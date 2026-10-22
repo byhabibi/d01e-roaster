@@ -31,6 +31,20 @@ pio run -t upload --upload-port COMx
 
 Heater on the first PCB revision is on/off on GPIO13. Burst-fire for the later board is `-DHEATER_HW_V36=1` in `platformio.ini`.
 
+## Mainboard
+
+PCB-01 MAIN-CTRL, the logic board. These three views are the routed Fase 1 layout from KiCad: front copper, back copper, and the 3D model. The editor reported the board fully routed (no airwires left).
+
+<p>
+<img src="pcb/images/mainboard-3d.png" width="340" alt="PCB-01 mainboard, 3D view">
+<img src="pcb/images/mainboard-front.png" width="340" alt="PCB-01 front copper">
+<img src="pcb/images/mainboard-back.png" width="340" alt="PCB-01 back copper">
+</p>
+
+3D view, front copper, back copper.
+
+DevKit sits in the middle (U1). Terminals along the edges take the panel, thermocouples, HMI, and the link to the power board. The Gerber set checked into `pcb/PCB-01_MAIN-CTRL/Gerbers/` is an older export and is marked not for fabrication. The pictures above are the layout to look at.
+
 ## Boards
 
 Two boards, production phase 1:
