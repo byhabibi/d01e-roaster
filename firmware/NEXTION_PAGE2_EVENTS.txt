@@ -1,0 +1,114 @@
+Nextion Editor — Page 2 (HMI final — Text components)
+=====================================================
+File: HMI_Nextion_7inch_D01_Standar.HMI
+
+Layout page 2:
+
+  b1 = START
+  b2 = STOP
+  b3 = RESET
+
+  t0 = Timer 00:00
+  t1 = BEAN TEMP
+  t2 = Δ BEAN ROR
+  t3 = ET TEMP
+  t4 = Δ ET ROR
+
+  t5 = AIR LEVEL    (firmware v1 belum)
+  t6 = HEATER LEVEL (firmware v1 belum)
+
+================================================================================
+PENTING: Error 88 FF FF FF = sintaks salah di Touch Release
+================================================================================
+
+JANGAN satu baris:
+  printh A5 01 FF FF FF    ← sering error 88
+
+PAKAI baris terpisah (Touch Release b1):
+  printh A5
+  printh 01
+  printh FF
+  printh FF
+  printh FF
+
+Touch Release b2:
+  printh A5
+  printh 02
+  printh FF
+  printh FF
+  printh FF
+
+Touch Release b3:
+  printh A5
+  printh 03
+  printh FF
+  printh FF
+  printh FF
+
+Simulator Return harus: A5 01 FF FF FF (bukan 88)
+
+================================================================================
+SIMULATOR: Timer + angka dummy (tanpa ESP32)
+================================================================================
+
+1. Tambah Timer: tm0, tim=1000, en=0, vis=0
+
+2. Page 2 → Preinitialize Event:
+  roastEn=0
+  sys0=0
+  t0.txt="00:00"
+  t1.txt="0.0"
+  t2.txt="0.0"
+  t3.txt="0.0"
+  t4.txt="0.0"
+
+3. tm0 → Timer Event:
+  if(roastEn==1)
+  {
+    sys0++
+    sprintf t0.txt,"%02d:%02d",sys0/60,sys0%60
+    t1.txt="185.2"
+    t2.txt="8.5"
+    t3.txt="210.0"
+    t4.txt="6.2"
+  }
+
+4. Touch Release b1 (START) — gabung dengan printh:
+  roastEn=1
+  tm0.en=1
+  printh A5
+  printh 01
+  printh FF
+  printh FF
+  printh FF
+
+5. Touch Release b2 (STOP):
+  roastEn=0
+  tm0.en=0
+  printh A5
+  printh 02
+  printh FF
+  printh FF
+  printh FF
+
+6. Touch Release b3 (RESET):
+  roastEn=0
+  tm0.en=0
+  sys0=0
+  t0.txt="00:00"
+  t1.txt="0.0"
+  t2.txt="0.0"
+  t3.txt="0.0"
+  t4.txt="0.0"
+  printh A5
+  printh 03
+  printh FF
+  printh FF
+  printh FF
+
+================================================================================
+HARDWARE (ESP32 + sensor nyata)
+================================================================================
+  Upload firmware D01E_Roaster ke ESP32.
+  t0–t4 di-update dari ESP32 — tm0.en=0 di Preinitialize.
+  printh tetap untuk START/STOP/RESET.

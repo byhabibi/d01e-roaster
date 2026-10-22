@@ -1,0 +1,281 @@
+Page page26
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Locked             : no
+        Swide up page ID   : disabled
+        Swide down page ID : disabled
+        Swide left page ID : disabled
+        Swide right page ID: disabled
+    
+    Events
+        Postinitialize Event
+            tm0.en=0
+            p3.pic=165
+            blinking=0
+            tm1.en=0
+            p3.pic=165
+            blinking=0
+        
+Picture p4
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p0
+    Attributes
+        ID               : 3
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p2
+    Attributes
+        ID               : 4
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p3
+    Attributes
+        ID               : 8
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p1
+    Attributes
+        ID               : 15
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Button b6
+    Attributes
+        ID               : 16
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            page page3
+        
+Button b0
+    Attributes
+        ID               : 17
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            page page1
+        
+Dual-state Button bt0
+    Attributes
+        ID               : 2
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            if(toggle==0)
+            {
+                p4.pic=204
+                ref p4
+                toggle=1
+            }else
+            {
+                p4.pic=189
+                ref p4
+                toggle=0
+            }
+        
+Dual-state Button bt7
+    Attributes
+        ID               : 5
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+Dual-state Button bt8
+    Attributes
+        ID               : 6
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+Dual-state Button bt2
+    Attributes
+        ID               : 7
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            if(toggle==0)
+            {
+                p3.pic=210
+                ref p3
+                toggle=1
+            }else
+            {
+                p3.pic=165
+                ref p3
+                toggle=0
+            }
+        
+Dual-state Button bt3
+    Attributes
+        ID               : 9
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            if(toggle==0)
+            {
+                p3.pic=214
+                ref p3
+                toggle=1
+            }else
+            {
+                p3.pic=165
+                ref p3
+                toggle=0
+            }
+        
+Dual-state Button bt4
+    Attributes
+        ID               : 11
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            if(blinking==0)
+            {
+                blinking=1
+                tm0.en=1
+                p3.pic=213
+            }else
+            {
+                blinking=0
+                tm0.en=0
+                p3.pic=165
+            }
+        
+Dual-state Button bt5
+    Attributes
+        ID               : 12
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            if(toggle==0)
+            {
+                p3.pic=212
+                ref p3
+                toggle=1
+            }else
+            {
+                p3.pic=165
+                ref p3
+                toggle=0
+            }
+        
+Dual-state Button bt6
+    Attributes
+        ID               : 13
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            if(blinking==0)
+            {
+                blinking=1
+                tm1.en=1
+                p3.pic=211
+            }else
+            {
+                blinking=0
+                tm1.en=0
+                p3.pic=165
+            }
+        
+Timer tm0
+    Attributes
+        ID         : 10
+        Scope      : local
+        Period (ms): 400
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            if(p3.pic==213)
+            {
+                p3.pic=165
+            }else
+            {
+                p3.pic=213
+            }
+        
+Timer tm1
+    Attributes
+        ID         : 14
+        Scope      : local
+        Period (ms): 400
+        Enabled    : yes
+    
+    Events
+        Timer Event
+            if(p3.pic==211)
+            {
+                p3.pic=165
+            }else
+            {
+                p3.pic=211
+            }
+        

@@ -1,0 +1,3 @@
+// bt2..bt6 — status notifikasi (COOLING / WARMING / INPUT BEAN / ROASTING / DONE)
+// Touch Press Event → KOSONGKAN (dikontrol ESP32 via btX.val + p3.pic)
+// Jangan pakai toggle manual / tm0.en di sini

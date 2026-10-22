@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1600" height="1000" fill="#faf9f7"/>
+  <text x="800" y="36" text-anchor="middle" font-size="24" font-weight="700">L2 · IO-PWR — Checklist jalur PCB (pad → pad)</text>
+  <text x="800" y="60" text-anchor="middle" font-size="13" fill="#4a5568">Board industrial locked Fase 1 · fokus clearances AC vs DC</text>
+
+  <rect x="40" y="85" width="740" height="280" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="8"/>
+  <text x="60" y="120" font-size="16" font-weight="700" fill="#c53030">A. AC HEATER (lebar track / clearance besar)</text>
+  <text x="60" y="155" font-size="13">☐ F4 → F1 → K1 A1/A2 → SSR1 LOAD → J5.1 (L heater)</text>
+  <text x="60" y="185" font-size="13">☐ N mains → J5.2 / bar N (sesuai desain)</text>
+  <text x="60" y="215" font-size="13">☐ Separation AC vs 12V logic ≥ clearance KiCad rules</text>
+  <text x="60" y="245" font-size="13">☐ Q_K1 gate ← HEATER_EN (J9.5) via R_G1 · pulldown R_G2</text>
+  <text x="60" y="275" font-size="13">☐ D_K1 flyback coil · SSR CTRL dari node coil</text>
+  <text x="60" y="310" font-size="12" fill="#c53030">JANGAN lempar EMI di jalur heater — EMI hanya cabang PSU</text>
+  <text x="60" y="340" font-size="12">Heatsink SSR + thermal pad wajib di BOM</text>
+
+  <rect x="820" y="85" width="740" height="280" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" rx="8"/>
+  <text x="840" y="120" font-size="16" font-weight="700" fill="#c05621">B. PSU 12V</text>
+  <text x="840" y="155" font-size="13">☐ AC → EMI1 → PSU1 L/N/PE</text>
+  <text x="840" y="185" font-size="13">☐ PSU +12V → F3 → +12V_BUS ke beban + J9.1</text>
+  <text x="840" y="215" font-size="13">☐ PSU GND → GND · J_PE ← PE</text>
+  <text x="840" y="245" font-size="13">☐ F2 di cabang PSU AC sesuai schematic</text>
+  <text x="840" y="275" font-size="13">☐ J9.1 harus continuous ke MAIN U3 VIN</text>
+  <text x="840" y="310" font-size="12">FG / PE bonding &lt; 0.1 Ω di assembly</text>
+  <text x="840" y="340" font-size="12">E-Stop NC#1 memutus AC PSU di harness H3 (bukan di PCB saja)</text>
+
+  <rect x="40" y="395" width="740" height="260" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="8"/>
+  <text x="60" y="430" font-size="16" font-weight="700" fill="#276749">C. DC LOADS</text>
+  <text x="60" y="465" font-size="13">☐ J9.6 DRUM_EN → U20 → Q2 → J6 (F_DRUM, D2)</text>
+  <text x="60" y="495" font-size="13">☐ J9.7 COOL_EN → Q7 → Q3 gate → J7</text>
+  <text x="60" y="525" font-size="13">☐ J9.8 EXHAUST_PWM → Q4 gate → J8</text>
+  <text x="60" y="555" font-size="13">☐ Pulldown gate R_Q3_G / R_Q4_G ke GND (boot safe OFF)</text>
+  <text x="60" y="585" font-size="13">☐ Flyback D3/D4 dekat MOSFET</text>
+  <text x="60" y="620" font-size="12">Terminal J6/J7/J8 di tepi field wiring</text>
+
+  <rect x="820" y="395" width="740" height="260" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2" rx="8"/>
+  <text x="840" y="430" font-size="16" font-weight="700" fill="#2b6cb0">D. J9 PIN MAP (IO side)</text>
+  <text x="840" y="465" font-size="13">1 +12V_BUS out ke MAIN · 2 GND · 4 GND_SIG</text>
+  <text x="840" y="495" font-size="13">5 HEATER_EN in · 6 DRUM_EN in</text>
+  <text x="840" y="525" font-size="13">7 COOL_EN in · 8 EXHAUST_PWM in</text>
+  <text x="840" y="555" font-size="13">9 +5V sense in (opsional) · 3/10–20 NC/spare</text>
+  <text x="840" y="590" font-size="13">Place J9 mirror ke MAIN supaya ribbon pendek lurus</text>
+  <text x="840" y="625" font-size="12" fill="#2b6cb0">Silk J9 pin1 tanda segitiga wajib (junior assembly)</text>
+
+  <rect x="40" y="685" width="1520" height="120" fill="#fffbeb" stroke="#d69e2e" stroke-width="2" rx="8"/>
+  <text x="60" y="720" font-size="15" font-weight="700">E. Urutan layout IO</text>
+  <text x="60" y="750" font-size="13">AC/heater kiri-atas → PSU tengah → K1/SSR kanan → DC loads bawah → J9 tepi ke MAIN</text>
+  <text x="60" y="780" font-size="13">DRC: clearance HV, hole, edge · lalu Gerber IO (Fase 1 tidak diganti ke modul)</text>
+
+  <text x="800" y="850" text-anchor="middle" font-size="12" fill="#718096">Ref: D01E_Heater_Control_v3.6.md · gen_pcb_layout.py IO_*_LINKS · pcb_nets.py</text>
+  <text x="800" y="880" text-anchor="middle" font-size="13" font-weight="700">IO lebih “sudah industrial” — prioritas junior: clearances AC + J9 pin1 ke MAIN FIXED 5V</text>
+</svg>

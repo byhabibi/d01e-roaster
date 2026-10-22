@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1400" height="900" fill="#1a202c"/>
+  <text x="700" y="36" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">L2 · MAIN — Peta zona placement (board ~120×90 mm)</text>
+  <text x="700" y="58" text-anchor="middle" font-size="12" fill="#a0aec0">Koordinat mm dari sudut kiri-atas board · sesuaikan generator MAIN_PLACE</text>
+
+  <!-- Board outline -->
+  <rect x="100" y="90" width="1200" height="720" fill="#2d3748" stroke="#ecc94b" stroke-width="3" rx="4"/>
+  <text x="120" y="115" font-size="12" fill="#ecc94b">0,0</text>
+  <text x="1240" y="115" font-size="12" fill="#ecc94b">~120 mm →</text>
+  <text x="120" y="790" font-size="12" fill="#ecc94b">↓ ~90 mm</text>
+
+  <!-- Power zone -->
+  <rect x="130" y="140" width="300" height="280" fill="#744210" stroke="#f6ad55" stroke-width="2" rx="6" opacity="0.95"/>
+  <text x="280" y="170" text-anchor="middle" font-size="14" font-weight="700" fill="#fefcbf">ZONA POWER</text>
+  <text x="150" y="210" font-size="13" fill="#fff">U3_MOD (~22, 28)</text>
+  <text x="150" y="235" font-size="12" fill="#fefcbf">BUCK 5V FIXED 3P</text>
+  <text x="150" y="270" font-size="13" fill="#fff">U2 MCP1700 (~22, 46)</text>
+  <text x="150" y="295" font-size="12" fill="#fefcbf">+3V3_ANA</text>
+  <text x="150" y="330" font-size="12" fill="#fc8181">C3 dekat VIN · C4 dekat VOUT</text>
+  <text x="150" y="370" font-size="11" fill="#feb2b2">Jauhkan dari TC analog</text>
+
+  <!-- MCU -->
+  <rect x="460" y="140" width="380" height="320" fill="#22543d" stroke="#68d391" stroke-width="2" rx="6"/>
+  <text x="650" y="170" text-anchor="middle" font-size="14" font-weight="700" fill="#c6f6d5">ZONA MCU</text>
+  <text x="480" y="220" font-size="14" fill="#fff">U1_DEVKIT (~72, 56)</text>
+  <text x="480" y="250" font-size="12" fill="#9ae6b4">Footprint: MODULE_ESP32_DEVKITC</text>
+  <text x="480" y="280" font-size="12" fill="#fc8181" font-weight="700">USB menghadap tepi / ke atas silk</text>
+  <text x="480" y="320" font-size="12" fill="#c6f6d5">Sisi kanan DevKit dekat U4/U5 (SPI pendek)</text>
+  <text x="480" y="350" font-size="12" fill="#c6f6d5">Sisi kiri dekat power +5V L19</text>
+  <text x="480" y="400" font-size="12" fill="#feb2b2">U11/J_USB area bawah = DNP (jangan padati)</text>
+
+  <!-- TC -->
+  <rect x="870" y="140" width="400" height="280" fill="#2a4365" stroke="#63b3ed" stroke-width="2" rx="6"/>
+  <text x="1070" y="170" text-anchor="middle" font-size="14" font-weight="700" fill="#bee3f8">ZONA TC</text>
+  <text x="890" y="215" font-size="13" fill="#fff">U4_MOD Bean (~96, 16)</text>
+  <text x="890" y="240" font-size="12" fill="#90cdf4">BEAN TC MODULE · 8P</text>
+  <text x="890" y="280" font-size="13" fill="#fff">U5_MOD Env (~96, 42)</text>
+  <text x="890" y="305" font-size="12" fill="#90cdf4">ENV TC MODULE · 8P</text>
+  <text x="890" y="345" font-size="12" fill="#bee3f8">J1 / J2 di tepi kanan board</text>
+  <text x="890" y="380" font-size="12" fill="#feb2b2">SPI bus &lt; 30–40 mm ideal</text>
+
+  <!-- Comms -->
+  <rect x="130" y="450" width="340" height="220" fill="#44337a" stroke="#b794f4" stroke-width="2" rx="6"/>
+  <text x="300" y="480" text-anchor="middle" font-size="14" font-weight="700" fill="#e9d8fd">ZONA COMMS</text>
+  <text x="150" y="520" font-size="12" fill="#fff">U6 MAX3485 · J3 RS485</text>
+  <text x="150" y="545" font-size="12" fill="#fff">U10 PCF8574 · Q6</text>
+  <text x="150" y="580" font-size="12" fill="#e9d8fd">TVS + bias dekat J3</text>
+  <text x="150" y="620" font-size="11" fill="#fc8181">Jauhkan switching buck noise</text>
+
+  <!-- Panel -->
+  <rect x="500" y="480" width="340" height="190" fill="#234e52" stroke="#4fd1c5" stroke-width="2" rx="6"/>
+  <text x="670" y="510" text-anchor="middle" font-size="14" font-weight="700" fill="#b2f5ea">ZONA PANEL</text>
+  <text x="520" y="550" font-size="12" fill="#fff">J_H1 (~34, 14) atas</text>
+  <text x="520" y="580" font-size="12" fill="#fff">U7 U8 U9 U12 opto</text>
+  <text x="520" y="610" font-size="12" fill="#b2f5ea">dekat J_H1 = track pendek</text>
+  <text x="520" y="645" font-size="12" fill="#fff">NTC1 dekat DevKit L6</text>
+
+  <!-- Audio + IDC -->
+  <rect x="870" y="450" width="200" height="220" fill="#744210" stroke="#f6e05e" stroke-width="2" rx="6"/>
+  <text x="970" y="485" text-anchor="middle" font-size="13" font-weight="700" fill="#fefcbf">AUDIO</text>
+  <text x="890" y="525" font-size="12" fill="#fff">U13 DFPlayer</text>
+  <text x="890" y="555" font-size="12" fill="#fff">(~94, 58)</text>
+  <text x="890" y="590" font-size="12" fill="#fefcbf">J10 speaker</text>
+
+  <rect x="1090" y="450" width="180" height="220" fill="#1a365d" stroke="#90cdf4" stroke-width="2" rx="6"/>
+  <text x="1180" y="485" text-anchor="middle" font-size="13" font-weight="700" fill="#bee3f8">IDC J9</text>
+  <text x="1110" y="530" font-size="12" fill="#fff">(~92, 48)</text>
+  <text x="1110" y="560" font-size="12" fill="#90cdf4">tepi ke IO board</text>
+  <text x="1110" y="600" font-size="11" fill="#fc8181">pin1 = +12V</text>
+  <text x="1110" y="625" font-size="11" fill="#fc8181">dekat U3 VIN</text>
+
+  <text x="700" y="850" text-anchor="middle" font-size="13" fill="#ecc94b">Aturan: SPI pendek · power kiri · IDC kanan/tepi · USB DevKit akses service · standoff modul</text>
+</svg>

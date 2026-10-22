@@ -1,0 +1,9 @@
+// Ganti tm0.en → tm1.en di event bt4 / bt6 (ROASTING IN PROCESS / DONE)
+// Contoh bt4 Touch Press — bagian yang sebelumnya tm0.en=1:
+//   blinking=1
+//   tm1.en=1
+//   p4.pic=213
+// Contoh hentikan:
+//   blinking=0
+//   tm1.en=0
+//   p4.pic=165

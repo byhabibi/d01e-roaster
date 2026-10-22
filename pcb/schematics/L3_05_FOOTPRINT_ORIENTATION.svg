@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1200" height="820" fill="#faf9f7"/>
+  <text x="40" y="40" font-size="22" font-weight="700">L3 · FOOTPRINT ORIENTATION (wajib)</text>
+  <text x="40" y="68" font-size="13" fill="#4a5568">Selaras footprint D01E.pretty + L2 DevKit map (USB = atas / −Y)</text>
+
+  <rect x="40" y="100" width="540" height="200" fill="#c6f6d5" stroke="#276749" stroke-width="2" rx="8"/>
+  <text x="60" y="140" font-size="16" font-weight="700">U1 ESP32-DevKitC</text>
+  <text x="60" y="175" font-size="14">USB menghadap ATAS (silk “USB” di −Y)</text>
+  <text x="60" y="205" font-size="14">Pad L* = kiri · R* = kanan (lihat L2 pinmap)</text>
+  <text x="60" y="235" font-size="14">Antena DevKit: keepout bersih di ujung modul</text>
+  <text x="60" y="270" font-size="13" fill="#c53030">Salah putar = seluruh GPIO tertukar</text>
+
+  <rect x="620" y="100" width="540" height="200" fill="#c6f6d5" stroke="#276749" stroke-width="2" rx="8"/>
+  <text x="640" y="140" font-size="16" font-weight="700">U3 MP1584 FIXED 5V</text>
+  <text x="640" y="175" font-size="14">Pin1 VIN = kotak (rect pad) · kiri</text>
+  <text x="640" y="205" font-size="14">Urutan: 1 VIN · 2 GND · 3 VOUT(+5V)</text>
+  <text x="640" y="235" font-size="14">Silk: BUCK 5V FIXED · NO TRIM</text>
+  <text x="640" y="270" font-size="13" fill="#c53030">Tidak ada pad ADJ</text>
+
+  <rect x="40" y="330" width="540" height="200" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2" rx="8"/>
+  <text x="60" y="370" font-size="16" font-weight="700">U4 / U5 MAX31856 module</text>
+  <text x="60" y="405" font-size="14">Pin1 VIN = pad kotak · kiri</text>
+  <text x="60" y="435" font-size="14">Urutan 1→8 ke kanan (Adafruit-compatible)</text>
+  <text x="60" y="465" font-size="14">U4 = BEAN · U5 = ENV (jangan ditukar CS)</text>
+  <text x="60" y="500" font-size="13">Silk: BEAN TC MODULE / ENV TC MODULE</text>
+
+  <rect x="620" y="330" width="540" height="200" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2" rx="8"/>
+  <text x="640" y="370" font-size="16" font-weight="700">J1 / J2 PCC-SMP-K · J9 · J_H1</text>
+  <text x="640" y="405" font-size="14">J1/J2: latch/akses probe ke LUAR tepi board</text>
+  <text x="640" y="435" font-size="14">J9: pin1 (+12V) bertanda · menghadap jalur ke IO</text>
+  <text x="640" y="465" font-size="14">J_H1: pin1 jelas · harness panel tidak terlipat aneh</text>
+  <text x="640" y="500" font-size="13">J3 RS485: A/B silkscreen jangan tertukar</text>
+
+  <rect x="40" y="560" width="1120" height="200" fill="#edf2f7" stroke="#4a5568" stroke-width="2" rx="8"/>
+  <text x="60" y="600" font-size="16" font-weight="700">Chip tetap (orientasi standar KiCad)</text>
+  <text x="60" y="635" font-size="14">U6 MAX3485 · U10 PCF8574 · U7–U9/U12 PC817: Pin1 sesuai notch footprint</text>
+  <text x="60" y="670" font-size="14">U13 DFPlayer: orientasi sesuai header 1×16 existing (TX ke GPIO4 = pin RX modul)</text>
+  <text x="60" y="705" font-size="14">IO: SSR1 / K1 / PSU block — terminal AC menghadap akses kabel / tidak tertutup heatsink salah</text>
+  <text x="60" y="720" font-size="12" fill="#718096"> </text>
+</svg>

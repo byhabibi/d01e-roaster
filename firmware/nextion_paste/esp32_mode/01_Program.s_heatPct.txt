@@ -1,0 +1,21 @@
+// Program.s — SEMUA int harus di ATAS, SEBELUM baud=/dim=/printh=
+//
+// Contoh urutan benar (sesuaikan dengan HMI Anda):
+
+int roastEn=0
+int sys0=0,sys1=0,sys2=0
+int sys3=0,sys4=0
+int heatPct=0
+int tempLim=300
+
+baud=115200
+dim=100
+recmod=0
+printh 00
+printh 00
+printh 00
+printh FF
+printh FF
+printh FF
+
+// SALAH: int tempLim=300 di bawah printh → Error compile!

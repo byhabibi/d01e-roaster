@@ -1,0 +1,22 @@
+if(roastEn==1)
+{
+  sys0++
+  sys1=sys0/60
+  sys2=sys0%60
+  covx sys1,t1.txt,2,0
+  covx sys2,t2.txt,2,0
+  t0.txt=t1.txt+":"+t2.txt
+  t1.txt="185"
+  t2.txt="8"
+  t3.txt="210"
+  t4.txt="6"
+  if(sys2==0)
+  {
+    sys4=185*255/250
+    add 28,0,sys4
+    sys4=210*255/250
+    add 28,1,sys4
+    sys4=8*255/30
+    add 28,2,sys4
+  }
+}

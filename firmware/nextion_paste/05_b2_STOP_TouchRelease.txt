@@ -1,0 +1,7 @@
+sys1=0
+tm0.en=0
+printh A5
+printh 02
+printh FF
+printh FF
+printh FF

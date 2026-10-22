@@ -1,0 +1,10 @@
+if(heatPct<100)
+{
+  heatPct+=10
+}
+printh A5
+printh 04
+printh heatPct
+printh FF
+printh FF
+printh FF

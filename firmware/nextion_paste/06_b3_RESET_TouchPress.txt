@@ -1,0 +1,18 @@
+roastEn=0
+tm0.en=0
+sys0=0
+sys1=0
+cle 28,255
+t0.txt="00:00"
+t1.txt="0"
+t2.txt="0"
+t3.txt="0"
+t4.txt="0"
+printh A5
+printh 03
+printh FF
+printh FF
+printh FF
+vis b1,1
+vis b2,0
+vis b3,0

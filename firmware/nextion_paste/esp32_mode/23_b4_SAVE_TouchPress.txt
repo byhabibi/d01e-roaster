@@ -1,0 +1,11 @@
+covx t0.txt,tempLim,0,0
+sys0=tempLim/256
+sys1=tempLim%256
+printh A5
+printh 0B
+printh sys0
+printh sys1
+printh FF
+printh FF
+printh FF
+page page2

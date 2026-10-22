@@ -1,0 +1,12 @@
+if(heatPct>0)
+{
+  heatPct-=10
+}
+covx heatPct,t6.txt,0,0
+t6.txt=t6.txt+"%"
+printh A5
+printh 04
+printh heatPct
+printh FF
+printh FF
+printh FF

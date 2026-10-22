@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 988" font-family="Segoe UI, Consolas, monospace">
+  <rect width="1280" height="988" fill="#faf9f7"/>
+  <text x="40" y="36" font-size="20" font-weight="700">L3 · NET DEFINITION (wajib dibaca sebelum route)</text>
+<rect x="40" y="48" width="1200" height="28" fill="#2d3748"/>
+<text x="48" y="67" font-size="12" font-weight="700" fill="#fff">NET</text>
+<text x="198" y="67" font-size="12" font-weight="700" fill="#fff">Type</text>
+<text x="308" y="67" font-size="12" font-weight="700" fill="#fff">Voltage</text>
+<text x="398" y="67" font-size="12" font-weight="700" fill="#fff">Direction</text>
+<text x="498" y="67" font-size="12" font-weight="700" fill="#fff">Drive</text>
+<text x="618" y="67" font-size="12" font-weight="700" fill="#fff">Active</text>
+<text x="728" y="67" font-size="12" font-weight="700" fill="#fff">Notes</text>
+  <text x="40" y="88" font-size="12" fill="#c53030" font-weight="700">Merah muda = output ke IO · Biru = input panel · Hijau muda = power · Teal = SPI</text>
+  <rect x="40" y="140" width="1200" height="26" fill="#f0fff4" stroke="#cbd5e0"/>
+<text x="48" y="157" font-size="11" font-weight="700">+12V_IN</text>
+<text x="198" y="157" font-size="11" font-weight="400">POWER</text>
+<text x="308" y="157" font-size="11" font-weight="400">12V</text>
+<text x="398" y="157" font-size="11" font-weight="400">IN</text>
+<text x="498" y="157" font-size="11" font-weight="400">rail</text>
+<text x="618" y="157" font-size="11" font-weight="400">—</text>
+<text x="728" y="157" font-size="11" font-weight="400">J9.1 dari IO PSU → U3 VIN</text>
+<rect x="40" y="166" width="1200" height="26" fill="#f0fff4" stroke="#cbd5e0"/>
+<text x="48" y="183" font-size="11" font-weight="700">+5V_SYS</text>
+<text x="198" y="183" font-size="11" font-weight="400">POWER</text>
+<text x="308" y="183" font-size="11" font-weight="400">5.0V FIXED</text>
+<text x="398" y="183" font-size="11" font-weight="400">OUT/rail</text>
+<text x="498" y="183" font-size="11" font-weight="400">rail</text>
+<text x="618" y="183" font-size="11" font-weight="400">—</text>
+<text x="728" y="183" font-size="11" font-weight="400">U3 VOUT → DevKit L19 + logika 5V</text>
+<rect x="40" y="192" width="1200" height="26" fill="#f0fff4" stroke="#cbd5e0"/>
+<text x="48" y="209" font-size="11" font-weight="700">+3V3_ANA</text>
+<text x="198" y="209" font-size="11" font-weight="400">POWER</text>
+<text x="308" y="209" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="209" font-size="11" font-weight="400">OUT/rail</text>
+<text x="498" y="209" font-size="11" font-weight="400">LDO U2</text>
+<text x="618" y="209" font-size="11" font-weight="400">—</text>
+<text x="728" y="209" font-size="11" font-weight="400">HANYA VIN seat U4/U5 · bukan ESP rail</text>
+<rect x="40" y="218" width="1200" height="26" fill="#ffffff" stroke="#cbd5e0"/>
+<text x="48" y="235" font-size="11" font-weight="700">GND</text>
+<text x="198" y="235" font-size="11" font-weight="400">POWER</text>
+<text x="308" y="235" font-size="11" font-weight="400">0V</text>
+<text x="398" y="235" font-size="11" font-weight="400">—</text>
+<text x="498" y="235" font-size="11" font-weight="400">plane</text>
+<text x="618" y="235" font-size="11" font-weight="400">—</text>
+<text x="728" y="235" font-size="11" font-weight="400">Star/pour · jangan floating modul</text>
+<rect x="40" y="244" width="1200" height="26" fill="#fff5f5" stroke="#cbd5e0"/>
+<text x="48" y="261" font-size="11" font-weight="700">HEATER_EN</text>
+<text x="198" y="261" font-size="11" font-weight="400">GPIO</text>
+<text x="308" y="261" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="261" font-size="11" font-weight="400">OUT → J9.5</text>
+<text x="498" y="261" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="261" font-size="11" font-weight="400">HIGH=ON</text>
+<text x="728" y="261" font-size="11" font-weight="400">GPIO13 · ke Q_K1 gate (IO ada R_G2 pulldown)</text>
+<rect x="40" y="270" width="1200" height="26" fill="#fff5f5" stroke="#cbd5e0"/>
+<text x="48" y="287" font-size="11" font-weight="700">DRUM_EN</text>
+<text x="198" y="287" font-size="11" font-weight="400">GPIO</text>
+<text x="308" y="287" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="287" font-size="11" font-weight="400">OUT → J9.6</text>
+<text x="498" y="287" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="287" font-size="11" font-weight="400">HIGH=ON</text>
+<text x="728" y="287" font-size="11" font-weight="400">GPIO12 · ke U20/Q2</text>
+<rect x="40" y="296" width="1200" height="26" fill="#fff5f5" stroke="#cbd5e0"/>
+<text x="48" y="313" font-size="11" font-weight="700">COOL_EN</text>
+<text x="198" y="313" font-size="11" font-weight="400">GPIO OD</text>
+<text x="308" y="313" font-size="11" font-weight="400">≈5V PCF</text>
+<text x="398" y="313" font-size="11" font-weight="400">OUT → J9.7</text>
+<text x="498" y="313" font-size="11" font-weight="400">open-drain</text>
+<text x="618" y="313" font-size="11" font-weight="400">LOW=ON</text>
+<text x="728" y="313" font-size="11" font-weight="400">PCF8574 P3 sink · Q7→Q3 · boot/safe HIGH/OFF</text>
+<rect x="40" y="322" width="1200" height="26" fill="#fff5f5" stroke="#cbd5e0"/>
+<text x="48" y="339" font-size="11" font-weight="700">EXHAUST_PWM</text>
+<text x="198" y="339" font-size="11" font-weight="400">PWM</text>
+<text x="308" y="339" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="339" font-size="11" font-weight="400">OUT → J9.8</text>
+<text x="498" y="339" font-size="11" font-weight="400">push-pull LEDC</text>
+<text x="618" y="339" font-size="11" font-weight="400">duty↑=kencang</text>
+<text x="728" y="339" font-size="11" font-weight="400">GPIO2 · 25 kHz 8-bit · boot duty=0</text>
+<rect x="40" y="348" width="1200" height="26" fill="#ebf8ff" stroke="#cbd5e0"/>
+<text x="48" y="365" font-size="11" font-weight="700">BTN_DRUM</text>
+<text x="198" y="365" font-size="11" font-weight="400">GPIO</text>
+<text x="308" y="365" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="365" font-size="11" font-weight="400">IN</text>
+<text x="498" y="365" font-size="11" font-weight="400">opto sink</text>
+<text x="618" y="365" font-size="11" font-weight="400">LOW=ON</text>
+<text x="728" y="365" font-size="11" font-weight="400">GPIO25 · PANEL_BTN_ACTIVE_LOW · pull-up board R1</text>
+<rect x="40" y="374" width="1200" height="26" fill="#ebf8ff" stroke="#cbd5e0"/>
+<text x="48" y="391" font-size="11" font-weight="700">BTN_HEATER</text>
+<text x="198" y="391" font-size="11" font-weight="400">GPIO</text>
+<text x="308" y="391" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="391" font-size="11" font-weight="400">IN</text>
+<text x="498" y="391" font-size="11" font-weight="400">opto sink</text>
+<text x="618" y="391" font-size="11" font-weight="400">LOW=ON</text>
+<text x="728" y="391" font-size="11" font-weight="400">GPIO26 · pull-up board R3</text>
+<rect x="40" y="400" width="1200" height="26" fill="#ebf8ff" stroke="#cbd5e0"/>
+<text x="48" y="417" font-size="11" font-weight="700">BTN_AIR</text>
+<text x="198" y="417" font-size="11" font-weight="400">GPIO</text>
+<text x="308" y="417" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="417" font-size="11" font-weight="400">IN</text>
+<text x="498" y="417" font-size="11" font-weight="400">opto sink</text>
+<text x="618" y="417" font-size="11" font-weight="400">LOW=ON</text>
+<text x="728" y="417" font-size="11" font-weight="400">GPIO27 · pull-up board R5</text>
+<rect x="40" y="426" width="1200" height="26" fill="#ebf8ff" stroke="#cbd5e0"/>
+<text x="48" y="443" font-size="11" font-weight="700">ESTOP_SENSE</text>
+<text x="198" y="443" font-size="11" font-weight="400">GPIO</text>
+<text x="308" y="443" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="443" font-size="11" font-weight="400">IN</text>
+<text x="498" y="443" font-size="11" font-weight="400">opto</text>
+<text x="618" y="443" font-size="11" font-weight="400">HIGH=UNSAFE</text>
+<text x="728" y="443" font-size="11" font-weight="400">GPIO14 · NC open → HIGH · jangan invert di layout</text>
+<rect x="40" y="452" width="1200" height="26" fill="#f7fafc" stroke="#cbd5e0"/>
+<text x="48" y="469" font-size="11" font-weight="700">POT_AIR</text>
+<text x="198" y="469" font-size="11" font-weight="400">ADC</text>
+<text x="308" y="469" font-size="11" font-weight="400">0–3.3V</text>
+<text x="398" y="469" font-size="11" font-weight="400">IN</text>
+<text x="498" y="469" font-size="11" font-weight="400">analog</text>
+<text x="618" y="469" font-size="11" font-weight="400">—</text>
+<text x="728" y="469" font-size="11" font-weight="400">GPIO34 · dari J_H1.9 · jauhkan dari PWM/heater</text>
+<rect x="40" y="478" width="1200" height="26" fill="#ffffff" stroke="#cbd5e0"/>
+<text x="48" y="495" font-size="11" font-weight="700">NTC_ADC</text>
+<text x="198" y="495" font-size="11" font-weight="400">ADC</text>
+<text x="308" y="495" font-size="11" font-weight="400">0–3.3V</text>
+<text x="398" y="495" font-size="11" font-weight="400">IN</text>
+<text x="498" y="495" font-size="11" font-weight="400">analog</text>
+<text x="618" y="495" font-size="11" font-weight="400">—</text>
+<text x="728" y="495" font-size="11" font-weight="400">GPIO35 · NTC box</text>
+<rect x="40" y="504" width="1200" height="26" fill="#e6fffa" stroke="#cbd5e0"/>
+<text x="48" y="521" font-size="11" font-weight="700">SPI_SCK</text>
+<text x="198" y="521" font-size="11" font-weight="400">SPI</text>
+<text x="308" y="521" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="521" font-size="11" font-weight="400">OUT</text>
+<text x="498" y="521" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="521" font-size="11" font-weight="400">—</text>
+<text x="728" y="521" font-size="11" font-weight="400">GPIO18 → U4.6 dan U5.6 · pendek</text>
+<rect x="40" y="530" width="1200" height="26" fill="#e6fffa" stroke="#cbd5e0"/>
+<text x="48" y="547" font-size="11" font-weight="700">SPI_MOSI</text>
+<text x="198" y="547" font-size="11" font-weight="400">SPI</text>
+<text x="308" y="547" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="547" font-size="11" font-weight="400">OUT</text>
+<text x="498" y="547" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="547" font-size="11" font-weight="400">—</text>
+<text x="728" y="547" font-size="11" font-weight="400">GPIO23 → U4.7 dan U5.7</text>
+<rect x="40" y="556" width="1200" height="26" fill="#e6fffa" stroke="#cbd5e0"/>
+<text x="48" y="573" font-size="11" font-weight="700">SPI_MISO</text>
+<text x="198" y="573" font-size="11" font-weight="400">SPI</text>
+<text x="308" y="573" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="573" font-size="11" font-weight="400">IN</text>
+<text x="498" y="573" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="573" font-size="11" font-weight="400">—</text>
+<text x="728" y="573" font-size="11" font-weight="400">GPIO19 ← U4.4 dan U5.4</text>
+<rect x="40" y="582" width="1200" height="26" fill="#e6fffa" stroke="#cbd5e0"/>
+<text x="48" y="599" font-size="11" font-weight="700">SPI_CS_BEAN</text>
+<text x="198" y="599" font-size="11" font-weight="400">GPIO</text>
+<text x="308" y="599" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="599" font-size="11" font-weight="400">OUT</text>
+<text x="498" y="599" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="599" font-size="11" font-weight="400">LOW=select</text>
+<text x="728" y="599" font-size="11" font-weight="400">GPIO5 → U4.5</text>
+<rect x="40" y="608" width="1200" height="26" fill="#e6fffa" stroke="#cbd5e0"/>
+<text x="48" y="625" font-size="11" font-weight="700">SPI_CS_ENV</text>
+<text x="198" y="625" font-size="11" font-weight="400">GPIO</text>
+<text x="308" y="625" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="625" font-size="11" font-weight="400">OUT</text>
+<text x="498" y="625" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="625" font-size="11" font-weight="400">LOW=select</text>
+<text x="728" y="625" font-size="11" font-weight="400">GPIO15 → U5.5</text>
+<rect x="40" y="634" width="1200" height="26" fill="#ffffff" stroke="#cbd5e0"/>
+<text x="48" y="651" font-size="11" font-weight="700">I2C_SDA</text>
+<text x="198" y="651" font-size="11" font-weight="400">I2C</text>
+<text x="308" y="651" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="651" font-size="11" font-weight="400">BIDIR</text>
+<text x="498" y="651" font-size="11" font-weight="400">open-drain</text>
+<text x="618" y="651" font-size="11" font-weight="400">—</text>
+<text x="728" y="651" font-size="11" font-weight="400">GPIO21 · pull-up · ke U10.9</text>
+<rect x="40" y="660" width="1200" height="26" fill="#f7fafc" stroke="#cbd5e0"/>
+<text x="48" y="677" font-size="11" font-weight="700">I2C_SCL</text>
+<text x="198" y="677" font-size="11" font-weight="400">I2C</text>
+<text x="308" y="677" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="677" font-size="11" font-weight="400">OUT/OD</text>
+<text x="498" y="677" font-size="11" font-weight="400">open-drain</text>
+<text x="618" y="677" font-size="11" font-weight="400">—</text>
+<text x="728" y="677" font-size="11" font-weight="400">GPIO22 · pull-up · ke U10.10</text>
+<rect x="40" y="686" width="1200" height="26" fill="#ffffff" stroke="#cbd5e0"/>
+<text x="48" y="703" font-size="11" font-weight="700">UART1_TX</text>
+<text x="198" y="703" font-size="11" font-weight="400">UART</text>
+<text x="308" y="703" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="703" font-size="11" font-weight="400">OUT</text>
+<text x="498" y="703" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="703" font-size="11" font-weight="400">—</text>
+<text x="728" y="703" font-size="11" font-weight="400">GPIO17 → U6 DI</text>
+<rect x="40" y="712" width="1200" height="26" fill="#f7fafc" stroke="#cbd5e0"/>
+<text x="48" y="729" font-size="11" font-weight="700">UART1_RX</text>
+<text x="198" y="729" font-size="11" font-weight="400">UART</text>
+<text x="308" y="729" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="729" font-size="11" font-weight="400">IN</text>
+<text x="498" y="729" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="729" font-size="11" font-weight="400">—</text>
+<text x="728" y="729" font-size="11" font-weight="400">GPIO16 ← U6 RO</text>
+<rect x="40" y="738" width="1200" height="26" fill="#ffffff" stroke="#cbd5e0"/>
+<text x="48" y="755" font-size="11" font-weight="700">UART2_TX</text>
+<text x="198" y="755" font-size="11" font-weight="400">UART</text>
+<text x="308" y="755" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="755" font-size="11" font-weight="400">OUT</text>
+<text x="498" y="755" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="755" font-size="11" font-weight="400">—</text>
+<text x="728" y="755" font-size="11" font-weight="400">GPIO33 → Nextion RX (J_H1.13)</text>
+<rect x="40" y="764" width="1200" height="26" fill="#f7fafc" stroke="#cbd5e0"/>
+<text x="48" y="781" font-size="11" font-weight="700">UART2_RX</text>
+<text x="198" y="781" font-size="11" font-weight="400">UART</text>
+<text x="308" y="781" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="781" font-size="11" font-weight="400">IN</text>
+<text x="498" y="781" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="781" font-size="11" font-weight="400">—</text>
+<text x="728" y="781" font-size="11" font-weight="400">GPIO32 ← Nextion TX (J_H1.12)</text>
+<rect x="40" y="790" width="1200" height="26" fill="#ffffff" stroke="#cbd5e0"/>
+<text x="48" y="807" font-size="11" font-weight="700">DFPLAYER_TX</text>
+<text x="198" y="807" font-size="11" font-weight="400">UART soft</text>
+<text x="308" y="807" font-size="11" font-weight="400">3.3V</text>
+<text x="398" y="807" font-size="11" font-weight="400">OUT</text>
+<text x="498" y="807" font-size="11" font-weight="400">push-pull</text>
+<text x="618" y="807" font-size="11" font-weight="400">—</text>
+<text x="728" y="807" font-size="11" font-weight="400">GPIO4 → U13 RX</text>
+<rect x="40" y="816" width="1200" height="26" fill="#f7fafc" stroke="#cbd5e0"/>
+<text x="48" y="833" font-size="11" font-weight="700">RS485_A/B</text>
+<text x="198" y="833" font-size="11" font-weight="400">DIFF</text>
+<text x="308" y="833" font-size="11" font-weight="400">±</text>
+<text x="398" y="833" font-size="11" font-weight="400">BIDIR</text>
+<text x="498" y="833" font-size="11" font-weight="400">MAX3485</text>
+<text x="618" y="833" font-size="11" font-weight="400">—</text>
+<text x="728" y="833" font-size="11" font-weight="400">J3 · TVS D1 · bias + term sesuai bus</text>
+<rect x="40" y="842" width="1200" height="26" fill="#ffffff" stroke="#cbd5e0"/>
+<text x="48" y="859" font-size="11" font-weight="700">RS485_DE</text>
+<text x="198" y="859" font-size="11" font-weight="400">GPIO</text>
+<text x="308" y="859" font-size="11" font-weight="400">logic</text>
+<text x="398" y="859" font-size="11" font-weight="400">INT</text>
+<text x="498" y="859" font-size="11" font-weight="400">via Q6</text>
+<text x="618" y="859" font-size="11" font-weight="400">see FW</text>
+<text x="728" y="859" font-size="11" font-weight="400">PCF P2 → inverter Q6 → MAX3485 DE/RE</text>
+  <text x="40" y="918" font-size="12" font-weight="700">Kunci firmware (jangan dibalik di layout):</text>
+  <text x="40" y="940" font-size="12">HEATER_EN / DRUM_EN = Active HIGH (ON). COOL_EN = Active LOW (ON). Tombol = Active LOW saat latched ON. ESTOP_SENSE HIGH = UNSAFE.</text>
+  <text x="40" y="964" font-size="11" fill="#718096">Sumber: config.h PANEL_BTN_ACTIVE_LOW / PANEL_ESTOP_UNSAFE_HIGH · heater_control.cpp · panel_interlock.cpp · Electrical §6.2</text>
+</svg>

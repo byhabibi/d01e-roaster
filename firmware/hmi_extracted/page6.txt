@@ -1,0 +1,114 @@
+Page page6
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Locked             : no
+        Swide up page ID   : 0
+        Swide down page ID : 0
+        Swide left page ID : 0
+        Swide right page ID: 0
+    
+    Events
+        Preinitialize Event
+            vis p8,0
+            vis b7,0
+            vis b8,0
+        
+Picture p1
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p0
+    Attributes
+        ID               : 4
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p8
+    Attributes
+        ID               : 7
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Button b6
+    Attributes
+        ID               : 5
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            page page3
+        
+Button b0
+    Attributes
+        ID               : 6
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            vis p8,1
+            vis b7,1
+            vis b8,1
+        
+Button b8
+    Attributes
+        ID               : 8
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            page page2
+        
+Button b7
+    Attributes
+        ID               : 9
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            vis p8,0
+            vis b7,0
+            vis b8,0
+        
+Checkbox c0
+    Attributes
+        ID               : 2
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : pressed
+    
+Checkbox c1
+    Attributes
+        ID               : 3
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : pressed
+    

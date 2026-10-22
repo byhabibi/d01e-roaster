@@ -1,0 +1,22 @@
+// WAJIB: tempel di bt0 → Touch Release (bukan Press)
+// Dual-state: val sudah ter-update saat Release
+if(bt0.val==1)
+{
+  sys0=0
+  roastEn=1
+  tm0.en=1
+  printh A5
+  printh 01
+  printh FF
+  printh FF
+  printh FF
+}else
+{
+  roastEn=0
+  tm0.en=0
+  printh A5
+  printh 02
+  printh FF
+  printh FF
+  printh FF
+}

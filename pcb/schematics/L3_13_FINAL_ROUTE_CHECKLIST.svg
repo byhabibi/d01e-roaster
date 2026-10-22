@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 880" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1280" height="880" fill="#faf9f7"/>
+  <text x="40" y="40" font-size="22" font-weight="700">L3 · FINAL ROUTE CHECKLIST (centang berurutan)</text>
+  <text x="40" y="68" font-size="13" fill="#c53030">Wajib 1→8. Kalau loncat ke GPIO dulu = layout “asal” · revisi mahal.</text>
+  
+  <rect x="40" y="110" width="48" height="48" fill="#fff" stroke="#2d3748" stroke-width="2.5" rx="6"/>
+  <text x="64" y="142" text-anchor="middle" font-size="18" font-weight="700">1</text>
+  <rect x="100" y="110" width="1140" height="70" fill="#fff" stroke="#a0aec0" rx="6"/>
+  <text x="120" y="138" font-size="16" font-weight="700">+12V</text>
+  <text x="120" y="162" font-size="13" fill="#4a5568">IN/BUS/HEATER lebar OK · dari sumber ke buck/beban · tidak putus</text>
+  <rect x="40" y="195" width="48" height="48" fill="#fff" stroke="#2d3748" stroke-width="2.5" rx="6"/>
+  <text x="64" y="227" text-anchor="middle" font-size="18" font-weight="700">2</text>
+  <rect x="100" y="195" width="1140" height="70" fill="#fff" stroke="#a0aec0" rx="6"/>
+  <text x="120" y="223" font-size="16" font-weight="700">+5V_SYS</text>
+  <text x="120" y="247" font-size="13" fill="#4a5568">U3→DevKit/U6/U10/U13 · ≥0.80 mm · cap &lt;5 mm di VOUT</text>
+  <rect x="40" y="280" width="48" height="48" fill="#fff" stroke="#2d3748" stroke-width="2.5" rx="6"/>
+  <text x="64" y="312" text-anchor="middle" font-size="18" font-weight="700">3</text>
+  <rect x="100" y="280" width="1140" height="70" fill="#fff" stroke="#a0aec0" rx="6"/>
+  <text x="120" y="308" font-size="16" font-weight="700">Ground</text>
+  <text x="120" y="332" font-size="13" fill="#4a5568">Polygon refill · stitch vias · PE bukan signal · no island</text>
+  <rect x="40" y="365" width="48" height="48" fill="#fff" stroke="#2d3748" stroke-width="2.5" rx="6"/>
+  <text x="64" y="397" text-anchor="middle" font-size="18" font-weight="700">4</text>
+  <rect x="100" y="365" width="1140" height="70" fill="#fff" stroke="#a0aec0" rx="6"/>
+  <text x="120" y="393" font-size="16" font-weight="700">SPI</text>
+  <text x="120" y="417" font-size="13" fill="#4a5568">Pendek · lurus · 0 via ideal · jauh buck · CS Bean/Env benar</text>
+  <rect x="40" y="450" width="48" height="48" fill="#fff" stroke="#2d3748" stroke-width="2.5" rx="6"/>
+  <text x="64" y="482" text-anchor="middle" font-size="18" font-weight="700">5</text>
+  <rect x="100" y="450" width="1140" height="70" fill="#fff" stroke="#a0aec0" rx="6"/>
+  <text x="120" y="478" font-size="16" font-weight="700">Thermocouple</text>
+  <text x="120" y="502" font-size="13" fill="#4a5568">U4/U5 dekat J1/J2 · analog tidak lewat buck · tidak sejajar PWM</text>
+  <rect x="40" y="535" width="48" height="48" fill="#fff" stroke="#2d3748" stroke-width="2.5" rx="6"/>
+  <text x="64" y="567" text-anchor="middle" font-size="18" font-weight="700">6</text>
+  <rect x="100" y="535" width="1140" height="70" fill="#fff" stroke="#a0aec0" rx="6"/>
+  <text x="120" y="563" font-size="16" font-weight="700">UART / I2C / RS485</text>
+  <text x="120" y="587" font-size="13" fill="#4a5568">Nextion · DFPlayer · MAX3485 · pair A/B rapi</text>
+  <rect x="40" y="620" width="48" height="48" fill="#fff" stroke="#2d3748" stroke-width="2.5" rx="6"/>
+  <text x="64" y="652" text-anchor="middle" font-size="18" font-weight="700">7</text>
+  <rect x="100" y="620" width="1140" height="70" fill="#fff" stroke="#a0aec0" rx="6"/>
+  <text x="120" y="648" font-size="16" font-weight="700">GPIO + PWM</text>
+  <text x="120" y="672" font-size="13" fill="#4a5568">HEATER/DRUM/COOL/EXHAUST ke J9 · jauh SPI bila bisa · pulldown IO ada</text>
+  <rect x="40" y="705" width="48" height="48" fill="#fff" stroke="#2d3748" stroke-width="2.5" rx="6"/>
+  <text x="64" y="737" text-anchor="middle" font-size="18" font-weight="700">8</text>
+  <rect x="100" y="705" width="1140" height="70" fill="#fff" stroke="#a0aec0" rx="6"/>
+  <text x="120" y="733" font-size="16" font-weight="700">Silkscreen</text>
+  <text x="120" y="757" font-size="13" fill="#4a5568">Pin1 · BUCK 5V FIXED · USB atas · tidak tutup pad/via</text>
+</svg>

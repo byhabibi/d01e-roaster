@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 766" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1280" height="766" fill="#faf9f7"/>
+  <text x="40" y="40" font-size="22" font-weight="700">L3 · BOM LOCK (tidak boleh diganti sembarangan)</text>
+  <text x="40" y="68" font-size="13" fill="#4a5568">Sumber: D01E_BOM_Production.csv · purchasing harus patuh kolom MPN + catatan</text>
+  <text x="40" y="95" font-size="12" font-weight="700">RefDes          MPN / spek kunci</text>
+  
+  <rect x="40" y="110" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="136" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">U1</text>
+  <rect x="190" y="110" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="136" font-size="13" font-weight="700">ESP32-DevKitC-32E</text>
+  <text x="490" y="136" font-size="13">HARUS DevKitC plug-in — bukan ESP32-WROOM soldered</text>
+  <rect x="40" y="158" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="184" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">U3</text>
+  <rect x="190" y="158" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="184" font-size="13" font-weight="700">MP1584-FIXED-5V</text>
+  <text x="490" y="184" font-size="13">HARUS FIXED 5V ≥3A — LARANG adjustable/trimpot</text>
+  <rect x="40" y="206" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="232" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">U4/U5</text>
+  <rect x="190" y="206" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="232" font-size="13" font-weight="700">MAX31856 breakout</text>
+  <text x="490" y="232" font-size="13">HARUS breakout header — bukan chip SOIC di PCB</text>
+  <rect x="40" y="254" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="280" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">U2</text>
+  <rect x="190" y="254" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="280" font-size="13" font-weight="700">MCP1700-3302E</text>
+  <text x="490" y="280" font-size="13">3.3V analog TC saja</text>
+  <rect x="40" y="302" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="328" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">SSR1</text>
+  <rect x="190" y="302" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="328" font-size="13" font-weight="700">Crydom D2440</text>
+  <text x="490" y="328" font-size="13">HARUS D2440 (+ heatsink HS1)</text>
+  <rect x="40" y="350" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="376" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">K1</text>
+  <rect x="190" y="350" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="376" font-size="13" font-weight="700">Schneider LC1D25JD</text>
+  <text x="490" y="376" font-size="13">HARUS LC1D25JD coil 12VDC — BUKAN LC1D25BD 24V</text>
+  <rect x="40" y="398" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="424" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">PSU1</text>
+  <rect x="190" y="398" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="424" font-size="13" font-weight="700">Mean Well LRS-150-12</text>
+  <text x="490" y="424" font-size="13">12V 12.5A</text>
+  <rect x="40" y="446" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="472" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">E-Stop</text>
+  <rect x="190" y="446" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="472" font-size="13" font-weight="700">XB4BS8444</text>
+  <text x="490" y="472" font-size="13">2NC — BUKAN 8445</text>
+  <rect x="40" y="494" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="520" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">Main isolator</text>
+  <rect x="190" y="494" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="520" font-size="13" font-weight="700">ABB OT25FT2</text>
+  <text x="490" y="520" font-size="13">25A 2P</text>
+  <rect x="40" y="542" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="568" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">DISP1</text>
+  <rect x="190" y="542" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="568" font-size="13" font-weight="700">NX8048K070-011C</text>
+  <text x="490" y="568" font-size="13">Capacitive — BUKAN 011R resistive</text>
+  <rect x="40" y="590" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="616" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">U11</text>
+  <rect x="190" y="590" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="616" font-size="13" font-weight="700">CP2102N</text>
+  <text x="490" y="616" font-size="13">Qty 0 DNP Fase 1 — flash via DevKit USB</text>
+  <rect x="40" y="638" width="140" height="40" fill="#2d3748" rx="4"/>
+  <text x="110" y="664" text-anchor="middle" font-size="14" font-weight="700" fill="#fff">L4</text>
+  <rect x="190" y="638" width="280" height="40" fill="#c6f6d5" stroke="#276749" rx="4"/>
+  <text x="200" y="664" font-size="13" font-weight="700">—</text>
+  <text x="490" y="664" font-size="13">DIHAPUS dari BOM — inductor ada di modul FIXED</text>
+  <text x="40" y="736" font-size="12" fill="#c53030">Salah order paling berbahaya: adjustable buck · contactor 24V · Nextion resistive · WROOM instead of DevKit</text>
+</svg>

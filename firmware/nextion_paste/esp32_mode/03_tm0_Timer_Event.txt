@@ -1,0 +1,9 @@
+// Panel FISIK: tm0 = kedip banner INPUT BEAN (pic 213). tim=400, en=0 default
+// Simulator: pakai 03_tm0_Timer_Event_SIMULATOR.txt (bukan file ini)
+if(p3.pic==213)
+{
+  p3.pic=165
+}else
+{
+  p3.pic=213
+}

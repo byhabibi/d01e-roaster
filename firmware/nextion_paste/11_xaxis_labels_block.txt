@@ -1,0 +1,32 @@
+// ============================================================
+// BLOK: update label sumbu X responsif (tx0–tx10)
+// Sisipkan di: Preinitialize, tm0 Timer, b3 RESET
+// visStart = menit kiri jendela; tx0..tx10 span visStart..sys1
+// ============================================================
+visStart=0
+sys3=71
+if(sys1>=sys3)
+{
+  visStart=sys1-sys3+1
+}
+covx visStart,tx0.txt,0,0
+sys4=sys1-visStart
+sys3=sys4*1/10+visStart
+covx sys3,tx1.txt,0,0
+sys3=sys4*2/10+visStart
+covx sys3,tx2.txt,0,0
+sys3=sys4*3/10+visStart
+covx sys3,tx3.txt,0,0
+sys3=sys4*4/10+visStart
+covx sys3,tx4.txt,0,0
+sys3=sys4*5/10+visStart
+covx sys3,tx5.txt,0,0
+sys3=sys4*6/10+visStart
+covx sys3,tx6.txt,0,0
+sys3=sys4*7/10+visStart
+covx sys3,tx7.txt,0,0
+sys3=sys4*8/10+visStart
+covx sys3,tx8.txt,0,0
+sys3=sys4*9/10+visStart
+covx sys3,tx9.txt,0,0
+covx sys1,tx10.txt,0,0

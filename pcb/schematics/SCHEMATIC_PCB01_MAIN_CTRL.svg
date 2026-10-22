@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1600" height="1100" fill="#faf9f7"/>
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2d3748"/>
+    </marker>
+  </defs>
+
+  <text x="800" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#1a202c">PCB-01 · D01E-MAIN-CTRL</text>
+  <text x="800" y="72" text-anchor="middle" font-size="15" fill="#4a5568">Schematic blok Fase 1 — module seats (mudah dibaca teknisi) · v3.7 FIXED 5V</text>
+
+  <!-- Legend -->
+  <rect x="40" y="95" width="1520" height="48" fill="#edf2f7" stroke="#cbd5e0" rx="6"/>
+  <rect x="60" y="108" width="22" height="22" fill="#c6f6d5" stroke="#276749"/>
+  <text x="90" y="125" font-size="13">Modul pluggable (header 2.54)</text>
+  <rect x="320" y="108" width="22" height="22" fill="#feebc8" stroke="#c05621"/>
+  <text x="350" y="125" font-size="13">Chip tetap di PCB</text>
+  <rect x="540" y="108" width="22" height="22" fill="#bee3f8" stroke="#2b6cb0"/>
+  <text x="570" y="125" font-size="13">Konektor / harness</text>
+  <rect x="820" y="108" width="22" height="22" fill="#e2e8f0" stroke="#718096"/>
+  <text x="850" y="125" font-size="13">DNP / spare</text>
+  <text x="1100" y="125" font-size="13" fill="#c53030" font-weight="700">U3 = FIXED 5V · LARANG trimpot</text>
+
+  <!-- Power zone -->
+  <rect x="40" y="170" width="380" height="320" fill="#fffaf0" stroke="#dd6b20" stroke-width="2.5" rx="10"/>
+  <text x="230" y="200" text-anchor="middle" font-size="16" font-weight="700" fill="#c05621">ZONA POWER</text>
+
+  <rect x="70" y="220" width="140" height="70" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2" rx="6"/>
+  <text x="140" y="248" text-anchor="middle" font-size="13" font-weight="700">J9 IDC</text>
+  <text x="140" y="270" text-anchor="middle" font-size="11">pin1 +12V dari IO</text>
+
+  <line x1="210" y1="255" x2="250" y2="255" stroke="#2d3748" stroke-width="2.5" marker-end="url(#arr)"/>
+
+  <rect x="250" y="215" width="150" height="90" fill="#c6f6d5" stroke="#276749" stroke-width="2.5" rx="6"/>
+  <text x="325" y="240" text-anchor="middle" font-size="12" font-weight="700">U3_MOD</text>
+  <text x="325" y="260" text-anchor="middle" font-size="14" font-weight="700">BUCK 5V FIXED</text>
+  <text x="325" y="280" text-anchor="middle" font-size="11">MP1584-FIXED-5V</text>
+  <text x="325" y="295" text-anchor="middle" font-size="10" fill="#276749">VIN·GND·VOUT</text>
+
+  <line x1="325" y1="305" x2="325" y2="340" stroke="#2d3748" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="340" y="330" font-size="12" font-weight="700" fill="#c05621">+5V_SYS</text>
+
+  <rect x="70" y="350" width="150" height="70" fill="#feebc8" stroke="#c05621" stroke-width="2" rx="6"/>
+  <text x="145" y="378" text-anchor="middle" font-size="13" font-weight="700">U2 MCP1700</text>
+  <text x="145" y="400" text-anchor="middle" font-size="11">+3V3_ANA → TC modul</text>
+
+  <text x="60" y="460" font-size="11" fill="#744210">QC: ukur VOUT 4.90…5.10 V · reject jika adjustable</text>
+
+  <!-- MCU zone -->
+  <rect x="450" y="170" width="420" height="320" fill="#f0fff4" stroke="#276749" stroke-width="2.5" rx="10"/>
+  <text x="660" y="200" text-anchor="middle" font-size="16" font-weight="700" fill="#276749">ZONA MCU</text>
+
+  <rect x="500" y="230" width="320" height="140" fill="#c6f6d5" stroke="#276749" stroke-width="2.5" rx="8"/>
+  <text x="660" y="265" text-anchor="middle" font-size="13" font-weight="700">U1_DEVKIT</text>
+  <text x="660" y="292" text-anchor="middle" font-size="18" font-weight="700">ESP32-DevKitC-32E</text>
+  <text x="660" y="318" text-anchor="middle" font-size="12">Header 2×19 · flash via USB DevKit</text>
+  <text x="660" y="345" text-anchor="middle" font-size="11" fill="#276749">GPIO map locked (config.h v3.3)</text>
+
+  <rect x="500" y="395" width="150" height="60" fill="#e2e8f0" stroke="#718096" stroke-width="2" stroke-dasharray="5 3" rx="6"/>
+  <text x="575" y="420" text-anchor="middle" font-size="12" font-weight="700" fill="#718096">U11 CP2102</text>
+  <text x="575" y="440" text-anchor="middle" font-size="11" fill="#718096">DNP Fase 1</text>
+
+  <rect x="680" y="395" width="140" height="60" fill="#e2e8f0" stroke="#718096" stroke-width="2" stroke-dasharray="5 3" rx="6"/>
+  <text x="750" y="420" text-anchor="middle" font-size="12" font-weight="700" fill="#718096">J_USB</text>
+  <text x="750" y="440" text-anchor="middle" font-size="11" fill="#718096">spare / DNP</text>
+
+  <!-- Arrow 5V to DevKit -->
+  <line x1="400" y1="340" x2="500" y2="300" stroke="#c05621" stroke-width="2.5" marker-end="url(#arr)"/>
+  <text x="430" y="310" font-size="11" fill="#c05621" font-weight="700">+5V</text>
+
+  <!-- TC zone -->
+  <rect x="900" y="170" width="360" height="320" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2.5" rx="10"/>
+  <text x="1080" y="200" text-anchor="middle" font-size="16" font-weight="700" fill="#2b6cb0">ZONA THERMOCOUPLE</text>
+
+  <rect x="940" y="225" width="280" height="85" fill="#c6f6d5" stroke="#276749" stroke-width="2.5" rx="6"/>
+  <text x="1080" y="255" text-anchor="middle" font-size="14" font-weight="700">U4_MOD · BEAN TC MODULE</text>
+  <text x="1080" y="278" text-anchor="middle" font-size="12">MAX31856 breakout · CS=GPIO5</text>
+  <text x="1080" y="296" text-anchor="middle" font-size="11">SPI SCK/MOSI/MISO shared</text>
+
+  <rect x="940" y="330" width="280" height="85" fill="#c6f6d5" stroke="#276749" stroke-width="2.5" rx="6"/>
+  <text x="1080" y="360" text-anchor="middle" font-size="14" font-weight="700">U5_MOD · ENV TC MODULE</text>
+  <text x="1080" y="383" text-anchor="middle" font-size="12">MAX31856 breakout · CS=GPIO15</text>
+  <text x="1080" y="401" text-anchor="middle" font-size="11">H2A → J1/J2 → T+/T− modul</text>
+
+  <rect x="940" y="435" width="120" height="40" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2" rx="4"/>
+  <text x="1000" y="460" text-anchor="middle" font-size="12" font-weight="700">J1 Bean</text>
+  <rect x="1100" y="435" width="120" height="40" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2" rx="4"/>
+  <text x="1160" y="460" text-anchor="middle" font-size="12" font-weight="700">J2 Env</text>
+
+  <!-- Right connectors column -->
+  <rect x="1290" y="170" width="270" height="320" fill="#faf5ff" stroke="#6b46c1" stroke-width="2.5" rx="10"/>
+  <text x="1425" y="200" text-anchor="middle" font-size="15" font-weight="700" fill="#6b46c1">KE PANEL / FIELD</text>
+  <text x="1310" y="235" font-size="13">J_H1 → harness H1</text>
+  <text x="1310" y="260" font-size="12" fill="#4a5568">tombol · pot · Nextion</text>
+  <text x="1310" y="285" font-size="12" fill="#4a5568">E-Stop sense · RS485 wires</text>
+  <text x="1310" y="320" font-size="13">J3 RS485 terminal</text>
+  <text x="1310" y="350" font-size="13">J10 speaker / DFPlayer</text>
+  <text x="1310" y="390" font-size="13">J9 → kontrol ke IO</text>
+  <text x="1310" y="415" font-size="11" fill="#744210">GPIO13 heater · GPIO12 drum</text>
+  <text x="1310" y="435" font-size="11" fill="#744210">PWM exhaust · cool via PCF</text>
+
+  <!-- Bottom chips row -->
+  <rect x="40" y="520" width="1520" height="200" fill="#ffffff" stroke="#a0aec0" stroke-width="2" rx="10"/>
+  <text x="800" y="550" text-anchor="middle" font-size="16" font-weight="700">CHIP &amp; BLOK TETAP DI BOARD (bukan modul Fase 1)</text>
+
+  <rect x="70" y="575" width="170" height="110" fill="#feebc8" stroke="#c05621" stroke-width="2" rx="6"/>
+  <text x="155" y="610" text-anchor="middle" font-size="13" font-weight="700">U6 MAX3485</text>
+  <text x="155" y="635" text-anchor="middle" font-size="11">RS485 UART1</text>
+  <text x="155" y="655" text-anchor="middle" font-size="11">DE via PCF+Q6</text>
+
+  <rect x="270" y="575" width="170" height="110" fill="#feebc8" stroke="#c05621" stroke-width="2" rx="6"/>
+  <text x="355" y="610" text-anchor="middle" font-size="13" font-weight="700">U10 PCF8574</text>
+  <text x="355" y="635" text-anchor="middle" font-size="11">I2C 0x20</text>
+  <text x="355" y="655" text-anchor="middle" font-size="11">Cool + DE + BUSY</text>
+
+  <rect x="470" y="575" width="200" height="110" fill="#feebc8" stroke="#c05621" stroke-width="2" rx="6"/>
+  <text x="570" y="610" text-anchor="middle" font-size="13" font-weight="700">U7–U9 · U12 PC817</text>
+  <text x="570" y="635" text-anchor="middle" font-size="11">Opto tombol + E-Stop</text>
+  <text x="570" y="655" text-anchor="middle" font-size="11">dari J_H1 12V panel</text>
+
+  <rect x="700" y="575" width="180" height="110" fill="#c6f6d5" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="790" y="610" text-anchor="middle" font-size="13" font-weight="700">U13 DFPlayer</text>
+  <text x="790" y="635" text-anchor="middle" font-size="11">sudah seat header</text>
+  <text x="790" y="655" text-anchor="middle" font-size="11">TX = GPIO4</text>
+
+  <rect x="910" y="575" width="280" height="110" fill="#edf2f7" stroke="#4a5568" stroke-width="2" rx="6"/>
+  <text x="1050" y="605" text-anchor="middle" font-size="13" font-weight="700">GPIO RINGKAS → IO (J9)</text>
+  <text x="930" y="630" font-size="12">5 HEATER_EN (GPIO13) · 6 DRUM_EN (GPIO12)</text>
+  <text x="930" y="650" font-size="12">7 COOL_EN (PCF P3) · 8 EXHAUST_PWM (GPIO2)</text>
+  <text x="930" y="670" font-size="12">1 +12V in · 2/4 GND · 9 +5V sense</text>
+
+  <rect x="1220" y="575" width="300" height="110" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="1370" y="610" text-anchor="middle" font-size="13" font-weight="700" fill="#c53030">MAINTENANCE</text>
+  <text x="1240" y="638" font-size="12">Cabut modul rusak dari header</text>
+  <text x="1240" y="658" font-size="12">Ganti tanpa solder iron / reflow</text>
+  <text x="1240" y="678" font-size="12">Standoff nylon wajib (getaran)</text>
+
+  <!-- Footer -->
+  <text x="800" y="760" text-anchor="middle" font-size="14" font-weight="700">Aliran singkat</text>
+  <text x="800" y="790" text-anchor="middle" font-size="13">J9 +12V → U3 FIXED 5V → DevKit → SPI ke U4/U5 · UART/GPIO ke opto · RS485 · DFPlayer · J9 control ke IO</text>
+  <text x="800" y="830" text-anchor="middle" font-size="12" fill="#718096">Sumber: D01E_Module_Optimization_Fase1.md v1.1 · D01E_Electrical_System_Design.md v3.7 · KiCad ERC clean</text>
+  <text x="800" y="860" text-anchor="middle" font-size="12" fill="#c53030">Ini schematic BLOK untuk teknisi — bukan Gerber. Gerber layout seats masih harus di-regen sebelum fab.</text>
+
+  <!-- Note box -->
+  <rect x="40" y="900" width="1520" height="160" fill="#fffbeb" stroke="#d69e2e" stroke-width="2" rx="8"/>
+  <text x="70" y="940" font-size="15" font-weight="700">Pin seat U3 FIXED (3 pin)</text>
+  <text x="70" y="970" font-size="13">1 = VIN (+12V) · 2 = GND · 3 = VOUT (+5V_SYS) · TIDAK ADA pad ADJ</text>
+  <text x="70" y="1005" font-size="15" font-weight="700">Pin seat MAX31856 (8 pin Adafruit-compatible)</text>
+  <text x="70" y="1035" font-size="13">1 VIN · 2 3Vo(NC) · 3 GND · 4 DO(MISO) · 5 CS · 6 CLK · 7 DIN(MOSI) · 8 DRDY(NC)</text>
+</svg>

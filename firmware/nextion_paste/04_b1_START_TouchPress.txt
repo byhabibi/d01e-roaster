@@ -1,0 +1,16 @@
+roastEn=1
+tm0.en=1
+sys4=185*255/250
+add 28,0,sys4
+sys4=210*255/250
+add 28,1,sys4
+sys4=8*255/30
+add 28,2,sys4
+printh A5
+printh 01
+printh FF
+printh FF
+printh FF
+vis b1,0
+vis b2,1
+vis b3,0

@@ -1,0 +1,17 @@
+// Panel FISIK + ESP32 — tanpa tm0 (ESP32 update t18–t22)
+// Tempel di bt0 → Touch Release
+if(bt0.val==1)
+{
+  printh A5
+  printh 01
+  printh FF
+  printh FF
+  printh FF
+}else
+{
+  printh A5
+  printh 02
+  printh FF
+  printh FF
+  printh FF
+}

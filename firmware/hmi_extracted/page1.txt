@@ -1,0 +1,74 @@
+Page page1
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Locked             : no
+        Swide up page ID   : 0
+        Swide down page ID : 0
+        Swide left page ID : 0
+        Swide right page ID: 0
+    
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p1
+    Attributes
+        ID               : 2
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p2
+    Attributes
+        ID               : 3
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p3
+    Attributes
+        ID               : 5
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p4
+    Attributes
+        ID               : 7
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Button b0
+    Attributes
+        ID               : 4
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            page page7
+        
+Button b1
+    Attributes
+        ID               : 6
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            page page2
+        

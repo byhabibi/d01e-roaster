@@ -1,0 +1,26 @@
+// tm0 — simulator F5 (tim=1000, en=0)
+// JANGAN pakai bt7/bt8.txt — angka muncul di atas tombol!
+// Pinjam t21+t22 sebentar untuk covx, lalu isi ulang RoR
+//
+if(roastEn==1)
+{
+  sys0++
+  sys1=sys0/60
+  sys2=sys0%60
+  covx sys1,t21.txt,2,0
+  covx sys2,t22.txt,2,0
+  t18.txt=t21.txt+":"+t22.txt
+  t19.txt="185"
+  t20.txt="210"
+  t21.txt="+8"
+  t22.txt="+6"
+  if(sys2==0)
+  {
+    sys4=185*255/250
+    add s0.id,0,sys4
+    sys4=210*255/250
+    add s0.id,1,sys4
+    sys4=8*255/30
+    add s0.id,2,sys4
+  }
+}

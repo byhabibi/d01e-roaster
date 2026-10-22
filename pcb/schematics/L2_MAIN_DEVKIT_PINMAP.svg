@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 720" font-family="Segoe UI, Consolas, monospace">
+  <rect width="1600" height="720" fill="#faf9f7"/>
+  <text x="800" y="36" text-anchor="middle" font-size="24" font-weight="700">L2 · MAIN — DevKitC pin → NET → tujuan (untuk layout PCB)</text>
+  <text x="800" y="60" text-anchor="middle" font-size="13" fill="#4a5568">USB DevKit di ATAS (−Y) · Footprint D01E:MODULE_ESP32_DEVKITC · pad L1–L19 / R1–R19</text>
+
+  <rect x="50" y="80" width="340" height="50" fill="#c6f6d5" stroke="#276749" stroke-width="2" rx="4"/>
+  <text x="220" y="100" text-anchor="middle" font-size="13" font-weight="700">KIRI (L) — USB di atas</text>
+  <text x="220" y="118" text-anchor="middle" font-size="11">Pad | GPIO | NET | ke mana</text>
+
+  <rect x="820" y="80" width="340" height="50" fill="#c6f6d5" stroke="#276749" stroke-width="2" rx="4"/>
+  <text x="990" y="100" text-anchor="middle" font-size="13" font-weight="700">KANAN (R) — USB di atas</text>
+  <text x="990" y="118" text-anchor="middle" font-size="11">Pad | GPIO | NET | ke mana</text>
+
+  <!-- DevKit outline center -->
+  <rect x="450" y="200" width="280" height="380" fill="#edf2f7" stroke="#276749" stroke-width="3" rx="8"/>
+  <text x="590" y="240" text-anchor="middle" font-size="16" font-weight="700">U1_DEVKIT</text>
+  <text x="590" y="268" text-anchor="middle" font-size="14">ESP32-DevKitC-32E</text>
+  <text x="590" y="300" text-anchor="middle" font-size="12">Female header 2×19</text>
+  <text x="590" y="325" text-anchor="middle" font-size="12">pitch 2.54 mm</text>
+  <text x="590" y="360" text-anchor="middle" font-size="12" fill="#c53030" font-weight="700">USB ↑ atas</text>
+  <text x="590" y="400" text-anchor="middle" font-size="11">Track: short SPI ke U4/U5</text>
+  <text x="590" y="425" text-anchor="middle" font-size="11">Power: L19 dari U3</text>
+  <text x="590" y="450" text-anchor="middle" font-size="11">GND: L14,R1,R7 → zone</text>
+  <text x="590" y="490" text-anchor="middle" font-size="11" fill="#744210">JANGAN route L1 3V3</text>
+  <text x="590" y="515" text-anchor="middle" font-size="11" fill="#744210">ke board +3V3_ANA</text>
+  <text x="590" y="550" text-anchor="middle" font-size="11">Flash: USB DevKit</text>
+  <text x="590" y="570" text-anchor="middle" font-size="11">(U11 DNP)</text>
+
+  <line x1="390" y1="390" x2="450" y2="390" stroke="#276749" stroke-width="2"/>
+  <line x1="730" y1="390" x2="820" y2="390" stroke="#276749" stroke-width="2"/>
+
+  
+  <rect x="50" y="160" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="56" y="175" font-size="11" font-weight="700">L1</text>
+  <text x="102" y="175" font-size="10" fill="#4a5568">3V3</text>
+  <text x="180" y="175" font-size="11" font-weight="700">NC</text>
+  <text x="280" y="175" font-size="10" fill="#2b6cb0">JANGAN ke rail board</text>
+
+  <rect x="50" y="184" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="56" y="199" font-size="11" font-weight="700">L2</text>
+  <text x="102" y="199" font-size="10" fill="#4a5568">EN</text>
+  <text x="180" y="199" font-size="11" font-weight="700">NC</text>
+  <text x="280" y="199" font-size="10" fill="#2b6cb0">biarkan / pull on DevKit</text>
+
+  <rect x="50" y="208" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="56" y="223" font-size="11" font-weight="700">L3</text>
+  <text x="102" y="223" font-size="10" fill="#4a5568">GPIO36</text>
+  <text x="180" y="223" font-size="11" font-weight="700">NC</text>
+  <text x="280" y="223" font-size="10" fill="#2b6cb0">—</text>
+
+  <rect x="50" y="232" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="56" y="247" font-size="11" font-weight="700">L4</text>
+  <text x="102" y="247" font-size="10" fill="#4a5568">GPIO39</text>
+  <text x="180" y="247" font-size="11" font-weight="700">NC</text>
+  <text x="280" y="247" font-size="10" fill="#2b6cb0">—</text>
+
+  <rect x="50" y="256" width="340" height="22" fill="#ebf8ff" stroke="#a0aec0"/>
+  <text x="56" y="271" font-size="11" font-weight="700">L5</text>
+  <text x="102" y="271" font-size="10" fill="#4a5568">GPIO34</text>
+  <text x="180" y="271" font-size="11" font-weight="700">POT_AIR</text>
+  <text x="280" y="271" font-size="10" fill="#2b6cb0">→ J_H1 pin9</text>
+
+  <rect x="50" y="280" width="340" height="22" fill="#ebf8ff" stroke="#a0aec0"/>
+  <text x="56" y="295" font-size="11" font-weight="700">L6</text>
+  <text x="102" y="295" font-size="10" fill="#4a5568">GPIO35</text>
+  <text x="180" y="295" font-size="11" font-weight="700">NTC_ADC</text>
+  <text x="280" y="295" font-size="10" fill="#2b6cb0">→ NTC1</text>
+
+  <rect x="50" y="304" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="56" y="319" font-size="11" font-weight="700">L7</text>
+  <text x="102" y="319" font-size="10" fill="#4a5568">GPIO32</text>
+  <text x="180" y="319" font-size="11" font-weight="700">UART2_RX</text>
+  <text x="280" y="319" font-size="10" fill="#2b6cb0">→ J_H1 pin12 (Nextion)</text>
+
+  <rect x="50" y="328" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="56" y="343" font-size="11" font-weight="700">L8</text>
+  <text x="102" y="343" font-size="10" fill="#4a5568">GPIO33</text>
+  <text x="180" y="343" font-size="11" font-weight="700">UART2_TX</text>
+  <text x="280" y="343" font-size="10" fill="#2b6cb0">→ J_H1 pin13 (Nextion)</text>
+
+  <rect x="50" y="352" width="340" height="22" fill="#ebf8ff" stroke="#a0aec0"/>
+  <text x="56" y="367" font-size="11" font-weight="700">L9</text>
+  <text x="102" y="367" font-size="10" fill="#4a5568">GPIO25</text>
+  <text x="180" y="367" font-size="11" font-weight="700">BTN_DRUM</text>
+  <text x="280" y="367" font-size="10" fill="#2b6cb0">← opto U7 out</text>
+
+  <rect x="50" y="376" width="340" height="22" fill="#ebf8ff" stroke="#a0aec0"/>
+  <text x="56" y="391" font-size="11" font-weight="700">L10</text>
+  <text x="102" y="391" font-size="10" fill="#4a5568">GPIO26</text>
+  <text x="180" y="391" font-size="11" font-weight="700">BTN_HEATER</text>
+  <text x="280" y="391" font-size="10" fill="#2b6cb0">← opto U8 out</text>
+
+  <rect x="50" y="400" width="340" height="22" fill="#ebf8ff" stroke="#a0aec0"/>
+  <text x="56" y="415" font-size="11" font-weight="700">L11</text>
+  <text x="102" y="415" font-size="10" fill="#4a5568">GPIO27</text>
+  <text x="180" y="415" font-size="11" font-weight="700">BTN_AIR</text>
+  <text x="280" y="415" font-size="10" fill="#2b6cb0">← opto U9 out</text>
+
+  <rect x="50" y="424" width="340" height="22" fill="#ebf8ff" stroke="#a0aec0"/>
+  <text x="56" y="439" font-size="11" font-weight="700">L12</text>
+  <text x="102" y="439" font-size="10" fill="#4a5568">GPIO14</text>
+  <text x="180" y="439" font-size="11" font-weight="700">ESTOP_SENSE</text>
+  <text x="280" y="439" font-size="10" fill="#2b6cb0">← opto U12 out</text>
+
+  <rect x="50" y="448" width="340" height="22" fill="#f0fff4" stroke="#a0aec0"/>
+  <text x="56" y="463" font-size="11" font-weight="700">L13</text>
+  <text x="102" y="463" font-size="10" fill="#4a5568">GPIO12</text>
+  <text x="180" y="463" font-size="11" font-weight="700">DRUM_EN</text>
+  <text x="280" y="463" font-size="10" fill="#2b6cb0">→ J9 pin6</text>
+
+  <rect x="50" y="472" width="340" height="22" fill="#e2e8f0" stroke="#a0aec0"/>
+  <text x="56" y="487" font-size="11" font-weight="700">L14</text>
+  <text x="102" y="487" font-size="10" fill="#4a5568">GND</text>
+  <text x="180" y="487" font-size="11" font-weight="700">GND</text>
+  <text x="280" y="487" font-size="10" fill="#2b6cb0">plane GND</text>
+
+  <rect x="50" y="496" width="340" height="22" fill="#f0fff4" stroke="#a0aec0"/>
+  <text x="56" y="511" font-size="11" font-weight="700">L15</text>
+  <text x="102" y="511" font-size="10" fill="#4a5568">GPIO13</text>
+  <text x="180" y="511" font-size="11" font-weight="700">HEATER_EN</text>
+  <text x="280" y="511" font-size="10" fill="#2b6cb0">→ J9 pin5</text>
+
+  <rect x="50" y="520" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="56" y="535" font-size="11" font-weight="700">L16</text>
+  <text x="102" y="535" font-size="10" fill="#4a5568">GPIO9</text>
+  <text x="180" y="535" font-size="11" font-weight="700">NC</text>
+  <text x="280" y="535" font-size="10" fill="#2b6cb0">flash — jangan pakai</text>
+
+  <rect x="50" y="544" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="56" y="559" font-size="11" font-weight="700">L17</text>
+  <text x="102" y="559" font-size="10" fill="#4a5568">GPIO10</text>
+  <text x="180" y="559" font-size="11" font-weight="700">NC</text>
+  <text x="280" y="559" font-size="10" fill="#2b6cb0">flash — jangan pakai</text>
+
+  <rect x="50" y="568" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="56" y="583" font-size="11" font-weight="700">L18</text>
+  <text x="102" y="583" font-size="10" fill="#4a5568">GPIO11</text>
+  <text x="180" y="583" font-size="11" font-weight="700">NC</text>
+  <text x="280" y="583" font-size="10" fill="#2b6cb0">flash — jangan pakai</text>
+
+  <rect x="50" y="592" width="340" height="22" fill="#fef3c7" stroke="#a0aec0"/>
+  <text x="56" y="607" font-size="11" font-weight="700">L19</text>
+  <text x="102" y="607" font-size="10" fill="#4a5568">5V</text>
+  <text x="180" y="607" font-size="11" font-weight="700">+5V_SYS</text>
+  <text x="280" y="607" font-size="10" fill="#2b6cb0">← U3 VOUT</text>
+  
+  <rect x="820" y="160" width="340" height="22" fill="#e2e8f0" stroke="#a0aec0"/>
+  <text x="826" y="175" font-size="11" font-weight="700">R1</text>
+  <text x="872" y="175" font-size="10" fill="#4a5568">GND</text>
+  <text x="950" y="175" font-size="11" font-weight="700">GND</text>
+  <text x="1050" y="175" font-size="10" fill="#2b6cb0">plane GND</text>
+
+  <rect x="820" y="184" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="199" font-size="11" font-weight="700">R2</text>
+  <text x="872" y="199" font-size="10" fill="#4a5568">GPIO23</text>
+  <text x="950" y="199" font-size="11" font-weight="700">SPI_MOSI</text>
+  <text x="1050" y="199" font-size="10" fill="#2b6cb0">→ U4/U5 pad7</text>
+
+  <rect x="820" y="208" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="223" font-size="11" font-weight="700">R3</text>
+  <text x="872" y="223" font-size="10" fill="#4a5568">GPIO22</text>
+  <text x="950" y="223" font-size="11" font-weight="700">I2C_SCL</text>
+  <text x="1050" y="223" font-size="10" fill="#2b6cb0">→ U10 pin10</text>
+
+  <rect x="820" y="232" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="247" font-size="11" font-weight="700">R4</text>
+  <text x="872" y="247" font-size="10" fill="#4a5568">TXD0</text>
+  <text x="950" y="247" font-size="11" font-weight="700">UART0_TX</text>
+  <text x="1050" y="247" font-size="10" fill="#2b6cb0">DevKit USB only</text>
+
+  <rect x="820" y="256" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="271" font-size="11" font-weight="700">R5</text>
+  <text x="872" y="271" font-size="10" fill="#4a5568">RXD0</text>
+  <text x="950" y="271" font-size="11" font-weight="700">UART0_RX</text>
+  <text x="1050" y="271" font-size="10" fill="#2b6cb0">DevKit USB only</text>
+
+  <rect x="820" y="280" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="295" font-size="11" font-weight="700">R6</text>
+  <text x="872" y="295" font-size="10" fill="#4a5568">GPIO21</text>
+  <text x="950" y="295" font-size="11" font-weight="700">I2C_SDA</text>
+  <text x="1050" y="295" font-size="10" fill="#2b6cb0">→ U10 pin9</text>
+
+  <rect x="820" y="304" width="340" height="22" fill="#e2e8f0" stroke="#a0aec0"/>
+  <text x="826" y="319" font-size="11" font-weight="700">R7</text>
+  <text x="872" y="319" font-size="10" fill="#4a5568">GND</text>
+  <text x="950" y="319" font-size="11" font-weight="700">GND</text>
+  <text x="1050" y="319" font-size="10" fill="#2b6cb0">plane GND</text>
+
+  <rect x="820" y="328" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="343" font-size="11" font-weight="700">R8</text>
+  <text x="872" y="343" font-size="10" fill="#4a5568">GPIO19</text>
+  <text x="950" y="343" font-size="11" font-weight="700">SPI_MISO</text>
+  <text x="1050" y="343" font-size="10" fill="#2b6cb0">← U4/U5 pad4</text>
+
+  <rect x="820" y="352" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="367" font-size="11" font-weight="700">R9</text>
+  <text x="872" y="367" font-size="10" fill="#4a5568">GPIO18</text>
+  <text x="950" y="367" font-size="11" font-weight="700">SPI_SCK</text>
+  <text x="1050" y="367" font-size="10" fill="#2b6cb0">→ U4/U5 pad6</text>
+
+  <rect x="820" y="376" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="391" font-size="11" font-weight="700">R10</text>
+  <text x="872" y="391" font-size="10" fill="#4a5568">GPIO5</text>
+  <text x="950" y="391" font-size="11" font-weight="700">SPI_CS_BEAN</text>
+  <text x="1050" y="391" font-size="10" fill="#2b6cb0">→ U4 pad5</text>
+
+  <rect x="820" y="400" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="415" font-size="11" font-weight="700">R11</text>
+  <text x="872" y="415" font-size="10" fill="#4a5568">GPIO17</text>
+  <text x="950" y="415" font-size="11" font-weight="700">UART1_TX</text>
+  <text x="1050" y="415" font-size="10" fill="#2b6cb0">→ U6 pin7</text>
+
+  <rect x="820" y="424" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="439" font-size="11" font-weight="700">R12</text>
+  <text x="872" y="439" font-size="10" fill="#4a5568">GPIO16</text>
+  <text x="950" y="439" font-size="11" font-weight="700">UART1_RX</text>
+  <text x="1050" y="439" font-size="10" fill="#2b6cb0">← U6 pin6</text>
+
+  <rect x="820" y="448" width="340" height="22" fill="#f0fff4" stroke="#a0aec0"/>
+  <text x="826" y="463" font-size="11" font-weight="700">R13</text>
+  <text x="872" y="463" font-size="10" fill="#4a5568">GPIO4</text>
+  <text x="950" y="463" font-size="11" font-weight="700">DFPLAYER_TX</text>
+  <text x="1050" y="463" font-size="10" fill="#2b6cb0">→ U13 pin2</text>
+
+  <rect x="820" y="472" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="826" y="487" font-size="11" font-weight="700">R14</text>
+  <text x="872" y="487" font-size="10" fill="#4a5568">GPIO0</text>
+  <text x="950" y="487" font-size="11" font-weight="700">NC</text>
+  <text x="1050" y="487" font-size="10" fill="#2b6cb0">boot — jangan ikat</text>
+
+  <rect x="820" y="496" width="340" height="22" fill="#f0fff4" stroke="#a0aec0"/>
+  <text x="826" y="511" font-size="11" font-weight="700">R15</text>
+  <text x="872" y="511" font-size="10" fill="#4a5568">GPIO2</text>
+  <text x="950" y="511" font-size="11" font-weight="700">EXHAUST_PWM</text>
+  <text x="1050" y="511" font-size="10" fill="#2b6cb0">→ J9 pin8</text>
+
+  <rect x="820" y="520" width="340" height="22" fill="#e6fffa" stroke="#a0aec0"/>
+  <text x="826" y="535" font-size="11" font-weight="700">R16</text>
+  <text x="872" y="535" font-size="10" fill="#4a5568">GPIO15</text>
+  <text x="950" y="535" font-size="11" font-weight="700">SPI_CS_ENV</text>
+  <text x="1050" y="535" font-size="10" fill="#2b6cb0">→ U5 pad5</text>
+
+  <rect x="820" y="544" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="826" y="559" font-size="11" font-weight="700">R17</text>
+  <text x="872" y="559" font-size="10" fill="#4a5568">GPIO8</text>
+  <text x="950" y="559" font-size="11" font-weight="700">NC</text>
+  <text x="1050" y="559" font-size="10" fill="#2b6cb0">flash — jangan pakai</text>
+
+  <rect x="820" y="568" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="826" y="583" font-size="11" font-weight="700">R18</text>
+  <text x="872" y="583" font-size="10" fill="#4a5568">GPIO7</text>
+  <text x="950" y="583" font-size="11" font-weight="700">NC</text>
+  <text x="1050" y="583" font-size="10" fill="#2b6cb0">flash — jangan pakai</text>
+
+  <rect x="820" y="592" width="340" height="22" fill="#f7fafc" stroke="#a0aec0"/>
+  <text x="826" y="607" font-size="11" font-weight="700">R19</text>
+  <text x="872" y="607" font-size="10" fill="#4a5568">GPIO6</text>
+  <text x="950" y="607" font-size="11" font-weight="700">NC</text>
+  <text x="1050" y="607" font-size="10" fill="#2b6cb0">flash — jangan pakai</text>
+
+  <text x="800" y="650" text-anchor="middle" font-size="12" fill="#4a5568">Warna: kuning=power · abu=GND · teal=bus · biru=input · hijau=output kontrol · putih=NC</text>
+  <text x="800" y="680" text-anchor="middle" font-size="12" font-weight="700">Kerja layout: untuk tiap baris NON-NC, buat track pad DevKit → pad tujuan di kolom kanan</text>
+  <text x="800" y="705" text-anchor="middle" font-size="11" fill="#718096">Sumber kebenaran: scripts/pcb_nets.py _ESP32_DEVKIT · D01E_Module_Optimization_Fase1.md</text>
+</svg>

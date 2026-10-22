@@ -1,0 +1,10 @@
+printh A5
+printh 0E
+printh FF
+printh FF
+printh FF
+vis p8,0
+vis b7,0
+vis b8,0
+c0.val=1
+c1.val=0

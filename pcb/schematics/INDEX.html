@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8"/>
+<title>D01E Schematics L0 → L3 Industrial</title>
+<style>
+  body{font-family:"Segoe UI",Arial,sans-serif;margin:24px;background:#f7fafc;color:#1a202c;max-width:1100px}
+  h1{margin:0 0 .25rem}
+  .sub{color:#4a5568;margin-bottom:1rem}
+  .path{background:#edf2f7;padding:14px 18px;border-radius:10px;margin-bottom:1.2rem}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  a.card{display:block;padding:12px 14px;border-radius:10px;border:2px solid #cbd5e0;background:#fff;text-decoration:none;color:inherit}
+  a.card:hover{border-color:#2b6cb0}
+  a.l1{border-color:#68d391}
+  a.l2{border-color:#4299e1;background:#ebf8ff}
+  a.l3{border-color:#ed8936;background:#fffaf0}
+  .tag{font-size:.68rem;font-weight:700;color:#718096;text-transform:uppercase}
+  h2{font-size:1rem;margin:.3rem 0}
+  p{margin:0;font-size:.88rem;color:#4a5568}
+  .warn{margin-top:1.2rem;padding:12px;background:#fff5f5;border:1px solid #fc8181;border-radius:8px}
+</style>
+</head>
+<body>
+  <h1>D01E — Junior PCB: L0 → L3 (kelas industri)</h1>
+  <p class="sub">Semua SVG · tanpa PDF · buka di browser</p>
+  <div class="path">
+    <strong>Urutan:</strong> L0 blueprint → L1 zona → L2 pad → <strong>L3 aturan produksi (layer/track/via/keepout/GND)</strong> → KiCad DRC 0 → Gerber baru
+  </div>
+  <h3>L0 Engineering Blueprint</h3>
+  <div class="grid">
+    <a class="card l1" href="D01E_ENGINEERING_BLUEPRINT.svg" target="_blank" style="border-color:#805ad5;background:#faf5ff"><div class="tag">L0 · BLUEPRINT</div><h2>System Architecture</h2><p>Power · control · SPI/I2C/UART · J9 · NET</p></a>
+  </div>
+  <h3>L1 Konsep</h3>
+  <div class="grid">
+    <a class="card l1" href="SCHEMATIC_PCB01_MAIN_CTRL.svg" target="_blank"><div class="tag">L1</div><h2>MAIN blok</h2><p>Zona module seats</p></a>
+    <a class="card l1" href="SCHEMATIC_PCB02_IO_PWR.svg" target="_blank"><div class="tag">L1</div><h2>IO blok</h2><p>PSU K1 SSR MOSFET</p></a>
+  </div>
+  <h3>L2 Layout</h3>
+  <div class="grid">
+    <a class="card l2" href="L2_MAIN_DEVKIT_PINMAP.svg" target="_blank"><div class="tag">L2</div><h2>DevKit pin → net</h2><p>L/R pad map</p></a>
+    <a class="card l2" href="L2_MAIN_NETLIST_PATHS.svg" target="_blank"><div class="tag">L2</div><h2>Checklist pad→pad</h2><p>Route list</p></a>
+    <a class="card l2" href="L2_MAIN_PLACEMENT_ZONES.svg" target="_blank"><div class="tag">L2</div><h2>Placement zones</h2><p>Di mana komponen</p></a>
+    <a class="card l2" href="L2_IO_NETLIST_PATHS.svg" target="_blank"><div class="tag">L2</div><h2>IO pad→pad</h2><p>AC/PSU/beban</p></a>
+  </div>
+  <h3>L3 Manufacturing (wajib industri)</h3>
+  <div class="grid">
+    <a class="card l3" href="L3_01_NET_DEFINITION.svg" target="_blank"><div class="tag">L3 · 1</div><h2>NET DEFINITION</h2><p>Type · V · Dir · Active</p></a>
+    <a class="card l3" href="L3_02_DESIGN_RULES.svg" target="_blank"><div class="tag">L3 · 2</div><h2>LAYER · TRACK · VIA</h2><p>Stackup · lebar · via</p></a>
+    <a class="card l3" href="L3_03_ROUTING_PRIORITY.svg" target="_blank"><div class="tag">L3 · 3</div><h2>ROUTING PRIORITY</h2><p>Urutan 1→8</p></a>
+    <a class="card l3" href="L3_04_DO_NOT.svg" target="_blank"><div class="tag">L3 · 4</div><h2>DO NOT / SEJAJAR</h2><p>Larangan keras</p></a>
+    <a class="card l3" href="L3_05_FOOTPRINT_ORIENTATION.svg" target="_blank"><div class="tag">L3 · 5</div><h2>ORIENTATION</h2><p>USB · Pin1 · latch</p></a>
+    <a class="card l3" href="L3_06_ASSEMBLY_CONSTRAINTS.svg" target="_blank"><div class="tag">L3 · 6</div><h2>KEEPOUT + ASSEMBLY</h2><p>Antena 15 mm · buck</p></a>
+    <a class="card l3" href="L3_11_COMPONENT_PROXIMITY.svg" target="_blank"><div class="tag">L3 · 11</div><h2>PROXIMITY</h2><p>Harus dekat · boleh jauh</p></a>
+    <a class="card l3" href="L3_12_GND_STRATEGY.svg" target="_blank"><div class="tag">L3 · 12</div><h2>GND STRATEGY</h2><p>Pour · PE · analog</p></a>
+    <a class="card l3" href="L3_13_FINAL_ROUTE_CHECKLIST.svg" target="_blank"><div class="tag">L3 · 13</div><h2>FINAL CHECKLIST</h2><p>12V→…→Silk</p></a>
+    <a class="card l3" href="L3_07_GERBER_CHECKLIST.svg" target="_blank"><div class="tag">L3 · 7</div><h2>GERBER CHECKLIST</h2><p>Sebelum zip pabrik</p></a>
+    <a class="card l3" href="L3_08_FAB_NOTES.svg" target="_blank"><div class="tag">L3 · 8</div><h2>FAB NOTES</h2><p>FR4 1.6 1oz HASL</p></a>
+    <a class="card l3" href="L3_09_BOM_LOCK.svg" target="_blank"><div class="tag">L3 · 9</div><h2>BOM LOCK</h2><p>FIXED 5V · LC1D25JD</p></a>
+    <a class="card l3" href="L3_10_COMMON_MISTAKES.svg" target="_blank"><div class="tag">L3 · 10</div><h2>COMMON MISTAKES</h2><p>SALAH vs BENAR</p></a>
+  </div>
+  <div class="warn"><strong>Net levels terkunci firmware:</strong> HEATER/DRUM Active HIGH · COOL Active LOW · tombol Active LOW · ESTOP HIGH=unsafe.
+  <br/><strong>Route order:</strong> +12V → +5V → GND → SPI → TC → UART → GPIO → Silk (L3_13).
+  <br/>Jangan kirim Gerber WROOM lama.</div>
+</body>
+</html>

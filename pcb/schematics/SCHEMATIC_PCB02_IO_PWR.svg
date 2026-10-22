@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1100" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1600" height="1100" fill="#faf9f7"/>
+  <defs>
+    <marker id="arr2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2d3748"/>
+    </marker>
+  </defs>
+
+  <text x="800" y="42" text-anchor="middle" font-size="28" font-weight="700" fill="#1a202c">PCB-02 · D01E-IO-PWR</text>
+  <text x="800" y="72" text-anchor="middle" font-size="15" fill="#4a5568">Schematic blok industrial — Fase 1 LOCKED (tidak diganti ke modul) · safety heater</text>
+
+  <rect x="40" y="95" width="1520" height="48" fill="#fff5f5" stroke="#fc8181" rx="6"/>
+  <text x="800" y="125" text-anchor="middle" font-size="14" font-weight="700" fill="#c53030">Fase 1: board ini TETAP diskrit industrial — PSU / K1 / SSR / MOSFET / fuse · jangan diutak-atik</text>
+
+  <!-- AC path -->
+  <rect x="40" y="170" width="700" height="280" fill="#fff5f5" stroke="#c53030" stroke-width="2.5" rx="10"/>
+  <text x="390" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#c53030">JALUR AC 220V · HEATER</text>
+
+  <rect x="70" y="230" width="100" height="60" fill="#fed7d7" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="120" y="255" text-anchor="middle" font-size="12" font-weight="700">F4 MCB</text>
+  <text x="120" y="275" text-anchor="middle" font-size="11">25A</text>
+
+  <line x1="170" y1="260" x2="210" y2="260" stroke="#2d3748" stroke-width="2.5" marker-end="url(#arr2)"/>
+
+  <rect x="210" y="230" width="100" height="60" fill="#fed7d7" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="260" y="255" text-anchor="middle" font-size="12" font-weight="700">F1</text>
+  <text x="260" y="275" text-anchor="middle" font-size="11">fuse 25A</text>
+
+  <line x1="310" y1="260" x2="350" y2="260" stroke="#2d3748" stroke-width="2.5" marker-end="url(#arr2)"/>
+
+  <rect x="350" y="220" width="130" height="80" fill="#feb2b2" stroke="#9b2c2c" stroke-width="2.5" rx="6"/>
+  <text x="415" y="250" text-anchor="middle" font-size="13" font-weight="700">K1</text>
+  <text x="415" y="270" text-anchor="middle" font-size="11">LC1D25JD</text>
+  <text x="415" y="288" text-anchor="middle" font-size="10">contactor 25A</text>
+
+  <line x1="480" y1="260" x2="520" y2="260" stroke="#2d3748" stroke-width="2.5" marker-end="url(#arr2)"/>
+
+  <rect x="520" y="220" width="130" height="80" fill="#feb2b2" stroke="#9b2c2c" stroke-width="2.5" rx="6"/>
+  <text x="585" y="250" text-anchor="middle" font-size="13" font-weight="700">SSR1</text>
+  <text x="585" y="270" text-anchor="middle" font-size="11">D2440 + HS1</text>
+  <text x="585" y="288" text-anchor="middle" font-size="10">heater switch</text>
+
+  <line x1="650" y1="260" x2="690" y2="260" stroke="#2d3748" stroke-width="2.5" marker-end="url(#arr2)"/>
+  <text x="700" y="255" font-size="12" font-weight="700">J5 →</text>
+  <text x="700" y="275" font-size="11">heater L</text>
+
+  <text x="70" y="340" font-size="13" font-weight="700">Driver coil + SSR:</text>
+  <rect x="70" y="355" width="200" height="70" fill="#feebc8" stroke="#c05621" stroke-width="2" rx="6"/>
+  <text x="170" y="385" text-anchor="middle" font-size="13" font-weight="700">Q_K1 IRLZ44N</text>
+  <text x="170" y="408" text-anchor="middle" font-size="11">+ D_K1 flyback</text>
+
+  <text x="300" y="385" font-size="12">← HEATER_EN dari MAIN (J9 pin5 / GPIO13)</text>
+  <text x="300" y="410" font-size="12" fill="#c53030">E-Stop NC#2 di jalur heater 12V (H3) — hardware cut</text>
+
+  <!-- PSU path -->
+  <rect x="780" y="170" width="780" height="280" fill="#fffaf0" stroke="#dd6b20" stroke-width="2.5" rx="10"/>
+  <text x="1170" y="205" text-anchor="middle" font-size="16" font-weight="700" fill="#c05621">JALUR PSU 12V DC</text>
+
+  <rect x="820" y="235" width="120" height="70" fill="#feebc8" stroke="#c05621" stroke-width="2" rx="6"/>
+  <text x="880" y="265" text-anchor="middle" font-size="12" font-weight="700">EMI1</text>
+  <text x="880" y="285" text-anchor="middle" font-size="11">FN2070 · F2</text>
+
+  <line x1="940" y1="270" x2="980" y2="270" stroke="#2d3748" stroke-width="2.5" marker-end="url(#arr2)"/>
+
+  <rect x="980" y="225" width="180" height="90" fill="#fbd38d" stroke="#c05621" stroke-width="2.5" rx="6"/>
+  <text x="1070" y="258" text-anchor="middle" font-size="14" font-weight="700">PSU1</text>
+  <text x="1070" y="280" text-anchor="middle" font-size="12">LRS-150-12</text>
+  <text x="1070" y="300" text-anchor="middle" font-size="11">12V 12.5A</text>
+
+  <line x1="1160" y1="270" x2="1200" y2="270" stroke="#2d3748" stroke-width="2.5" marker-end="url(#arr2)"/>
+
+  <rect x="1200" y="235" width="140" height="70" fill="#feebc8" stroke="#c05621" stroke-width="2" rx="6"/>
+  <text x="1270" y="265" text-anchor="middle" font-size="12" font-weight="700">F3 10A</text>
+  <text x="1270" y="285" text-anchor="middle" font-size="11">bus 12V</text>
+
+  <text x="820" y="350" font-size="13" font-weight="700">Dari PSU +12V juga ke:</text>
+  <text x="820" y="375" font-size="13">• J9 pin1 → MAIN U3_MOD FIXED 5V VIN</text>
+  <text x="820" y="400" font-size="13">• J4 panel lampu 12V · bus drum/fan (via fuse)</text>
+  <text x="820" y="425" font-size="13">• E-Stop NC#1 memutus AC ke PSU (H3) — safety</text>
+
+  <!-- DC loads -->
+  <rect x="40" y="480" width="1100" height="280" fill="#f0fff4" stroke="#276749" stroke-width="2.5" rx="10"/>
+  <text x="590" y="515" text-anchor="middle" font-size="16" font-weight="700" fill="#276749">BEBAN 12V DC (MOSFET di board)</text>
+
+  <rect x="70" y="545" width="300" height="170" fill="#c6f6d5" stroke="#276749" stroke-width="2" rx="8"/>
+  <text x="220" y="580" text-anchor="middle" font-size="14" font-weight="700">DRUM</text>
+  <text x="90" y="610" font-size="12">Q2 IRLB8743 + U20 TC4427</text>
+  <text x="90" y="635" font-size="12">F_DRUM 7.5A · D2 flyback</text>
+  <text x="90" y="660" font-size="12">In: DRUM_EN J9 pin6 (GPIO12)</text>
+  <text x="90" y="690" font-size="12" font-weight="700">Out: J6 → H2B drum motor</text>
+
+  <rect x="400" y="545" width="300" height="170" fill="#c6f6d5" stroke="#276749" stroke-width="2" rx="8"/>
+  <text x="550" y="580" text-anchor="middle" font-size="14" font-weight="700">COOLING ×2</text>
+  <text x="420" y="610" font-size="12">Q3 SI2302 + Q7 BC847 buffer</text>
+  <text x="420" y="635" font-size="12">In: COOL_EN J9 pin7 (PCF P3)</text>
+  <text x="420" y="660" font-size="12">P3 LOW = cooling ON</text>
+  <text x="420" y="690" font-size="12" font-weight="700">Out: J7 → H2B cooling fans</text>
+
+  <rect x="730" y="545" width="370" height="170" fill="#c6f6d5" stroke="#276749" stroke-width="2" rx="8"/>
+  <text x="915" y="580" text-anchor="middle" font-size="14" font-weight="700">EXHAUST (PWM)</text>
+  <text x="750" y="610" font-size="12">Q4 SI2302 + pulldown</text>
+  <text x="750" y="635" font-size="12">In: EXHAUST_PWM J9 pin8 (GPIO2 LEDC)</text>
+  <text x="750" y="660" font-size="12">Pot Air di panel → MAIN ADC → duty</text>
+  <text x="750" y="690" font-size="12" font-weight="700">Out: J8 → H2B exhaust fan</text>
+
+  <!-- J9 + PE -->
+  <rect x="1170" y="480" width="390" height="280" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2.5" rx="10"/>
+  <text x="1365" y="515" text-anchor="middle" font-size="15" font-weight="700" fill="#2b6cb0">J9 KE MAIN + PE</text>
+  <text x="1195" y="555" font-size="13" font-weight="700">J9 IDC 2×10</text>
+  <text x="1195" y="580" font-size="12">1 +12V → MAIN buck FIXED</text>
+  <text x="1195" y="600" font-size="12">2 GND_PWR · 4 GND_SIG</text>
+  <text x="1195" y="620" font-size="12">5 HEATER · 6 DRUM</text>
+  <text x="1195" y="640" font-size="12">7 COOL · 8 EXHAUST PWM</text>
+  <text x="1195" y="660" font-size="12">9 +5V sense (opsional)</text>
+  <text x="1195" y="700" font-size="13" font-weight="700">J_PE stud M4</text>
+  <text x="1195" y="725" font-size="12">Earth bond &lt; 0.1 Ω</text>
+
+  <!-- Footer safety -->
+  <rect x="40" y="790" width="1520" height="260" fill="#ffffff" stroke="#a0aec0" stroke-width="2" rx="10"/>
+  <text x="800" y="830" text-anchor="middle" font-size="16" font-weight="700">Safety ringkas (jangan dilanggar)</text>
+  <text x="80" y="870" font-size="14">1. E-Stop XB4BS8444 2NC: NC#1 putus AC PSU · NC#2 putus jalur heater 12V — hardware, bukan software saja</text>
+  <text x="80" y="905" font-size="14">2. Heater: F4 → F1 → K1 → SSR1 → J5 · coil K1 + SSR ctrl via Q_K1 dari MAIN GPIO13</text>
+  <text x="80" y="940" font-size="14">3. EMI hanya di cabang PSU — BUKAN di jalur heater 3600W</text>
+  <text x="80" y="975" font-size="14">4. Fase 1: tidak diganti ke MOSFET-module / RS485-module — industrial path locked</text>
+  <text x="80" y="1010" font-size="13" fill="#718096">Sumber: D01E_Electrical_System_Design.md v3.7 · D01E_Heater_Control_v3.6.md · KiCad D01E-IO-PWR</text>
+</svg>

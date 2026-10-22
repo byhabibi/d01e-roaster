@@ -1,0 +1,22 @@
+printh A5
+printh 0F
+printh 16
+printh FF
+printh FF
+printh FF
+tm0.en=0
+tm1.en=0
+heatPct=0
+bt2.val=0
+bt3.val=0
+bt4.val=0
+bt5.val=0
+bt6.val=0
+p3.pic=165
+bt7.val=0
+bt8.val=0
+t18.txt="00:00"
+t19.txt="0"
+t20.txt="0"
+t21.txt="0"
+t22.txt="0"

@@ -1,0 +1,9 @@
+PCB-02 IO-PWR Gerbers — STATUS
+
+Part references in positions.csv match Fase 1 locks:
+  K1 = LC1D25JD · SSR1 = D2440
+
+DRC report still lists violations (see ../../QC/D01E-IO-PWR-drc.rpt).
+Do NOT place fab order until engineer confirms DRC = 0 and Gerber re-export if needed.
+
+IO board is industrial discrete (not module-seat redesign in Fase 1).

@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3600 2920" font-family="Segoe UI, Consolas, Arial, sans-serif">
+<rect width="3600" height="2920" fill="#f4f1ec"/>
+<defs>
+<marker id="m_pwr" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#c53030"/></marker>
+<marker id="m_12v" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#dd6b20"/></marker>
+<marker id="m_5v" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#d69e2e"/></marker>
+<marker id="m_3v3" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#38a169"/></marker>
+<marker id="m_gnd" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#1a202c"/></marker>
+<marker id="m_spi" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#2b6cb0"/></marker>
+<marker id="m_i2c" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#00a3c4"/></marker>
+<marker id="m_uart" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#6b46c1"/></marker>
+<marker id="m_gpio_out" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#276749"/></marker>
+<marker id="m_gpio_in" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#68d391"/></marker>
+<marker id="m_pwm" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#d53f8c"/></marker>
+<marker id="m_opt" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#718096"/></marker>
+<marker id="m_ac" markerWidth="9" markerHeight="9" refX="8" refY="3.5" orient="auto"><path d="M0,0 L8,3.5 L0,7 Z" fill="#9b2c2c"/></marker>
+</defs>
+<text x="1800.0" y="38" text-anchor="middle" font-size="28" font-weight="700">D01E ENGINEERING BLUEPRINT — System Architecture (MAIN + J9 + IO)</text>
+<text x="1800.0" y="62" text-anchor="middle" font-size="13" fill="#4a5568">Fase 1 · FIXED 5V · DevKitC plug-in · Blueprint layout v2 (koridor wiring) · Electrical v3.7</text>
+<rect x="40" y="78" width="3520" height="56" rx="8" fill="#edf2f7" stroke="#a0aec0"/>
+<text x="54" y="100" font-size="13" font-weight="700">LEGEND NET</text>
+<line x1="160" y1="114" x2="184" y2="114" stroke="#dd6b20" stroke-width="4"/>
+<text x="190" y="118" font-size="11">12V / +12V_IN / +12V_BUS</text>
+<line x1="440" y1="114" x2="464" y2="114" stroke="#d69e2e" stroke-width="4"/>
+<text x="470" y="118" font-size="11">+5V_SYS</text>
+<line x1="720" y1="114" x2="744" y2="114" stroke="#38a169" stroke-width="4"/>
+<text x="750" y="118" font-size="11">+3V3_ANA</text>
+<line x1="1000" y1="114" x2="1024" y2="114" stroke="#1a202c" stroke-width="4"/>
+<text x="1030" y="118" font-size="11">GND</text>
+<line x1="1280" y1="114" x2="1304" y2="114" stroke="#2b6cb0" stroke-width="4"/>
+<text x="1310" y="118" font-size="11">SPI</text>
+<line x1="1560" y1="114" x2="1584" y2="114" stroke="#00a3c4" stroke-width="4"/>
+<text x="1590" y="118" font-size="11">I2C</text>
+<line x1="1840" y1="114" x2="1864" y2="114" stroke="#6b46c1" stroke-width="4"/>
+<text x="1870" y="118" font-size="11">UART / RS485</text>
+<line x1="2120" y1="114" x2="2144" y2="114" stroke="#276749" stroke-width="4"/>
+<text x="2150" y="118" font-size="11">GPIO OUT</text>
+<line x1="2400" y1="114" x2="2424" y2="114" stroke="#68d391" stroke-width="4"/>
+<text x="2430" y="118" font-size="11">GPIO IN</text>
+<line x1="2680" y1="114" x2="2704" y2="114" stroke="#d53f8c" stroke-width="4"/>
+<text x="2710" y="118" font-size="11">PWM</text>
+<line x1="2960" y1="114" x2="2984" y2="114" stroke="#9b2c2c" stroke-width="4"/>
+<text x="2990" y="118" font-size="11">AC 220V</text>
+<line x1="3240" y1="114" x2="3264" y2="114" stroke="#718096" stroke-width="4"/>
+<text x="3270" y="118" font-size="11">DNP / spare</text>
+<rect x="40" y="150" width="3520" height="1320" rx="12" fill="#e6fffa" stroke="#276749" stroke-width="2.5"/><text x="56" y="178" font-size="17" font-weight="700" fill="#276749">PCB-01  D01E-MAIN-CTRL  (~120×90 mm) — otak + sensor + panel + comms</text>
+<rect x="60" y="200" width="230" height="150" rx="8" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+<rect x="72" y="213" width="24" height="14" rx="2" fill="#bee3f8" stroke="#2b6cb0"/>
+<circle cx="76" cy="220" r="1.4" fill="#2b6cb0"/>
+<circle cx="81" cy="220" r="1.4" fill="#2b6cb0"/>
+<circle cx="86" cy="220" r="1.4" fill="#2b6cb0"/>
+<circle cx="91" cy="220" r="1.4" fill="#2b6cb0"/>
+<text x="106" y="225" font-size="13" font-weight="700">J9 · IDC dari IO</text>
+<text x="72" y="246" font-size="12" font-weight="700">Header IDC 2×10</text>
+<text x="72" y="264" font-size="11" fill="#4a5568">Suplai + kontrol antar PCB</text>
+<text x="72" y="284" font-size="11"><tspan font-weight="700" fill="#dd6b20">Supply:</tspan> Pin1 +12V IN</text>
+<text x="72" y="301" font-size="11"><tspan font-weight="700" fill="#d69e2e">Output:</tspan> Pin5–8 control OUT</text>
+<rect x="330" y="200" width="250" height="150" rx="8" fill="#faf089" stroke="#d69e2e" stroke-width="2"/>
+<rect x="340" y="211" width="28" height="18" rx="2" fill="#faf089" stroke="#d69e2e" stroke-width="1.5"/>
+<text x="354" y="224" text-anchor="middle" font-size="9" font-weight="700">5V</text>
+<text x="376" y="225" font-size="13" font-weight="700">U3_MOD · Buck FIXED 5V</text>
+<text x="342" y="246" font-size="12" font-weight="700">MP1584-FIXED-5V</text>
+<text x="342" y="264" font-size="11" fill="#4a5568">Buck 12V → 5V tetap</text>
+<text x="342" y="284" font-size="11"><tspan font-weight="700" fill="#dd6b20">Supply:</tspan> VIN=+12V_IN (J9.1)</text>
+<text x="342" y="301" font-size="11"><tspan font-weight="700" fill="#d69e2e">Output:</tspan> +5V_SYS pad3</text>
+<text x="342" y="318" font-size="11"><tspan font-weight="700" fill="#4a5568">Note:</tspan> QC 4.90…5.10 V · LARANG trimpot</text>
+<rect x="620" y="200" width="440" height="150" rx="8" fill="#c6f6d5" stroke="#276749" stroke-width="2"/>
+<rect x="628" y="210" width="32" height="20" rx="3" fill="#c6f6d5" stroke="#276749" stroke-width="1.5"/>
+<rect x="634" y="215" width="20" height="10" fill="#276749"/>
+<text x="666" y="225" font-size="13" font-weight="700">U1_DEVKIT · MCU board</text>
+<text x="632" y="246" font-size="12" font-weight="700">ESP32-DevKitC-32E</text>
+<text x="632" y="264" font-size="11" fill="#4a5568">Mengontrol seluruh mesin.</text>
+<text x="632" y="284" font-size="11"><tspan font-weight="700" fill="#dd6b20">Supply:</tspan> L19 ← +5V_SYS</text>
+<text x="632" y="301" font-size="11"><tspan font-weight="700" fill="#d69e2e">Output:</tspan> SPI/I2C/UART/GPIO/PWM</text>
+<text x="632" y="318" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> HTR L15=13 · DRM L13=12 · PWM R15=2</text>
+<text x="632" y="335" font-size="11"><tspan font-weight="700" fill="#4a5568">Note:</tspan> Flash USB DevKit · U11 DNP</text>
+<rect x="1120" y="200" width="280" height="150" rx="8" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+<circle cx="1144" cy="220" r="9" fill="#bee3f8" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="1144" y="223" text-anchor="middle" font-size="8" font-weight="700">TC</text>
+<text x="1166" y="225" font-size="13" font-weight="700">U4_MOD · Bean temp</text>
+<text x="1132" y="246" font-size="12" font-weight="700">MAX31856 breakout</text>
+<text x="1132" y="264" font-size="11" fill="#4a5568">Baca thermocouple Bean.</text>
+<text x="1132" y="284" font-size="11"><tspan font-weight="700" fill="#dd6b20">Supply:</tspan> VIN ← +3V3_ANA</text>
+<text x="1132" y="301" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> CS=SPI_CS_BEAN GPIO5</text>
+<text x="1132" y="318" font-size="11"><tspan font-weight="700" fill="#4a5568">Note:</tspan> → J1</text>
+<rect x="1440" y="200" width="140" height="100" rx="8" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+<rect x="1452" y="213" width="24" height="14" rx="2" fill="#bee3f8" stroke="#2b6cb0"/>
+<circle cx="1456" cy="220" r="1.4" fill="#2b6cb0"/>
+<circle cx="1461" cy="220" r="1.4" fill="#2b6cb0"/>
+<circle cx="1466" cy="220" r="1.4" fill="#2b6cb0"/>
+<circle cx="1471" cy="220" r="1.4" fill="#2b6cb0"/>
+<text x="1486" y="225" font-size="13" font-weight="700">J1 · TC Bean</text>
+<text x="1452" y="246" font-size="12" font-weight="700">Terminal</text>
+<text x="1452" y="264" font-size="11" fill="#4a5568">Konektor Bean</text>
+<rect x="1620" y="200" width="170" height="100" rx="8" fill="#e2e8f0" stroke="#718096" stroke-width="2"/>
+<text x="1632" y="225" font-size="13" font-weight="700">U11 · USB-UART</text>
+<text x="1632" y="246" font-size="12" font-weight="700">CP2102N</text>
+<text x="1632" y="264" font-size="11" fill="#4a5568">DNP Fase 1</text>
+<text x="1632" y="284" font-size="11"><tspan font-weight="700" fill="#4a5568">Note:</tspan> Qty=0</text>
+<rect x="1840" y="200" width="1680" height="150" rx="8" fill="#fffbeb" stroke="#d69e2e" stroke-width="2"/><text x="1860" y="228" font-size="14" font-weight="700" fill="#744210">ACTIVE LEVELS (firmware locked)</text><text x="1860" y="254" font-size="12">HEATER_EN GPIO13 · DRUM_EN GPIO12 = Active HIGH = ON</text><text x="1860" y="276" font-size="12">COOL_EN PCF8574 P3 = Active LOW = ON</text><text x="1860" y="298" font-size="12">BTN_* = Active LOW ON · ESTOP_SENSE HIGH = UNSAFE</text><text x="1860" y="328" font-size="12" fill="#c53030" font-weight="700">U3 = FIXED 5V ≥3A · K1 = LC1D25JD 12V · SSR = Crydom D2440</text>
+<rect x="60" y="365" width="1740" height="36" rx="4" fill="#edf2f7" stroke="#a0aec0" stroke-width="1" stroke-dasharray="6 4" opacity="0.85"/><text x="68" y="379" font-size="10" fill="#718096" font-weight="700">KORIDOR A — power stubs (+5V / +3V3) · jangan taruh komponen di sini</text>
+<rect x="330" y="415" width="250" height="130" rx="8" fill="#c6f6d5" stroke="#38a169" stroke-width="2"/>
+<rect x="340" y="426" width="28" height="18" rx="2" fill="#c6f6d5" stroke="#38a169" stroke-width="1.5"/>
+<text x="354" y="439" text-anchor="middle" font-size="9" font-weight="700">3V3</text>
+<text x="376" y="440" font-size="13" font-weight="700">U2 · LDO analog 3.3V</text>
+<text x="342" y="461" font-size="12" font-weight="700">MCP1700-3302E</text>
+<text x="342" y="479" font-size="11" fill="#4a5568">3.3V hanya untuk TC modul</text>
+<text x="342" y="499" font-size="11"><tspan font-weight="700" fill="#dd6b20">Supply:</tspan> VIN=+5V_SYS</text>
+<text x="342" y="516" font-size="11"><tspan font-weight="700" fill="#d69e2e">Output:</tspan> +3V3_ANA</text>
+<text x="342" y="533" font-size="11"><tspan font-weight="700" fill="#4a5568">Note:</tspan> BUKAN rail DevKit</text>
+<rect x="1120" y="415" width="280" height="130" rx="8" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+<circle cx="1144" cy="435" r="9" fill="#bee3f8" stroke="#2b6cb0" stroke-width="1.5"/>
+<text x="1144" y="438" text-anchor="middle" font-size="8" font-weight="700">TC</text>
+<text x="1166" y="440" font-size="13" font-weight="700">U5_MOD · Env temp</text>
+<text x="1132" y="461" font-size="12" font-weight="700">MAX31856 breakout</text>
+<text x="1132" y="479" font-size="11" fill="#4a5568">Baca thermocouple Env.</text>
+<text x="1132" y="499" font-size="11"><tspan font-weight="700" fill="#dd6b20">Supply:</tspan> VIN ← +3V3_ANA</text>
+<text x="1132" y="516" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> CS=SPI_CS_ENV GPIO15</text>
+<text x="1132" y="533" font-size="11"><tspan font-weight="700" fill="#4a5568">Note:</tspan> → J2</text>
+<rect x="1440" y="415" width="140" height="100" rx="8" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/>
+<rect x="1452" y="428" width="24" height="14" rx="2" fill="#bee3f8" stroke="#2b6cb0"/>
+<circle cx="1456" cy="435" r="1.4" fill="#2b6cb0"/>
+<circle cx="1461" cy="435" r="1.4" fill="#2b6cb0"/>
+<circle cx="1466" cy="435" r="1.4" fill="#2b6cb0"/>
+<circle cx="1471" cy="435" r="1.4" fill="#2b6cb0"/>
+<text x="1486" y="440" font-size="13" font-weight="700">J2 · TC Env</text>
+<text x="1452" y="461" font-size="12" font-weight="700">Terminal</text>
+<text x="1452" y="479" font-size="11" fill="#4a5568">Konektor Env</text>
+<rect x="1620" y="415" width="170" height="100" rx="8" fill="#e2e8f0" stroke="#718096" stroke-width="2"/>
+<rect x="1632" y="428" width="24" height="14" rx="2" fill="#bee3f8" stroke="#2b6cb0"/>
+<circle cx="1636" cy="435" r="1.4" fill="#2b6cb0"/>
+<circle cx="1641" cy="435" r="1.4" fill="#2b6cb0"/>
+<circle cx="1646" cy="435" r="1.4" fill="#2b6cb0"/>
+<circle cx="1651" cy="435" r="1.4" fill="#2b6cb0"/>
+<text x="1666" y="440" font-size="13" font-weight="700">J_USB · USB-C spare</text>
+<text x="1632" y="461" font-size="12" font-weight="700">USB-C</text>
+<text x="1632" y="479" font-size="11" fill="#4a5568">DNP jika U11 DNP</text>
+<rect x="1840" y="415" width="1680" height="200" rx="8" fill="#ffffff" stroke="#276749" stroke-width="2"/><text x="1860" y="445" font-size="14" font-weight="700" fill="#276749">U1 DevKitC pad → NET (USB ↑ atas)</text><text x="1860" y="472" font-size="12" font-family="Consolas, monospace">L5 POT_AIR · L6 NTC · L7 UART2_RX · L8 UART2_TX · L9 BTN_DRUM · L10 BTN_HEATER · L11 BTN_AIR</text><text x="1860" y="494" font-size="12" font-family="Consolas, monospace">L12 ESTOP · L13 DRUM_EN · L14 GND · L15 HEATER_EN · L19 +5V_SYS</text><text x="1860" y="516" font-size="12" font-family="Consolas, monospace">R2 MOSI · R3 SCL · R6 SDA · R8 MISO · R9 SCK · R10 CS_BEAN · R11 UART1_TX · R12 UART1_RX</text><text x="1860" y="538" font-size="12" font-family="Consolas, monospace">R13 DFPLAYER_TX · R15 EXHAUST_PWM · R16 CS_ENV · L1 3V3=NC board · flash pins=NC</text><text x="1860" y="572" font-size="12" font-weight="700">POWER: J9.1 +12V → U3 → +5V_SYS → U1/U6/U10/U13 · U2 → +3V3_ANA → U4/U5</text><text x="1860" y="595" font-size="12">COMMS: SPI→U4/U5 · I2C→U10 · UART1→U6→J3 · UART2→J_H1 Nextion · GPIO4→U13</text>
+<rect x="60" y="560" width="1740" height="40" rx="4" fill="#edf2f7" stroke="#a0aec0" stroke-width="1" stroke-dasharray="6 4" opacity="0.85"/><text x="68" y="574" font-size="10" fill="#718096" font-weight="700">KORIDOR B — SPI bus + +3V3 ke TC · label NET di koridor ini</text>
+<rect x="60" y="615" width="280" height="155" rx="8" fill="#feebc8" stroke="#c05621" stroke-width="2"/>
+<circle cx="79" cy="635" r="5" fill="none" stroke="#dd6b20" stroke-width="1.5"/>
+<circle cx="89" cy="635" r="5" fill="none" stroke="#dd6b20" stroke-width="1.5"/>
+<text x="106" y="640" font-size="13" font-weight="700">U7–U9 U12 · Opto isolasi</text>
+<text x="72" y="661" font-size="12" font-weight="700">PC817 ×4</text>
+<text x="72" y="679" font-size="11" fill="#4a5568">Isolasi tombol + E-Stop</text>
+<text x="72" y="699" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> → GPIO25/26/27/14</text>
+<text x="72" y="716" font-size="11"><tspan font-weight="700" fill="#4a5568">Note:</tspan> BTN Active LOW · ESTOP HIGH=unsafe</text>
+<rect x="360" y="615" width="250" height="155" rx="8" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+<rect x="372" y="628" width="24" height="14" rx="2" fill="#bee3f8" stroke="#2b6cb0"/>
+<circle cx="376" cy="635" r="1.4" fill="#2b6cb0"/>
+<circle cx="381" cy="635" r="1.4" fill="#2b6cb0"/>
+<circle cx="386" cy="635" r="1.4" fill="#2b6cb0"/>
+<circle cx="391" cy="635" r="1.4" fill="#2b6cb0"/>
+<text x="406" y="640" font-size="13" font-weight="700">J_H1 · Panel harness</text>
+<text x="372" y="661" font-size="12" font-weight="700">Header 2×10</text>
+<text x="372" y="679" font-size="11" fill="#4a5568">Tombol · pot · Nextion · RS485</text>
+<text x="372" y="699" font-size="11"><tspan font-weight="700" fill="#dd6b20">Supply:</tspan> P1 +12V · P7 +3V3 pot</text>
+<text x="372" y="716" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> P9 POT · P12/13 UART2 · P15/16 RS485</text>
+<rect x="640" y="615" width="230" height="155" rx="8" fill="#e9d8fd" stroke="#6b46c1" stroke-width="2"/>
+<rect x="650" y="626" width="28" height="18" rx="2" fill="#e9d8fd" stroke="#6b46c1"/>
+<text x="664" y="639" text-anchor="middle" font-size="8" font-weight="700">A/B</text>
+<text x="686" y="640" font-size="13" font-weight="700">U6 · RS485 PHY</text>
+<text x="652" y="661" font-size="12" font-weight="700">MAX3485</text>
+<text x="652" y="679" font-size="11" fill="#4a5568">Komunikasi RS485</text>
+<text x="652" y="699" font-size="11"><tspan font-weight="700" fill="#dd6b20">Supply:</tspan> +5V_SYS</text>
+<text x="652" y="716" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> UART1 GPIO17/16 · DE via PCF</text>
+<rect x="900" y="615" width="230" height="155" rx="8" fill="#b2f5ea" stroke="#319795" stroke-width="2"/>
+<rect x="910" y="626" width="28" height="18" rx="2" fill="#b2f5ea" stroke="#319795"/>
+<text x="924" y="639" text-anchor="middle" font-size="8" font-weight="700">I/O</text>
+<text x="946" y="640" font-size="13" font-weight="700">U10 · GPIO expander</text>
+<text x="912" y="661" font-size="12" font-weight="700">PCF8574 @0x20</text>
+<text x="912" y="679" font-size="11" fill="#4a5568">I2C expander</text>
+<text x="912" y="699" font-size="11"><tspan font-weight="700" fill="#dd6b20">Supply:</tspan> +5V_SYS</text>
+<text x="912" y="716" font-size="11"><tspan font-weight="700" fill="#d69e2e">Output:</tspan> P3=COOL_EN LOW=ON</text>
+<text x="912" y="733" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> SDA21 · SCL22</text>
+<rect x="1160" y="615" width="230" height="155" rx="8" fill="#fefcbf" stroke="#d69e2e" stroke-width="2"/>
+<path d="M1177,635 L1182,628 L1182,642 Z" fill="#faf089" stroke="#d69e2e"/>
+<path d="M1186,630 Q1194,635 1186,640" fill="none" stroke="#d69e2e" stroke-width="1.5"/>
+<text x="1206" y="640" font-size="13" font-weight="700">U13 · Audio</text>
+<text x="1172" y="661" font-size="12" font-weight="700">DFPlayer Mini</text>
+<text x="1172" y="679" font-size="11" fill="#4a5568">Suara / alarm</text>
+<text x="1172" y="699" font-size="11"><tspan font-weight="700" fill="#dd6b20">Supply:</tspan> +5V_SYS</text>
+<text x="1172" y="716" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> RX ← GPIO4</text>
+<text x="1172" y="733" font-size="11"><tspan font-weight="700" fill="#4a5568">Note:</tspan> → J10 speaker</text>
+<rect x="1420" y="615" width="200" height="155" rx="8" fill="#e9d8fd" stroke="#6b46c1" stroke-width="2"/>
+<rect x="1432" y="628" width="24" height="14" rx="2" fill="#bee3f8" stroke="#2b6cb0"/>
+<circle cx="1436" cy="635" r="1.4" fill="#2b6cb0"/>
+<circle cx="1441" cy="635" r="1.4" fill="#2b6cb0"/>
+<circle cx="1446" cy="635" r="1.4" fill="#2b6cb0"/>
+<circle cx="1451" cy="635" r="1.4" fill="#2b6cb0"/>
+<text x="1466" y="640" font-size="13" font-weight="700">J3 · RS485 term</text>
+<text x="1432" y="661" font-size="12" font-weight="700">Terminal 3P</text>
+<text x="1432" y="679" font-size="11" fill="#4a5568">A / B / GND lapangan</text>
+<text x="1432" y="699" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> RS485_A · RS485_B</text>
+<rect x="60" y="785" width="1740" height="110" rx="4" fill="#edf2f7" stroke="#a0aec0" stroke-width="1" stroke-dasharray="6 4" opacity="0.85"/><text x="68" y="799" font-size="10" fill="#718096" font-weight="700">KORIDOR C — control ke J9 + input panel (label NET hanya di koridor)</text>
+<line x1="175" y1="350" x2="175" y2="382" stroke="#dd6b20" stroke-width="2.5" marker-end="url(#m_12v)"/>
+
+<line x1="455" y1="350" x2="455" y2="382" stroke="#dd6b20" stroke-width="2.5" marker-end="url(#m_12v)"/>
+
+<line x1="175" y1="382" x2="455" y2="382" stroke="#dd6b20" stroke-width="2.5" marker-end="url(#m_12v)"/>
+<rect x="285.9" y="358" width="58.199999999999996" height="16" rx="3" fill="#ffffff" stroke="#dd6b20" stroke-width="0.8" opacity="0.96"/><text x="315.0" y="370" text-anchor="middle" font-size="11" font-weight="700" fill="#dd6b20">+12V_IN</text>
+<line x1="750" y1="350" x2="750" y2="382" stroke="#d69e2e" stroke-width="2.5" marker-end="url(#m_5v)"/>
+
+<line x1="455" y1="382" x2="750" y2="382" stroke="#d69e2e" stroke-width="2.5" marker-end="url(#m_5v)"/>
+<rect x="573.4" y="384" width="58.199999999999996" height="16" rx="3" fill="#ffffff" stroke="#d69e2e" stroke-width="0.8" opacity="0.96"/><text x="602.5" y="396" text-anchor="middle" font-size="11" font-weight="700" fill="#d69e2e">+5V_SYS</text>
+<line x1="455" y1="350" x2="455" y2="415" stroke="#d69e2e" stroke-width="2.5" marker-end="url(#m_5v)"/>
+
+<path d="M580,480 L600,480 L600,580 L1090,580 L1090,275 L1120,275" fill="none" stroke="#38a169" stroke-width="2.5" marker-end="url(#m_3v3)"/>
+<rect x="807.6" y="554" width="64.8" height="16" rx="3" fill="#ffffff" stroke="#38a169" stroke-width="0.8" opacity="0.96"/><text x="840" y="566" text-anchor="middle" font-size="11" font-weight="700" fill="#38a169">+3V3_ANA</text>
+<line x1="1090" y1="275" x2="1090" y2="415" stroke="#38a169" stroke-width="2.5" marker-end="url(#m_3v3)"/>
+
+<line x1="1060" y1="350" x2="1060" y2="575" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#m_spi)"/>
+
+<line x1="1120" y1="350" x2="1120" y2="575" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#m_spi)"/>
+
+<line x1="1060" y1="575" x2="1120" y2="575" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#m_spi)"/>
+<rect x="1014.7" y="551" width="150.6" height="16" rx="3" fill="#ffffff" stroke="#2b6cb0" stroke-width="0.8" opacity="0.96"/><text x="1090.0" y="563" text-anchor="middle" font-size="11" font-weight="700" fill="#2b6cb0">SPI_MOSI / SCK / MISO</text>
+<line x1="1060" y1="590" x2="1120" y2="590" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#m_spi)"/>
+<rect x="988.3" y="592" width="203.39999999999998" height="16" rx="3" fill="#ffffff" stroke="#2b6cb0" stroke-width="0.8" opacity="0.96"/><text x="1090.0" y="604" text-anchor="middle" font-size="11" font-weight="700" fill="#2b6cb0">CS_BEAN GPIO5 · CS_ENV GPIO15</text>
+<line x1="1100" y1="590" x2="1100" y2="470" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#m_spi)"/>
+
+<line x1="1400" y1="250" x2="1440" y2="250" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#m_spi)"/>
+
+<line x1="1400" y1="465" x2="1440" y2="465" stroke="#2b6cb0" stroke-width="2.5" marker-end="url(#m_spi)"/>
+
+<path d="M755,350 L755,575 L755,615" fill="none" stroke="#6b46c1" stroke-width="2.5" marker-end="url(#m_uart)"/>
+<rect x="777.5" y="549" width="45.0" height="16" rx="3" fill="#ffffff" stroke="#6b46c1" stroke-width="0.8" opacity="0.96"/><text x="800" y="561" text-anchor="middle" font-size="11" font-weight="700" fill="#6b46c1">UART1</text>
+<path d="M1015,350 L1015,575 L1015,615" fill="none" stroke="#00a3c4" stroke-width="2.5" marker-end="url(#m_i2c)"/>
+<rect x="1040.0" y="549" width="40" height="16" rx="3" fill="#ffffff" stroke="#00a3c4" stroke-width="0.8" opacity="0.96"/><text x="1060" y="561" text-anchor="middle" font-size="11" font-weight="700" fill="#00a3c4">I2C</text>
+<path d="M1200,350 L1200,575 L1275,575 L1275,615" fill="none" stroke="#6b46c1" stroke-width="2.5" marker-end="url(#m_uart)"/>
+<rect x="1192.7" y="549" width="84.6" height="16" rx="3" fill="#ffffff" stroke="#6b46c1" stroke-width="0.8" opacity="0.96"/><text x="1235" y="561" text-anchor="middle" font-size="11" font-weight="700" fill="#6b46c1">DFPLAYER_TX</text>
+<line x1="755" y1="770" x2="755" y2="800" stroke="#6b46c1" stroke-width="2.5" marker-end="url(#m_uart)"/>
+
+<line x1="1520" y1="770" x2="1520" y2="800" stroke="#6b46c1" stroke-width="2.5" marker-end="url(#m_uart)"/>
+
+<line x1="755" y1="800" x2="1520" y2="800" stroke="#6b46c1" stroke-width="2.5" marker-end="url(#m_uart)"/>
+<rect x="1075.4" y="776" width="124.19999999999999" height="16" rx="3" fill="#ffffff" stroke="#6b46c1" stroke-width="0.8" opacity="0.96"/><text x="1137.5" y="788" text-anchor="middle" font-size="11" font-weight="700" fill="#6b46c1">RS485_A / RS485_B</text>
+<line x1="340" y1="690" x2="360" y2="690" stroke="#68d391" stroke-width="2.5" marker-end="url(#m_gpio_in)"/>
+
+<path d="M200,770 L200,820 L700,820 L700,350" fill="none" stroke="#68d391" stroke-width="2.5" marker-end="url(#m_gpio_in)"/>
+<rect x="411.3" y="794" width="137.39999999999998" height="16" rx="3" fill="#ffffff" stroke="#68d391" stroke-width="0.8" opacity="0.96"/><text x="480" y="806" text-anchor="middle" font-size="11" font-weight="700" fill="#68d391">BTN_* · ESTOP_SENSE</text>
+<path d="M620,255 L600,255 L600,840 L55,840 L55,355 L60,355" fill="none" stroke="#276749" stroke-width="2.5" marker-end="url(#m_gpio_out)"/>
+<rect x="274.6" y="814" width="130.8" height="16" rx="3" fill="#ffffff" stroke="#276749" stroke-width="0.8" opacity="0.96"/><text x="340" y="826" text-anchor="middle" font-size="11" font-weight="700" fill="#276749">HEATER_EN (GPIO13)</text>
+<path d="M620,285 L590,285 L590,860 L48,860 L48,340 L60,340" fill="none" stroke="#276749" stroke-width="2.5" marker-end="url(#m_gpio_out)"/>
+<rect x="281.2" y="862" width="117.6" height="16" rx="3" fill="#ffffff" stroke="#276749" stroke-width="0.8" opacity="0.96"/><text x="340" y="874" text-anchor="middle" font-size="11" font-weight="700" fill="#276749">DRUM_EN (GPIO12)</text>
+<path d="M900,350 L900,880 L42,880 L42,325 L60,325" fill="none" stroke="#d53f8c" stroke-width="2.5" marker-end="url(#m_pwm)"/>
+<rect x="571.3" y="854" width="137.39999999999998" height="16" rx="3" fill="#ffffff" stroke="#d53f8c" stroke-width="0.8" opacity="0.96"/><text x="640" y="866" text-anchor="middle" font-size="11" font-weight="700" fill="#d53f8c">EXHAUST_PWM (GPIO2)</text>
+<path d="M1015,770 L1015,888 L36,888 L36,310 L60,310" fill="none" stroke="#276749" stroke-width="2.5" marker-end="url(#m_gpio_out)"/>
+<rect x="544.9" y="862" width="190.2" height="16" rx="3" fill="#ffffff" stroke="#276749" stroke-width="0.8" opacity="0.96"/><text x="640" y="874" text-anchor="middle" font-size="11" font-weight="700" fill="#276749">COOL_EN (PCF P3 Active LOW)</text>
+<rect x="142.6" y="386" width="64.8" height="16" rx="3" fill="#ffffff" stroke="#276749" stroke-width="0.8" opacity="0.96"/><text x="175" y="398" text-anchor="middle" font-size="11" font-weight="700" fill="#276749">→ J9.5–8</text>
+<rect x="60" y="940" width="480" height="204" rx="6" fill="#ffffff" stroke="#4a5568" stroke-width="1.5"/>
+<text x="70" y="960" font-size="12" font-weight="700">J9 MAIN↔IO</text>
+<text x="70" y="980" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">1</tspan>  +12V_IN  <tspan fill="#2b6cb0">IN</tspan>  IO→U3 VIN</text>
+<text x="70" y="997" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">2</tspan>  GND  <tspan fill="#2b6cb0">IO</tspan>  GND daya</text>
+<text x="70" y="1014" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">3</tspan>  NC  <tspan fill="#2b6cb0">—</tspan>  spare</text>
+<text x="70" y="1031" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">4</tspan>  GND_SIG  <tspan fill="#2b6cb0">IO</tspan>  GND sinyal</text>
+<text x="70" y="1048" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">5</tspan>  HEATER_EN  <tspan fill="#2b6cb0">OUT</tspan>  GPIO13 HIGH=ON</text>
+<text x="70" y="1065" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">6</tspan>  DRUM_EN  <tspan fill="#2b6cb0">OUT</tspan>  GPIO12 HIGH=ON</text>
+<text x="70" y="1082" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">7</tspan>  COOL_EN  <tspan fill="#2b6cb0">OUT</tspan>  PCF P3 LOW=ON</text>
+<text x="70" y="1099" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">8</tspan>  EXHAUST_PWM  <tspan fill="#2b6cb0">OUT</tspan>  GPIO2</text>
+<text x="70" y="1116" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">9</tspan>  +5V_SYS  <tspan fill="#2b6cb0">OUT</tspan>  sense opt</text>
+<text x="70" y="1133" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">10-20</tspan>  NC  <tspan fill="#2b6cb0">—</tspan>  spare</text>
+<rect x="560" y="940" width="400" height="170" rx="6" fill="#ffffff" stroke="#4a5568" stroke-width="1.5"/>
+<text x="570" y="960" font-size="12" font-weight="700">J_H1 PANEL</text>
+<text x="570" y="980" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">1</tspan>  +12V_IN  <tspan fill="#2b6cb0">OUT</tspan>  panel 12V</text>
+<text x="570" y="997" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">3-6</tspan>  +5V_SYS  <tspan fill="#2b6cb0">OUT</tspan>  switch</text>
+<text x="570" y="1014" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">7</tspan>  +3V3_ANA  <tspan fill="#2b6cb0">OUT</tspan>  pot</text>
+<text x="570" y="1031" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">9</tspan>  POT_AIR  <tspan fill="#2b6cb0">IN</tspan>  GPIO34</text>
+<text x="570" y="1048" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">12</tspan>  UART2_RX  <tspan fill="#2b6cb0">IN</tspan>  Nextion</text>
+<text x="570" y="1065" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">13</tspan>  UART2_TX  <tspan fill="#2b6cb0">OUT</tspan>  Nextion</text>
+<text x="570" y="1082" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">15</tspan>  RS485_A  <tspan fill="#2b6cb0">IO</tspan>  </text>
+<text x="570" y="1099" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">16</tspan>  RS485_B  <tspan fill="#2b6cb0">IO</tspan>  </text>
+<rect x="980" y="940" width="360" height="153" rx="6" fill="#ffffff" stroke="#4a5568" stroke-width="1.5"/>
+<text x="990" y="960" font-size="12" font-weight="700">U4/U5 seat 8P</text>
+<text x="990" y="980" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">1</tspan>  +3V3_ANA  <tspan fill="#2b6cb0">IN</tspan>  VIN</text>
+<text x="990" y="997" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">3</tspan>  GND  <tspan fill="#2b6cb0">IO</tspan>  </text>
+<text x="990" y="1014" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">4</tspan>  SPI_MISO  <tspan fill="#2b6cb0">OUT</tspan>  DO</text>
+<text x="990" y="1031" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">5</tspan>  CS  <tspan fill="#2b6cb0">IN</tspan>  GPIO5 / 15</text>
+<text x="990" y="1048" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">6</tspan>  SPI_SCK  <tspan fill="#2b6cb0">IN</tspan>  CLK</text>
+<text x="990" y="1065" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">7</tspan>  SPI_MOSI  <tspan fill="#2b6cb0">IN</tspan>  DIN</text>
+<text x="990" y="1082" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">2/8</tspan>  NC  <tspan fill="#2b6cb0">—</tspan>  3Vo/DRDY</text>
+<rect x="1360" y="940" width="300" height="102" rx="6" fill="#ffffff" stroke="#4a5568" stroke-width="1.5"/>
+<text x="1370" y="960" font-size="12" font-weight="700">U3 seat FIXED</text>
+<text x="1370" y="980" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">1</tspan>  +12V_IN  <tspan fill="#2b6cb0">IN</tspan>  VIN</text>
+<text x="1370" y="997" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">2</tspan>  GND  <tspan fill="#2b6cb0">IO</tspan>  </text>
+<text x="1370" y="1014" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">3</tspan>  +5V_SYS  <tspan fill="#2b6cb0">OUT</tspan>  VOUT</text>
+<text x="1370" y="1031" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">—</tspan>  NO ADJ  <tspan fill="#2b6cb0">—</tspan>  tolak trimpot</text>
+<rect x="1680" y="940" width="300" height="119" rx="6" fill="#ffffff" stroke="#4a5568" stroke-width="1.5"/>
+<text x="1690" y="960" font-size="12" font-weight="700">U10 PCF8574</text>
+<text x="1690" y="980" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">4</tspan>  COOL_EN  <tspan fill="#2b6cb0">OUT</tspan>  P3 LOW=ON</text>
+<text x="1690" y="997" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">3</tspan>  RS485_DE  <tspan fill="#2b6cb0">OUT</tspan>  P2</text>
+<text x="1690" y="1014" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">9</tspan>  I2C_SDA  <tspan fill="#2b6cb0">IO</tspan>  GPIO21</text>
+<text x="1690" y="1031" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">10</tspan>  I2C_SCL  <tspan fill="#2b6cb0">IO</tspan>  GPIO22</text>
+<text x="1690" y="1048" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">16</tspan>  +5V_SYS  <tspan fill="#2b6cb0">IN</tspan>  </text>
+<rect x="2000" y="940" width="320" height="119" rx="6" fill="#ffffff" stroke="#4a5568" stroke-width="1.5"/>
+<text x="2010" y="960" font-size="12" font-weight="700">U6 MAX3485</text>
+<text x="2010" y="980" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">6</tspan>  UART1_RX  <tspan fill="#2b6cb0">IN</tspan>  ESP R12</text>
+<text x="2010" y="997" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">7</tspan>  UART1_TX  <tspan fill="#2b6cb0">IN</tspan>  ESP R11</text>
+<text x="2010" y="1014" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">1</tspan>  RS485_DE  <tspan fill="#2b6cb0">IN</tspan>  via Q6</text>
+<text x="2010" y="1031" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">2/3</tspan>  RS485_A/B  <tspan fill="#2b6cb0">IO</tspan>  → J3</text>
+<text x="2010" y="1048" font-size="11" font-family="Consolas, monospace"><tspan font-weight="700">5</tspan>  +5V_SYS  <tspan fill="#2b6cb0">IN</tspan>  </text>
+<rect x="2340" y="940" width="1180" height="200" rx="6" fill="#f0fff4" stroke="#276749" stroke-width="2"/><text x="2360" y="968" font-size="14" font-weight="700">CONTROL FLOW MAIN → J9</text><text x="2360" y="998" font-size="13">GPIO13 —HEATER_EN→ J9.5</text><text x="2360" y="1022" font-size="13">GPIO12 —DRUM_EN→ J9.6</text><text x="2360" y="1046" font-size="13">PCF P3 —COOL_EN→ J9.7 (LOW=ON)</text><text x="2360" y="1070" font-size="13">GPIO2 —EXHAUST_PWM→ J9.8</text><text x="2360" y="1105" font-size="12" fill="#4a5568">Detail pad: L2_MAIN_DEVKIT_PINMAP · L2_MAIN_NETLIST_PATHS</text>
+<rect x="40" y="1500" width="3520" height="120" rx="12" fill="#faf5ff" stroke="#6b46c1" stroke-width="2.5"/><text x="56" y="1528" font-size="17" font-weight="700" fill="#6b46c1">J9 IDC BRIDGE — ribbon MAIN ↔ IO (pin1 / segel merah sama arah)</text>
+<text x="60" y="1555" font-size="15" font-weight="700" fill="#6b46c1">IO→MAIN:</text><text x="180" y="1555" font-size="14" fill="#dd6b20" font-weight="700">+12V pin1</text><text x="340" y="1555" font-size="14" font-weight="700">GND pin2/4</text><text x="520" y="1555" font-size="15" font-weight="700" fill="#6b46c1">MAIN→IO:</text><text x="660" y="1555" font-size="14" fill="#276749" font-weight="700">HEATER_EN · DRUM_EN · COOL_EN · EXHAUST_PWM</text><text x="60" y="1590" font-size="13">Ribbon 15–25 cm · JANGAN tertukar J_H1 · salah orientasi = rusak board</text>
+<rect x="40" y="1645" width="3520" height="880" rx="12" fill="#fff5f5" stroke="#c53030" stroke-width="2.5"/><text x="56" y="1673" font-size="17" font-weight="700" fill="#c53030">PCB-02  D01E-IO-PWR — industrial power (Fase1 LOCKED diskrit)</text>
+<rect x="60" y="1700" width="160" height="120" rx="8" fill="#fed7d7" stroke="#c53030" stroke-width="2"/>
+<rect x="72" y="1716" width="24" height="8" rx="4" fill="#fed7d7" stroke="#c53030"/>
+<text x="106" y="1725" font-size="13" font-weight="700">F4 · MCB/Fuse</text>
+<text x="72" y="1746" font-size="12" font-weight="700">25A</text>
+<text x="72" y="1764" font-size="11" fill="#4a5568">Proteksi AC</text>
+<rect x="280" y="1700" width="150" height="120" rx="8" fill="#fed7d7" stroke="#c53030" stroke-width="2"/>
+<rect x="292" y="1716" width="24" height="8" rx="4" fill="#fed7d7" stroke="#c53030"/>
+<text x="326" y="1725" font-size="13" font-weight="700">F1 · Fuse</text>
+<text x="292" y="1746" font-size="12" font-weight="700">25A</text>
+<text x="292" y="1764" font-size="11" fill="#4a5568">Cabang heater</text>
+<rect x="490" y="1690" width="200" height="140" rx="8" fill="#feb2b2" stroke="#9b2c2c" stroke-width="2"/>
+<rect x="500" y="1700" width="28" height="20" rx="2" fill="#feb2b2" stroke="#9b2c2c"/>
+<text x="514" y="1714" text-anchor="middle" font-size="9" font-weight="700">K</text>
+<text x="536" y="1715" font-size="13" font-weight="700">K1 · Contactor</text>
+<text x="502" y="1736" font-size="12" font-weight="700">LC1D25JD</text>
+<text x="502" y="1754" font-size="11" fill="#4a5568">Safety cut heater</text>
+<text x="502" y="1774" font-size="11"><tspan font-weight="700" fill="#4a5568">Note:</tspan> BUKAN LC1D25BD 24V</text>
+<rect x="750" y="1690" width="200" height="140" rx="8" fill="#fc8181" stroke="#9b2c2c" stroke-width="2"/>
+<rect x="760" y="1700" width="28" height="20" rx="2" fill="#fc8181" stroke="#9b2c2c"/>
+<text x="774" y="1714" text-anchor="middle" font-size="8" font-weight="700">SSR</text>
+<text x="796" y="1715" font-size="13" font-weight="700">SSR1 · SSR</text>
+<text x="762" y="1736" font-size="12" font-weight="700">D2440 + HS1</text>
+<text x="762" y="1754" font-size="11" fill="#4a5568">Switch heater AC</text>
+<text x="762" y="1774" font-size="11"><tspan font-weight="700" fill="#d69e2e">Output:</tspan> → J5</text>
+<rect x="1010" y="1700" width="160" height="120" rx="8" fill="#fed7d7" stroke="#c53030" stroke-width="2"/>
+<rect x="1022" y="1713" width="24" height="14" rx="2" fill="#fed7d7" stroke="#c53030"/>
+<text x="1056" y="1725" font-size="13" font-weight="700">J5 · Heater</text>
+<text x="1022" y="1746" font-size="12" font-weight="700">Terminal</text>
+<text x="1022" y="1764" font-size="11" fill="#4a5568">Elemen heater</text>
+<line x1="140" y1="1675" x2="140" y2="1700" stroke="#9b2c2c" stroke-width="2.5" marker-end="url(#m_ac)"/>
+
+<line x1="355" y1="1675" x2="355" y2="1700" stroke="#9b2c2c" stroke-width="2.5" marker-end="url(#m_ac)"/>
+
+<line x1="140" y1="1675" x2="355" y2="1675" stroke="#9b2c2c" stroke-width="2.5" marker-end="url(#m_ac)"/>
+<rect x="218.4" y="1651" width="58.199999999999996" height="16" rx="3" fill="#ffffff" stroke="#9b2c2c" stroke-width="0.8" opacity="0.96"/><text x="247.5" y="1663" text-anchor="middle" font-size="11" font-weight="700" fill="#9b2c2c">L_MAINS</text>
+<line x1="590" y1="1675" x2="590" y2="1690" stroke="#9b2c2c" stroke-width="2.5" marker-end="url(#m_ac)"/>
+
+<line x1="355" y1="1675" x2="590" y2="1675" stroke="#9b2c2c" stroke-width="2.5" marker-end="url(#m_ac)"/>
+<rect x="440.1" y="1651" width="64.8" height="16" rx="3" fill="#ffffff" stroke="#9b2c2c" stroke-width="0.8" opacity="0.96"/><text x="472.5" y="1663" text-anchor="middle" font-size="11" font-weight="700" fill="#9b2c2c">L_HEATER</text>
+<line x1="850" y1="1675" x2="850" y2="1690" stroke="#9b2c2c" stroke-width="2.5" marker-end="url(#m_ac)"/>
+
+<line x1="690" y1="1675" x2="850" y2="1675" stroke="#9b2c2c" stroke-width="2.5" marker-end="url(#m_ac)"/>
+
+<line x1="1090" y1="1675" x2="1090" y2="1700" stroke="#9b2c2c" stroke-width="2.5" marker-end="url(#m_ac)"/>
+
+<line x1="850" y1="1675" x2="1090" y2="1675" stroke="#9b2c2c" stroke-width="2.5" marker-end="url(#m_ac)"/>
+<rect x="937.6" y="1651" width="64.8" height="16" rx="3" fill="#ffffff" stroke="#9b2c2c" stroke-width="0.8" opacity="0.96"/><text x="970.0" y="1663" text-anchor="middle" font-size="11" font-weight="700" fill="#9b2c2c">→ heater</text>
+<rect x="490" y="1860" width="240" height="130" rx="8" fill="#feebc8" stroke="#c05621" stroke-width="2"/>
+<path d="M507,1872 V1888 M507,1880 H517 M517,1873 V1887 M521,1873 V1887" stroke="#2d3748" stroke-width="1.6" fill="none"/>
+<text x="536" y="1885" font-size="13" font-weight="700">Q_K1 · Gate MOSFET</text>
+<text x="502" y="1906" font-size="12" font-weight="700">IRLZ44N + D_K1</text>
+<text x="502" y="1924" font-size="11" fill="#4a5568">Driver K1 coil + SSR</text>
+<text x="502" y="1944" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> Gate ← HEATER_EN J9.5</text>
+<text x="502" y="1961" font-size="11"><tspan font-weight="700" fill="#4a5568">Note:</tspan> R_G2 pulldown</text>
+<path d="M610,1860 L610,1848 L980,1848" fill="none" stroke="#276749" stroke-width="2.5" marker-end="url(#m_gpio_out)"/>
+<rect x="1047.8" y="1836" width="104.39999999999999" height="16" rx="3" fill="#ffffff" stroke="#276749" stroke-width="0.8" opacity="0.96"/><text x="1100" y="1848" text-anchor="middle" font-size="11" font-weight="700" fill="#276749">HEATER_EN→Q_K1</text>
+<rect x="1240" y="1700" width="180" height="120" rx="8" fill="#feebc8" stroke="#c05621" stroke-width="2"/>
+<rect x="1252" y="1716" width="24" height="8" rx="4" fill="#fed7d7" stroke="#c53030"/>
+<text x="1286" y="1725" font-size="13" font-weight="700">EMI1 · EMI</text>
+<text x="1252" y="1746" font-size="12" font-weight="700">FN2070+F2</text>
+<text x="1252" y="1764" font-size="11" fill="#4a5568">Filter AC→PSU</text>
+<rect x="1480" y="1690" width="220" height="140" rx="8" fill="#fbd38d" stroke="#c05621" stroke-width="2"/>
+<rect x="1488" y="1700" width="32" height="20" rx="2" fill="#fbd38d" stroke="#c05621"/>
+<text x="1504" y="1714" text-anchor="middle" font-size="8" font-weight="700">PSU</text>
+<text x="1526" y="1715" font-size="13" font-weight="700">PSU1 · PSU</text>
+<text x="1492" y="1736" font-size="12" font-weight="700">LRS-150-12</text>
+<text x="1492" y="1754" font-size="11" fill="#4a5568">12V 12.5A</text>
+<text x="1492" y="1774" font-size="11"><tspan font-weight="700" fill="#d69e2e">Output:</tspan> +12V_BUS</text>
+<rect x="1760" y="1700" width="160" height="120" rx="8" fill="#feebc8" stroke="#c05621" stroke-width="2"/>
+<rect x="1772" y="1716" width="24" height="8" rx="4" fill="#fed7d7" stroke="#c53030"/>
+<text x="1806" y="1725" font-size="13" font-weight="700">F3 · Fuse 12V</text>
+<text x="1772" y="1746" font-size="12" font-weight="700">10A</text>
+<text x="1772" y="1764" font-size="11" fill="#4a5568">Bus 12V</text>
+<rect x="1980" y="1700" width="200" height="120" rx="8" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+<rect x="1992" y="1713" width="24" height="14" rx="2" fill="#bee3f8" stroke="#2b6cb0"/>
+<circle cx="1996" cy="1720" r="1.4" fill="#2b6cb0"/>
+<circle cx="2001" cy="1720" r="1.4" fill="#2b6cb0"/>
+<circle cx="2006" cy="1720" r="1.4" fill="#2b6cb0"/>
+<circle cx="2011" cy="1720" r="1.4" fill="#2b6cb0"/>
+<text x="2026" y="1725" font-size="13" font-weight="700">J9 · IDC MAIN</text>
+<text x="1992" y="1746" font-size="12" font-weight="700">IDC 2×10</text>
+<text x="1992" y="1764" font-size="11" fill="#4a5568">Pin1 +12V → MAIN U3</text>
+<line x1="1330" y1="1675" x2="1330" y2="1700" stroke="#dd6b20" stroke-width="2.5" marker-end="url(#m_12v)"/>
+
+<line x1="1590" y1="1675" x2="1590" y2="1690" stroke="#dd6b20" stroke-width="2.5" marker-end="url(#m_12v)"/>
+
+<line x1="1330" y1="1675" x2="1590" y2="1675" stroke="#dd6b20" stroke-width="2.5" marker-end="url(#m_12v)"/>
+<rect x="1434.2" y="1651" width="51.599999999999994" height="16" rx="3" fill="#ffffff" stroke="#dd6b20" stroke-width="0.8" opacity="0.96"/><text x="1460.0" y="1663" text-anchor="middle" font-size="11" font-weight="700" fill="#dd6b20">AC→PSU</text>
+<line x1="1840" y1="1675" x2="1840" y2="1700" stroke="#dd6b20" stroke-width="2.5" marker-end="url(#m_12v)"/>
+
+<line x1="1700" y1="1675" x2="1840" y2="1675" stroke="#dd6b20" stroke-width="2.5" marker-end="url(#m_12v)"/>
+<rect x="1737.6" y="1651" width="64.8" height="16" rx="3" fill="#ffffff" stroke="#dd6b20" stroke-width="0.8" opacity="0.96"/><text x="1770.0" y="1663" text-anchor="middle" font-size="11" font-weight="700" fill="#dd6b20">+12V_BUS</text>
+<line x1="2080" y1="1675" x2="2080" y2="1700" stroke="#dd6b20" stroke-width="2.5" marker-end="url(#m_12v)"/>
+
+<line x1="1920" y1="1675" x2="2080" y2="1675" stroke="#dd6b20" stroke-width="2.5" marker-end="url(#m_12v)"/>
+<rect x="1964.3" y="1651" width="71.4" height="16" rx="3" fill="#ffffff" stroke="#dd6b20" stroke-width="0.8" opacity="0.96"/><text x="2000.0" y="1663" text-anchor="middle" font-size="11" font-weight="700" fill="#dd6b20">+12V→MAIN</text>
+<rect x="1240" y="1860" width="250" height="130" rx="8" fill="#c6f6d5" stroke="#276749" stroke-width="2"/>
+<path d="M1257,1872 V1888 M1257,1880 H1267 M1267,1873 V1887 M1271,1873 V1887" stroke="#2d3748" stroke-width="1.6" fill="none"/>
+<text x="1286" y="1885" font-size="13" font-weight="700">U20+Q2 · Drum drv</text>
+<text x="1252" y="1906" font-size="12" font-weight="700">TC4427+MOSFET</text>
+<text x="1252" y="1924" font-size="11" fill="#4a5568">Motor drum</text>
+<text x="1252" y="1944" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> ← DRUM_EN J9.6</text>
+<rect x="1540" y="1870" width="150" height="110" rx="8" fill="#c6f6d5" stroke="#276749" stroke-width="2"/>
+<circle cx="1564" cy="1890" r="10" fill="#c6f6d5" stroke="#276749"/>
+<text x="1564" y="1894" text-anchor="middle" font-size="8" font-weight="700">M</text>
+<text x="1586" y="1895" font-size="13" font-weight="700">J6 · Drum</text>
+<text x="1552" y="1916" font-size="12" font-weight="700">Terminal</text>
+<text x="1552" y="1934" font-size="11" fill="#4a5568">Motor drum</text>
+<rect x="1750" y="1860" width="250" height="130" rx="8" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+<circle cx="1774" cy="1880" r="10" fill="#bee3f8" stroke="#2b6cb0"/>
+<path d="M1774,1880 L1774,1873 M1774,1880 L1780,1884 M1774,1880 L1768,1884" stroke="#2b6cb0"/>
+<text x="1796" y="1885" font-size="13" font-weight="700">Q7+Q3 · Cool</text>
+<text x="1762" y="1906" font-size="12" font-weight="700">BC847+SI2302</text>
+<text x="1762" y="1924" font-size="11" fill="#4a5568">Kipas cooling</text>
+<text x="1762" y="1944" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> ← COOL_EN LOW=ON</text>
+<rect x="2050" y="1870" width="140" height="110" rx="8" fill="#bee3f8" stroke="#2b6cb0" stroke-width="2"/>
+<circle cx="2074" cy="1890" r="10" fill="#bee3f8" stroke="#2b6cb0"/>
+<path d="M2074,1890 L2074,1883 M2074,1890 L2080,1894 M2074,1890 L2068,1894" stroke="#2b6cb0"/>
+<text x="2096" y="1895" font-size="13" font-weight="700">J7 · Cool out</text>
+<text x="2062" y="1916" font-size="12" font-weight="700">Terminal</text>
+<text x="2062" y="1934" font-size="11" fill="#4a5568">Fan cool</text>
+<rect x="2250" y="1860" width="240" height="130" rx="8" fill="#fbb6ce" stroke="#d53f8c" stroke-width="2"/>
+<circle cx="2274" cy="1880" r="10" fill="#bee3f8" stroke="#2b6cb0"/>
+<path d="M2274,1880 L2274,1873 M2274,1880 L2280,1884 M2274,1880 L2268,1884" stroke="#2b6cb0"/>
+<text x="2296" y="1885" font-size="13" font-weight="700">Q4 · Exhaust</text>
+<text x="2262" y="1906" font-size="12" font-weight="700">MOSFET</text>
+<text x="2262" y="1924" font-size="11" fill="#4a5568">Kipas exhaust PWM</text>
+<text x="2262" y="1944" font-size="11"><tspan font-weight="700" fill="#276749">GPIO/Pin:</tspan> ← EXHAUST_PWM</text>
+<rect x="2540" y="1870" width="140" height="110" rx="8" fill="#fbb6ce" stroke="#d53f8c" stroke-width="2"/>
+<circle cx="2564" cy="1890" r="10" fill="#bee3f8" stroke="#2b6cb0"/>
+<path d="M2564,1890 L2564,1883 M2564,1890 L2570,1894 M2564,1890 L2558,1894" stroke="#2b6cb0"/>
+<text x="2586" y="1895" font-size="13" font-weight="700">J8 · Exh out</text>
+<text x="2552" y="1916" font-size="12" font-weight="700">Terminal</text>
+<text x="2552" y="1934" font-size="11" fill="#4a5568">Fan exhaust</text>
+<line x1="1365" y1="1990" x2="1365" y2="2015" stroke="#276749" stroke-width="2.5" marker-end="url(#m_gpio_out)"/>
+
+<line x1="1615" y1="1980" x2="1615" y2="2015" stroke="#276749" stroke-width="2.5" marker-end="url(#m_gpio_out)"/>
+
+<line x1="1365" y1="2015" x2="1615" y2="2015" stroke="#276749" stroke-width="2.5" marker-end="url(#m_gpio_out)"/>
+<rect x="1470.0" y="2017" width="40" height="16" rx="3" fill="#ffffff" stroke="#276749" stroke-width="0.8" opacity="0.96"/><text x="1490.0" y="2029" text-anchor="middle" font-size="11" font-weight="700" fill="#276749">DRUM</text>
+<line x1="1875" y1="1990" x2="1875" y2="2015" stroke="#276749" stroke-width="2.5" marker-end="url(#m_gpio_out)"/>
+
+<line x1="2120" y1="1980" x2="2120" y2="2015" stroke="#276749" stroke-width="2.5" marker-end="url(#m_gpio_out)"/>
+
+<line x1="1875" y1="2015" x2="2120" y2="2015" stroke="#276749" stroke-width="2.5" marker-end="url(#m_gpio_out)"/>
+<rect x="1977.5" y="2017" width="40" height="16" rx="3" fill="#ffffff" stroke="#276749" stroke-width="0.8" opacity="0.96"/><text x="1997.5" y="2029" text-anchor="middle" font-size="11" font-weight="700" fill="#276749">COOL</text>
+<line x1="2370" y1="1990" x2="2370" y2="2015" stroke="#d53f8c" stroke-width="2.5" marker-end="url(#m_pwm)"/>
+
+<line x1="2610" y1="1980" x2="2610" y2="2015" stroke="#d53f8c" stroke-width="2.5" marker-end="url(#m_pwm)"/>
+
+<line x1="2370" y1="2015" x2="2610" y2="2015" stroke="#d53f8c" stroke-width="2.5" marker-end="url(#m_pwm)"/>
+<rect x="2470.0" y="2017" width="40" height="16" rx="3" fill="#ffffff" stroke="#d53f8c" stroke-width="0.8" opacity="0.96"/><text x="2490.0" y="2029" text-anchor="middle" font-size="11" font-weight="700" fill="#d53f8c">PWM</text>
+<rect x="60" y="2040" width="1080" height="200" rx="8" fill="#ffffff" stroke="#c53030" stroke-width="2"/><text x="80" y="2072" font-size="14" font-weight="700" fill="#c53030">CONTROL FLOW IO</text><text x="80" y="2102" font-size="13">HEATER_EN → R_G1 → Q_K1 → K1 coil + SSR → J5</text><text x="80" y="2128" font-size="13">DRUM_EN → U20 → Q2 → J6</text><text x="80" y="2154" font-size="13">COOL_EN → Q7 → Q3 → J7 (Active LOW)</text><text x="80" y="2180" font-size="13">EXHAUST_PWM → Q4 → J8</text><text x="80" y="2212" font-size="12" fill="#744210">AC: F4 → F1 → K1 → SSR1 → J5</text>
+<rect x="1180" y="2040" width="1080" height="200" rx="8" fill="#fffaf0" stroke="#c05621" stroke-width="2"/><text x="1200" y="2072" font-size="14" font-weight="700" fill="#c05621">POWER FLOW IO</text><text x="1200" y="2102" font-size="13">AC → EMI1 → PSU1 → F3 → +12V_BUS</text><text x="1200" y="2128" font-size="13">+12V_BUS → J9.1 → MAIN U3 VIN (FIXED 5V)</text><text x="1200" y="2154" font-size="13">+12V_BUS → beban J6/J7/J8 via MOSFET</text><text x="1200" y="2180" font-size="13">+12V_HEATER coil K1 + E-Stop NC interlock</text><text x="1200" y="2212" font-size="12" fill="#4a5568">IO diskrit — jangan diganti modul Fase 1</text>
+<rect x="2300" y="2040" width="1220" height="200" rx="8" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2"/><text x="2320" y="2072" font-size="14" font-weight="700" fill="#2b6cb0">COMMUNICATION FLOW (MAIN)</text><text x="2320" y="2102" font-size="13">ESP32 —UART2→ J_H1 → Nextion</text><text x="2320" y="2128" font-size="13">ESP32 —UART1→ U6 —RS485→ J3 / J_H1</text><text x="2320" y="2154" font-size="13">ESP32 GPIO4 —DFPLAYER_TX→ U13 → J10</text><text x="2320" y="2180" font-size="13">ESP32 —SPI→ U4/U5 · —I2C→ U10</text><text x="2320" y="2212" font-size="12" fill="#4a5568">Net names = KiCad net names (jangan rename)</text>
+<rect x="40" y="2290" width="3520" height="560" rx="10" fill="#1a202c"/><text x="60" y="2330" font-size="17" font-weight="700" fill="#fff">CARA PAKAI BLUEPRINT INI DI KICAD (JUNIOR)</text><text x="60" y="2370" font-size="14" fill="#e2e8f0">1. Placement: L2_MAIN_PLACEMENT_ZONES · USB DevKit menghadap tepi/atas silk.</text><text x="60" y="2400" font-size="14" fill="#e2e8f0">2. Route POWER dulu (+12V_IN, +5V_SYS, +3V3_ANA, GND) sesuai L3_02.</text><text x="60" y="2430" font-size="14" fill="#e2e8f0">3. Route SPI pendek ke U4/U5 · lalu I2C · UART · GPIO kontrol ke J9.</text><text x="60" y="2460" font-size="14" fill="#e2e8f0">4. Setiap panah + label NET = nama net KiCad — jangan rename.</text><text x="60" y="2490" font-size="14" fill="#e2e8f0">5. Checklist: L2_MAIN_NETLIST_PATHS · L2_IO_NETLIST_PATHS · L2_MAIN_DEVKIT_PINMAP.</text><text x="60" y="2520" font-size="14" fill="#e2e8f0">6. DRC 0 · positions.csv jangan masih WROOM / MP1584EN SOT / L4.</text><text x="60" y="2565" font-size="14" fill="#faf089">Truth: pcb_nets.py · Electrical v3.7 · BOM Production · config.h</text><text x="60" y="2600" font-size="14" fill="#fc8181">Blueprint arsitektur — bukan Gerber. Regen seats modul sebelum fab.</text><text x="60" y="2680" font-size="12" fill="#a0aec0">D01E · Hartanzah Manufaktur Indonesia · gen_engineering_blueprint_svg.py v2</text>
+</svg>

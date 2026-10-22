@@ -1,0 +1,10 @@
+roastEn=0
+tm0.en=0
+printh A5
+printh 02
+printh FF
+printh FF
+printh FF
+vis b1,1
+vis b2,0
+vis b3,1

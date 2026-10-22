@@ -1,0 +1,12 @@
+covx t0.txt,tempLim,0,0
+if(tempLim<320)
+{
+  tempLim+=10
+}
+if(tempLim>320)
+{
+  tempLim=320
+}
+covx tempLim,t0.txt,0,0
+vis b3,1
+vis b4,0

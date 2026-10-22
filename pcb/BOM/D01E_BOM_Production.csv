@@ -1,0 +1,86 @@
+No,Subsystem,RefDes,Qty,Nama Komponen (Indonesia),Manufacturer,MPN,PCB,Fungsi Singkat,Catatan Kritis untuk Pemula,Harness Label
+1,Otak - MCU,U1,1,ESP32 DevKitC plug-in,Espressif,ESP32-DevKitC-32E,MAIN,Otak utama di seat U1_DEVKIT,Header 2.54mm pluggable — flash via USB DevKit,
+2,Otak - Power analog,U2,1,Regulator 3.3V bersih analog,Microchip,MCP1700-3302E,MAIN,Daya VIN seat MAX31856 modul,BUKAN untuk ESP32,
+3,Otak - Power 5V,U3,1,Modul buck FIXED 5V 3A,Generic/MP,MP1584-FIXED-5V,MAIN,Seat U3_MOD VIN/GND/VOUT,WAJIB FIXED 5V — LARANG tipe trimpot/adjustable,
+4,Otak - Module retention,STD_MOD,6,Spacer nylon M2.5 modul,Generic,M2.5x10 nylon,MAIN,Ikat DevKit+buck+2xTC,Wajib — getaran drum,
+5,Otak - GPIO expander,U10,1,Penambah pin I2C,NXP,PCF8574AP,MAIN,Cooling+RS485 DE+DF busy,Alamat I2C 0x20,
+6,Otak - USB program,U11,0,Chip USB ke serial DNP,Silicon Labs,CP2102N-A02,MAIN,DNP Fase1 — flash via DevKit,Jangan pasang bersamaan DevKit UART0,
+7,Suhu - Modul bean,U4,1,Breakout MAX31856 K-type Bean,Adafruit/compat,MAX31856 breakout,MAIN,Seat U4_MOD BEAN TC MODULE,Pinout VIN DO CS CLK DIN — pluggable,
+8,Suhu - Modul env,U5,1,Breakout MAX31856 K-type Env,Adafruit/compat,MAX31856 breakout,MAIN,Seat U5_MOD ENV TC MODULE,Bukan suhu box,
+9,Suhu - Konektor bean,J1,1,Socket panel K-type,Omega,PCC-SMP-K,MAIN,Probe bean,Material K-only,
+10,Suhu - Konektor env,J2,1,Socket panel K-type,Omega,PCC-SMP-K,MAIN,Probe env,Material K-only,
+11,Suhu - Probe bean,TC1,1,Probe K-type 2m ungrounded,Omega,KQXL-18G-2,FIELD,Suhu biji drum,Ungrounded,H2A-01 s/d H2A-03
+12,Suhu - Probe env,TC2,1,Probe K-type 2m ungrounded,Omega,KQXL-18G-2,FIELD,Suhu udara exhaust,Chamber bukan box,H2A-04 s/d H2A-06
+13,HMI,DISP1,1,Layar 7in capacitive,Nextion,NX8048K070-011C,FIELD,HMI operator,Bukan 011R resistive,H1-08 s/d H1-11
+14,Komunikasi,U6,1,Chip RS485,Maxim,MAX3485ESA+,MAIN,Modbus RTU,DE via PCF8574 P2+Q6,
+15,Komunikasi,J3,1,Terminal RS485 3 pin,Phoenix,1757018,MAIN,Comm port panel,H1-12 s/d H1-14
+16,Komunikasi,D1,1,TVS proteksi RS485,Littelfuse,SMAJ6.5CA,MAIN,Surge protection,,
+17,Komunikasi,R_TERM,1,Resistor 120R terminasi,Yageo,RC0805 120R,MAIN,Jumper DNP jika bukan ujung bus,,
+18,Komunikasi,R_BIAS1,1,Resistor bias 560R pull-up,Yageo,RC0805 560R,MAIN,RS485 B ke 3.3V,,
+19,Komunikasi,R_BIAS2,1,Resistor bias 560R pull-down,Yageo,RC0805 560R,MAIN,RS485 A ke GND,,
+20,Komunikasi,Q6,1,NPN inverter RS485 DE,ON Semi,BC847C,MAIN,P2 HIGH=RX mode default,Boot-safe bus,
+21,Isolasi input,U7,1,Optocoupler tombol Drum,Everlight,PC817C,MAIN,Input drum 12V,H1-03 ke J_H1,
+22,Isolasi input,U8,1,Optocoupler tombol Heater,Everlight,PC817C,MAIN,Input heater 12V,H1-04 ke J_H1,
+23,Isolasi input,U9,1,Optocoupler tombol Air,Everlight,PC817C,MAIN,Input air 12V,H1-05 ke J_H1,
+24,Isolasi input,U12,1,Optocoupler sense E-Stop,Everlight,PC817C,MAIN,Sense E-Stop GPIO14,H1-06 ke J_H1,
+25,Input panel,SW1,1,E-Stop 2NC mushroom,Schneider,XB4BS8444,FIELD,Darurat,BUKAN 8445,
+26,Input panel,SW2,1,Tombol Drum NO lampu,Schneider,XB4BW33B5,FIELD,Drum on/off,H1-03
+27,Input panel,SW3,1,Tombol Heater NO lampu,Schneider,XB4BW33B5,FIELD,Heater on/off,H1-04
+28,Input panel,SW4,1,Tombol Air NO lampu,Schneider,XB4BW33B5,FIELD,Air exhaust enable,H1-05
+29,Input panel,SW5,1,Main isolator 2P 25A,ABB,OT25FT2,FIELD,Putus L+N mains,BUKAN switch 22mm 10A,
+30,Input panel,R1,1,Potensiometer 10k linear,Bourns,PTV09A-4020F-B103,FIELD,Kecepatan exhaust PWM,H1-07A/B/C
+31,Output heater,K1,1,Contactor 25A coil 12VDC,Schneider,LC1D25JD,IO,Safety heater,BUKAN LC1D25BD 24V,
+32,Output heater,SSR1,1,SSR AC 40A,Crydom,D2440,IO,Heater switch,Sesudah K1,
+33,Output heater,HS1,1,Heatsink SSR 1.0C/W,Fischer,SK-104-100,IO,Pendingin SSR,Thermal pad TPAD1,
+34,Output heater,Q_K1,1,MOSFET driver coil K1,Infineon,IRLZ44NPBF,IO,Arus coil 0.4A,BUKAN PC817,
+35,Output heater,D_K1,1,Flyback diode coil K1,ON Semi,1N4007,IO,Paralel coil,Katoda ke +12V,
+36,Output heater,R_G1,1,Resistor gate Q_K1 1k,0603,1k,IO,GPIO13 via IDC pin5,,
+37,Output heater,R_G2,1,Pulldown gate Q_K1 10k,0603,10k,IO,Gate Q_K1 default OFF,,
+38,Output drum,Q2,1,MOSFET motor drum,Infineon,IRLB8743,IO,Switch drum 5A,Flyback D2 wajib,
+39,Output drum,U20,1,Gate driver drum TC4427,Microchip,TC4427A,IO,Driver GPIO12,Pull-down GPIO12,
+40,Output drum,D2,1,Flyback drum SS34,ON Semi,SS34,IO,Back-EMF motor,,
+41,Output drum,F_DRUM,1,Sekring drum 7.5A,Littelfuse,0287007.L,IO,Protegsi stall,H2B-07
+42,Output fan,Q3,1,MOSFET cooling fans,Vishay,SI2302,IO,2 kipas parallel,Via Q7 buffer,
+43,Output fan,Q7,1,NPN buffer cooling P3 ke Q3,ON Semi,BC847C,IO,P3 LOW=ON via sink,BUKAN langsung ke gate,
+44,Output fan,R_Q3_G,1,Pulldown gate Q3 10k,0603,10k,IO,Cooling OFF saat boot,,
+45,Output fan,R_Q7,1,Base resistor Q7 4.7k,0603,4.7k,IO,Dari IDC pin7,,
+46,Output fan,Q4,1,MOSFET exhaust fan,Vishay,SI2302,IO,PWM GPIO2 LEDC,IDC pin8,
+47,Output fan,R_Q4_G,1,Pulldown gate Q4 10k,0603,10k,IO,Exhaust OFF saat boot,,
+48,Output fan,D3,1,Flyback cooling 1N5819,Schottky,1N5819,IO,Proteksi kipas,,
+49,Output fan,D4,1,Flyback exhaust 1N5819,Schottky,1N5819,IO,Proteksi kipas,,
+50,Proteksi,F1,1,Sekring heater 25A,Littelfuse,0215025.MXP+holder,IO,Heater 16.4A,,
+51,Proteksi,F2,1,Sekring PSU 6A,Littelfuse,0215006.MXP+holder,IO,Cabang PSU,,
+52,Proteksi,F3,1,Sekring bus 12V 10A,Littelfuse,0215010.MXP+holder,IO,Distribution 12V,,
+53,Proteksi,F4,1,MCB 25A 1P C25,Schneider,iC60N C25,IO,Setelah main switch,,
+54,Proteksi,EMI1,1,Filter EMI 6A PSU,Schaffner,FN2070-6-06,IO,Hanya cabang PSU,BUKAN jalur heater,
+55,Power,PSU1,1,PSU 12V 12.5A 150W,Mean Well,LRS-150-12,IO,Daya DC 6.8A peak,FG ke J_PE,
+56,Monitor,NTC1,1,NTC 10k box monitor,Generic,NTC 10K B3950,MAIN,Suhu box 40C,GPIO35,
+57,Sensor opsional,J_COLOR,1,Header JST color sensor,Generic,JST-XH-4,MAIN,DNP v1,TCS34725 opsional,
+58,Audio,U13,1,Modul DFPlayer Mini,DFRobot,MP3-TF-16P,MAIN,Audio MP3,TX=GPIO4 BUKAN UART0,
+59,Audio,SP1,1,Speaker 3W 8ohm,Generic,3W 8R 50mm,FIELD,Keluar suara,H1-15 H1-16
+60,Audio,SD1,1,microSD 1GB FAT32,Any,1GB,FIELD,File MP3,,
+61,Programming,J_USB,1,USB-C service port DNP optional,Amphenol,12401598E4#2A,MAIN,Spare path — flash utama DevKit USB,DNP jika U11 DNP,
+62,Konektor,J_H1,1,Header panel 20 pin 2.54mm,Generic,2x10 header,MAIN,Harness H1 panel,BUKAN lewat IDC,
+63,Konektor,J4,1,Terminal 12V out 2p,Phoenix,1777992,IO,12V ke panel lampu,H1-01
+64,Konektor,J5,1,Terminal heater 7.62mm,Phoenix,1998962,IO,SSR OUT ke heater L,H2B-14
+65,Konektor,J6,1,Terminal drum 2p,Phoenix,1777992,IO,Drum motor,H2B-07 H2B-08
+66,Konektor,J7,1,Terminal cooling 2p,Phoenix,1777992,IO,Cooling fans,H2B-09 H2B-10
+67,Konektor,J8,1,Terminal exhaust 2p,Phoenix,1777992,IO,Exhaust fan,H2B-11 H2B-12
+68,Konektor,J9,1,IDC 2x10 antar PCB,Generic,2.54mm IDC 20p,BOTH,MAIN ke IO,Lihat pinout doc,
+69,Konektor,J10,1,JST-XH 4p audio,Generic,JST-XH-4,MAIN,DFPlayer+speaker,,
+70,Konektor,J_PE,1,Stud PE M4,Generic,M4+serrated,IO,Earth bond,<0.1 ohm,
+71,Passive,R_PULL,20,Resistor assorted 0603,Yageo,RC0603,MAIN,10k 4k7 470 1k,Decoupling pull,
+72,Passive,C_DEC,40,Kapasitor 100nF 10uF 105C,0603,X7R,MAIN,Decoupling,10uF ESP VIN,
+73,Passive,C_TC,4,Kapasitor 100pF C0G TC opsional,Murata,GRM1555C1H101JA01,MAIN,Bypass board dekat J1/J2,Modul punya filter sendiri,
+74,Passive,FB_TC,4,Ferrite bead TC,Murata,BLM18PG121SN1,MAIN,Filter HF TC,,
+75,Passive,TPAD1,1,Thermal pad SSR,Bergquist,GP5000S35,IO,SSR ke heatsink,,
+76,Mekanik,STD1-4,4,Spacer M3x10,Generic,M3x10 brass,BOTH,Mounting PCB,,
+77,Mekanik,ENC1,1,Box IP54 ventilated,Spelsberg,AE ventilated,FIELD,Control box,Grille vent,
+78,Mekanik,LBL1,1,Label CE rating,Custom,D01E-CE-PLATE,FIELD,220V 3600W,,
+79,Kabel,CBL_HEATER,1,Kabel 3G2.5 H05RR-F 2m,Generic,H05RR-F 3G2.5,FIELD,Heater L N PE,H2B-13 s/d H2B-15
+80,Kabel,CBL_DRUM,1,Kabel 2x1.5mm2 2m,Generic,2x1.5mm2,FIELD,Drum 5A,H2B-07 H2B-08
+81,Kabel,CBL_TC,2,Extension K-type 2m,Omega,EXTT-K-SJ-2,FIELD,Probe ke MAIN J1/J2,H2A-xx
+82,Kabel,CBL_RS485,1,Kabel RS485 shielded,Belden,9841,FIELD,Comm,H1-12 s/d H1-14
+83,Kabel,CBL_SPK,1,Kabel speaker 22AWG,Generic,22AWG 2C,FIELD,Speaker,H1-15 H1-16
+84,Kabel,CBL_PANEL,1,Harness panel 20 core,Generic,20x0.5mm2,FIELD,Panel ke J_H1,Semua H1-xx
+85,Kabel,CBL_POWER,1,Harness power safety 5 core,Generic,5x1.5-2.5mm2,FIELD,E-Stop+mains,H3-01 s/d H3-05,

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1200" height="860" fill="#faf9f7"/>
+  <text x="40" y="40" font-size="22" font-weight="700">L3 · COMMON MISTAKES (SALAH vs BENAR)</text>
+  <text x="40" y="68" font-size="13" fill="#4a5568">Contoh konkret — hafalkan sebelum layout</text>
+  
+  <rect x="40" y="100" width="540" height="58" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="55" y="124" font-size="12" font-weight="700" fill="#c53030">SALAH</text>
+  <text x="55" y="144" font-size="13">SPI muter mengelilingi board / lintas buck</text>
+  <rect x="620" y="100" width="540" height="58" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="635" y="124" font-size="12" font-weight="700" fill="#276749">BENAR</text>
+  <text x="635" y="144" font-size="13">SPI lurus pendek DevKit kanan → U4/U5</text>
+  <rect x="40" y="170" width="540" height="58" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="55" y="194" font-size="12" font-weight="700" fill="#c53030">SALAH</text>
+  <text x="55" y="214" font-size="13">Buck U3 dekat / di tengah zona TC</text>
+  <rect x="620" y="170" width="540" height="58" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="635" y="194" font-size="12" font-weight="700" fill="#276749">BENAR</text>
+  <text x="635" y="214" font-size="13">Buck kiri (power) · TC kanan · sesuai zona L2</text>
+  <rect x="40" y="240" width="540" height="58" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="55" y="264" font-size="12" font-weight="700" fill="#c53030">SALAH</text>
+  <text x="55" y="284" font-size="13">DevKit USB menghadap bawah / pin tertukar</text>
+  <rect x="620" y="240" width="540" height="58" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="635" y="264" font-size="12" font-weight="700" fill="#276749">BENAR</text>
+  <text x="635" y="284" font-size="13">USB ATAS · cek L2 pinmap L/R</text>
+  <rect x="40" y="310" width="540" height="58" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="55" y="334" font-size="12" font-weight="700" fill="#c53030">SALAH</text>
+  <text x="55" y="354" font-size="13">Pasang MP1584 ada trimpot “biar bisa disetel”</text>
+  <rect x="620" y="310" width="540" height="58" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="635" y="334" font-size="12" font-weight="700" fill="#276749">BENAR</text>
+  <text x="635" y="354" font-size="13">HANYA FIXED 5V · QC ukur 4.90…5.10 V</text>
+  <rect x="40" y="380" width="540" height="58" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="55" y="404" font-size="12" font-weight="700" fill="#c53030">SALAH</text>
+  <text x="55" y="424" font-size="13">Populate U11 + DevKit USB bersamaan</text>
+  <rect x="620" y="380" width="540" height="58" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="635" y="404" font-size="12" font-weight="700" fill="#276749">BENAR</text>
+  <text x="635" y="424" font-size="13">U11 DNP · flash hanya USB DevKit</text>
+  <rect x="40" y="450" width="540" height="58" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="55" y="474" font-size="12" font-weight="700" fill="#c53030">SALAH</text>
+  <text x="55" y="494" font-size="13">Kirim Gerber positions masih WROOM/L4</text>
+  <rect x="620" y="450" width="540" height="58" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="635" y="474" font-size="12" font-weight="700" fill="#276749">BENAR</text>
+  <text x="635" y="494" font-size="13">Regen layout seats · DRC 0 · Gerber baru</text>
+  <rect x="40" y="520" width="540" height="58" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="55" y="544" font-size="12" font-weight="700" fill="#c53030">SALAH</text>
+  <text x="55" y="564" font-size="13">GND hanya track tipis tanpa pour</text>
+  <rect x="620" y="520" width="540" height="58" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="635" y="544" font-size="12" font-weight="700" fill="#276749">BENAR</text>
+  <text x="635" y="564" font-size="13">Polygon GND + refill + vias</text>
+  <rect x="40" y="590" width="540" height="58" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="55" y="614" font-size="12" font-weight="700" fill="#c53030">SALAH</text>
+  <text x="55" y="634" font-size="13">EMI di jalur heater 3600W</text>
+  <rect x="620" y="590" width="540" height="58" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="635" y="614" font-size="12" font-weight="700" fill="#276749">BENAR</text>
+  <text x="635" y="634" font-size="13">EMI hanya cabang PSU</text>
+  <rect x="40" y="660" width="540" height="58" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="55" y="684" font-size="12" font-weight="700" fill="#c53030">SALAH</text>
+  <text x="55" y="704" font-size="13">K1 salah tipe coil 24V (LC1D25BD)</text>
+  <rect x="620" y="660" width="540" height="58" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="635" y="684" font-size="12" font-weight="700" fill="#276749">BENAR</text>
+  <text x="635" y="704" font-size="13">K1 = LC1D25JD 12VDC</text>
+  <rect x="40" y="730" width="540" height="58" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="55" y="754" font-size="12" font-weight="700" fill="#c53030">SALAH</text>
+  <text x="55" y="774" font-size="13">COOL dianggap Active HIGH sama heater</text>
+  <rect x="620" y="730" width="540" height="58" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="6"/>
+  <text x="635" y="754" font-size="12" font-weight="700" fill="#276749">BENAR</text>
+  <text x="635" y="774" font-size="13">COOL_EN Active LOW (P3 sink) · jangan samakan</text>
+</svg>

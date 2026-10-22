@@ -1,0 +1,300 @@
+Page page2
+    Attributes
+        ID                 : 0
+        Scope              : local
+        Send Component ID  : disabled
+        Locked             : no
+        Swide up page ID   : 0
+        Swide down page ID : 0
+        Swide left page ID : 0
+        Swide right page ID: 0
+    
+    Events
+        Preinitialize Event
+            vis b2,0
+            vis p7,0
+            vis b7,0
+            vis b8,0
+        
+Text t0
+    Attributes
+        ID                 : 20
+        Scope              : local
+        Dragging           : 0
+        Send Component ID  : disabled
+        Associated Keyboard: none
+        Text               : 00:00
+        Max. Text Size     : 10
+    
+Text t1
+    Attributes
+        ID                 : 21
+        Scope              : local
+        Dragging           : 0
+        Send Component ID  : disabled
+        Associated Keyboard: none
+        Text               : 00
+        Max. Text Size     : 10
+    
+Text t2
+    Attributes
+        ID                 : 22
+        Scope              : local
+        Dragging           : 0
+        Send Component ID  : disabled
+        Associated Keyboard: none
+        Text               : 00
+        Max. Text Size     : 10
+    
+Text t3
+    Attributes
+        ID                 : 23
+        Scope              : local
+        Dragging           : 0
+        Send Component ID  : disabled
+        Associated Keyboard: none
+        Text               : 00
+        Max. Text Size     : 10
+    
+Text t4
+    Attributes
+        ID                 : 24
+        Scope              : local
+        Dragging           : 0
+        Send Component ID  : disabled
+        Associated Keyboard: none
+        Text               : 00
+        Max. Text Size     : 10
+    
+Text t5
+    Attributes
+        ID                 : 25
+        Scope              : local
+        Dragging           : 0
+        Send Component ID  : disabled
+        Associated Keyboard: none
+        Text               : 00
+        Max. Text Size     : 10
+    
+Text t6
+    Attributes
+        ID                 : 26
+        Scope              : local
+        Dragging           : 0
+        Send Component ID  : disabled
+        Associated Keyboard: none
+        Text               : 00
+        Max. Text Size     : 10
+    
+Picture p0
+    Attributes
+        ID               : 1
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p1
+    Attributes
+        ID               : 2
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p2
+    Attributes
+        ID               : 3
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p4
+    Attributes
+        ID               : 6
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p5
+    Attributes
+        ID               : 7
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p6
+    Attributes
+        ID               : 10
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p3
+    Attributes
+        ID               : 12
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Picture p7
+    Attributes
+        ID               : 17
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+    
+Button b0
+    Attributes
+        ID               : 4
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            vis p7,1
+            vis b7,1
+            vis b8,1
+        
+Button b6
+    Attributes
+        ID               : 5
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            page page3
+        
+Button b1
+    Attributes
+        ID               : 8
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            vis b1,0
+            vis b2,1
+            vis b3,0
+        
+        Touch Release Event
+            roastEn=1
+            tm0.en=1
+            printh A5
+            printh 01
+            printh FF
+            printh FF
+            printh FF
+        
+Button b2
+    Attributes
+        ID               : 9
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            vis b1,1
+            vis b2,0
+            vis b3,1
+        
+        Touch Release Event
+            printh A5 ? 02 ? FF ? FF ? FF
+        
+Button b3
+    Attributes
+        ID               : 11
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Release Event
+            printh A5 ? 03 ? FF ? FF ? FF
+        
+Button b4
+    Attributes
+        ID               : 13
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+Button b5
+    Attributes
+        ID               : 14
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+Button b8
+    Attributes
+        ID               : 18
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            page page1
+        
+Button b7
+    Attributes
+        ID               : 19
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+    Events
+        Touch Press Event
+            vis p7,0
+        
+Dual-state Button bt0
+    Attributes
+        ID               : 15
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    
+Dual-state Button bt1
+    Attributes
+        ID               : 16
+        Scope            : local
+        Dragging         : 0
+        Send Component ID: disabled
+        State            : unpressed
+        Text             : 
+        Max. Text Size   : 10
+    

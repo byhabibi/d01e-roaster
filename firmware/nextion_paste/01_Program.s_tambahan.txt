@@ -1,0 +1,4 @@
+// Tambahkan di Program.s (bersama variabel lain):
+int roastEn=0
+int sys3=0,sys4=0
+int heatPct=0

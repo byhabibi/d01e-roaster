@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1200" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1600" height="1200" fill="#faf9f7"/>
+  <text x="800" y="36" text-anchor="middle" font-size="24" font-weight="700">L2 · MAIN — Checklist jalur PCB (pad → pad)</text>
+  <text x="800" y="60" text-anchor="middle" font-size="13" fill="#4a5568">Junior layout centang satu per satu di KiCad · nama net harus SAMA</text>
+
+  <!-- POWER -->
+  <rect x="40" y="85" width="740" height="230" fill="#fffaf0" stroke="#dd6b20" stroke-width="2" rx="8"/>
+  <text x="60" y="115" font-size="16" font-weight="700" fill="#c05621">A. POWER (wajib dulu)</text>
+  <text x="60" y="145" font-size="13">☐ J9.1  →  U3.1 VIN     net +12V_IN     (lebar ≥0.5 mm)</text>
+  <text x="60" y="170" font-size="13">☐ J9.2  →  GND zone     net GND_PWR / GND star</text>
+  <text x="60" y="195" font-size="13">☐ U3.2  →  GND          net GND</text>
+  <text x="60" y="220" font-size="13">☐ U3.3  →  U1.L19       net +5V_SYS     (ke DevKit 5V)</text>
+  <text x="60" y="245" font-size="13">☐ U3.3  →  U13.1, U10.16, decoupling C4  net +5V_SYS</text>
+  <text x="60" y="270" font-size="13">☐ U2.3 ← +5V_SYS · U2.2 → U4.1 &amp; U5.1  net +3V3_ANA</text>
+  <text x="60" y="295" font-size="12" fill="#c53030" font-weight="700">U3 = FIXED 5V 3 pin saja · TIDAK ADA pad ADJ/trimpot</text>
+
+  <!-- SPI TC -->
+  <rect x="820" y="85" width="740" height="230" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2" rx="8"/>
+  <text x="840" y="115" font-size="16" font-weight="700" fill="#2b6cb0">B. SPI THERMOCOUPLE (pendek!)</text>
+  <text x="840" y="145" font-size="13">☐ U1.R9  → U4.6 &amp; U5.6   SPI_SCK</text>
+  <text x="840" y="170" font-size="13">☐ U1.R2  → U4.7 &amp; U5.7   SPI_MOSI</text>
+  <text x="840" y="195" font-size="13">☐ U1.R8  → U4.4 &amp; U5.4   SPI_MISO</text>
+  <text x="840" y="220" font-size="13">☐ U1.R10 → U4.5          SPI_CS_BEAN</text>
+  <text x="840" y="245" font-size="13">☐ U1.R16 → U5.5          SPI_CS_ENV</text>
+  <text x="840" y="270" font-size="13">☐ U4.3 / U5.3 → GND · U4.1 / U5.1 ← +3V3_ANA</text>
+  <text x="840" y="295" font-size="12" fill="#2b6cb0">J1/J2 = konektor probe → kawat pendek ke T+/T− di modul TC</text>
+
+  <!-- Panel inputs -->
+  <rect x="40" y="340" width="740" height="220" fill="#f0fff4" stroke="#276749" stroke-width="2" rx="8"/>
+  <text x="60" y="370" font-size="16" font-weight="700" fill="#276749">C. INPUT PANEL (opto → DevKit)</text>
+  <text x="60" y="400" font-size="13">☐ J_H1.3/4/5 → anoda jalur U7/U8/U9 (via 5V panel path)</text>
+  <text x="60" y="425" font-size="13">☐ U7.2 → U1.L9   BTN_DRUM</text>
+  <text x="60" y="450" font-size="13">☐ U8.2 → U1.L10  BTN_HEATER</text>
+  <text x="60" y="475" font-size="13">☐ U9.2 → U1.L11  BTN_AIR</text>
+  <text x="60" y="500" font-size="13">☐ U12.2 → U1.L12 ESTOP_SENSE</text>
+  <text x="60" y="525" font-size="13">☐ J_H1.9 → U1.L5  POT_AIR · NTC1 → U1.L6</text>
+  <text x="60" y="550" font-size="12">Pull-up/down R1–R8 dekat opto/GPIO (lihat MAIN_PASSIVES)</text>
+
+  <!-- Outputs J9 -->
+  <rect x="820" y="340" width="740" height="220" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="8"/>
+  <text x="840" y="370" font-size="16" font-weight="700" fill="#c53030">D. OUTPUT KE IO (J9) — critical</text>
+  <text x="840" y="400" font-size="13">☐ U1.L15 → J9.5   HEATER_EN   (GPIO13)</text>
+  <text x="840" y="425" font-size="13">☐ U1.L13 → J9.6   DRUM_EN     (GPIO12)</text>
+  <text x="840" y="450" font-size="13">☐ U10.4  → J9.7   COOL_EN     (PCF P3)</text>
+  <text x="840" y="475" font-size="13">☐ U1.R15 → J9.8   EXHAUST_PWM (GPIO2)</text>
+  <text x="840" y="500" font-size="13">☐ J9.4 → GND_SIG · J9.9 ← +5V sense (opsional)</text>
+  <text x="840" y="525" font-size="12" fill="#c53030">Track heater/drum jauh dari SPI analog TC bila mungkin</text>
+  <text x="840" y="550" font-size="12">Edge IDC J9 di tepi board menghadap IO</text>
+
+  <!-- Comms audio -->
+  <rect x="40" y="585" width="740" height="220" fill="#faf5ff" stroke="#6b46c1" stroke-width="2" rx="8"/>
+  <text x="60" y="615" font-size="16" font-weight="700" fill="#6b46c1">E. RS485 + I2C + AUDIO</text>
+  <text x="60" y="645" font-size="13">☐ U1.R11 → U6.7  UART1_TX · U1.R12 → U6.6 UART1_RX</text>
+  <text x="60" y="670" font-size="13">☐ U6.2 → J3.1 RS485_A · U6.3 → J3.2 RS485_B · U6.4 GND</text>
+  <text x="60" y="695" font-size="13">☐ U10.3 → Q6 → DE path · bias R_BIAS + TVS D1 dekat J3</text>
+  <text x="60" y="720" font-size="13">☐ U1.R6 → U10.9 SDA · U1.R3 → U10.10 SCL</text>
+  <text x="60" y="745" font-size="13">☐ U1.R13 → U13.2 DFPLAYER_TX · U13.1 ← +5V</text>
+  <text x="60" y="770" font-size="13">☐ J_H1.12/13 ←→ UART2 Nextion (L7/L8)</text>
+  <text x="60" y="790" font-size="12">Term 120R = DNP kecuali ujung bus</text>
+
+  <!-- Footprints -->
+  <rect x="820" y="585" width="740" height="220" fill="#edf2f7" stroke="#4a5568" stroke-width="2" rx="8"/>
+  <text x="840" y="615" font-size="16" font-weight="700">F. FOOTPRINT SEATS (KiCad)</text>
+  <text x="840" y="645" font-size="13">☐ U1 = D01E:MODULE_ESP32_DEVKITC</text>
+  <text x="840" y="670" font-size="13">☐ U3 = D01E:MODULE_MP1584_4P (3 pad VIN/GND/VOUT)</text>
+  <text x="840" y="695" font-size="13">☐ U4 / U5 = D01E:MODULE_MAX31856_8P</text>
+  <text x="840" y="720" font-size="13">☐ U13 = PinHeader 1×16 (sudah ada)</text>
+  <text x="840" y="745" font-size="13">☐ U11 + J_USB = DNP Fase 1 (jangan populate)</text>
+  <text x="840" y="770" font-size="13">☐ Silk: BUCK 5V FIXED · ESP32 DevKit · BEAN/ENV TC</text>
+  <text x="840" y="795" font-size="12" fill="#744210">Setelah place: assign net = nama di kolom NET (L2 DevKit sheet)</text>
+
+  <!-- Placement coords hint -->
+  <rect x="40" y="830" width="1520" height="140" fill="#ffffff" stroke="#a0aec0" stroke-width="2" rx="8"/>
+  <text x="60" y="865" font-size="15" font-weight="700">G. Urutan kerja junior di KiCad (disarankan)</text>
+  <text x="60" y="895" font-size="13">1. Place footprints seats (U3→U1→U4/U5→J9→J_H1→chips) sesuai zona L2 placement</text>
+  <text x="60" y="920" font-size="13">2. Assign net tiap pad dari checklist A–E · jangan menebak GPIO</text>
+  <text x="60" y="945" font-size="13">3. Route power + GND pour dulu · lalu SPI pendek · lalu J9 control · lalu panel</text>
+  <text x="60" y="970" font-size="13">4. DRC 0 · export Gerber BARU · sync ke D01E_Delivery/03_PCB_Manufacturer (ganti file lama WROOM!)</text>
+
+  <text x="800" y="1010" text-anchor="middle" font-size="12" fill="#718096">Generator links: scripts/gen_pcb_layout.py MAIN_LINKS · scripts/pcb_nets.py</text>
+  <text x="800" y="1040" text-anchor="middle" font-size="13" font-weight="700" fill="#c53030">Gerber lama masih WROOM/chip — JANGAN kirim fab sampai langkah G.4 selesai</text>
+</svg>

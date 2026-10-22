@@ -1,0 +1,2 @@
+// page16–27 ONLY — gunakan 40_pageNN_Preinitialize.txt (bukan 30_*)
+// page2 manual: 02_page2_Preinitialize.txt → A5 08

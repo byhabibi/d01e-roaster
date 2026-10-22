@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1180" font-family="Segoe UI, Consolas, Arial, sans-serif">
+  <rect width="1280" height="1180" fill="#faf9f7"/>
+  <text x="40" y="36" font-size="22" font-weight="700">L3 · LAYER + TRACK + VIA (aturan fabrikasi D01E — KUNCI)</text>
+  <text x="40" y="58" font-size="12" fill="#c53030">Nilai di bawah WAJIB diikuti junior. Jangan longgarkan tanpa Senior Hardware Engineer.</text>
+
+  <!-- Layer stack -->
+  <rect x="40" y="80" width="600" height="280" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2.5" rx="8"/>
+  <text x="60" y="112" font-size="16" font-weight="700" fill="#2b6cb0">1. LAYER ROUTING (MAIN &amp; IO = 2-layer FR4)</text>
+  <text x="60" y="148" font-size="14" font-weight="700">TOP (F.Cu)</text>
+  <text x="60" y="172" font-size="13">· Power (+12V / +5V_SYS / +3V3_ANA)</text>
+  <text x="60" y="194" font-size="13">· SPI (prioritas, pendek, minim via)</text>
+  <text x="60" y="216" font-size="13">· Signal kritis pendek (CS, LEDC PWM pendek)</text>
+  <text x="60" y="248" font-size="14" font-weight="700">BOTTOM (B.Cu)</text>
+  <text x="60" y="272" font-size="13">· GND plane PENUH (polygon refill)</text>
+  <text x="60" y="294" font-size="13">· Sinyal sisa / bridge crossing (bukan pengganti plane)</text>
+  <text x="60" y="330" font-size="12" fill="#744210">Jangan pecah GND plane tanpa alasan. Stitch via di bawah IC.</text>
+
+  <rect x="660" y="80" width="580" height="280" fill="#edf2f7" stroke="#718096" stroke-width="2" rx="8"/>
+  <text x="680" y="112" font-size="15" font-weight="700">Opsional 4-layer (HANYA jika disetujui)</text>
+  <text x="680" y="148" font-size="13">TOP     — Power</text>
+  <text x="680" y="176" font-size="13">INNER1  — Ground plane</text>
+  <text x="680" y="204" font-size="13">INNER2  — +3V3 / power clean</text>
+  <text x="680" y="232" font-size="13">BOTTOM  — Signal</text>
+  <text x="680" y="272" font-size="13" fill="#c53030">Default produksi Fase 1 = 2-layer (lihat L3_08).</text>
+  <text x="680" y="300" font-size="12" fill="#4a5568">4-layer tidak mengubah net name / pin map.</text>
+  <text x="680" y="330" font-size="12" fill="#4a5568">IO HV tetap clearance ≥ 4 mm AC↔LV.</text>
+
+  <!-- Track width -->
+  <rect x="40" y="380" width="600" height="420" fill="#fff" stroke="#dd6b20" stroke-width="2.5" rx="8"/>
+  <text x="60" y="412" font-size="16" font-weight="700" fill="#c05621">3. TRACK WIDTH (eksplisit — min)</text>
+  <text x="60" y="448" font-size="14" font-family="Consolas, monospace">+12V heater / +12V_HEATER (IO)   ≥ 2.50 mm</text>
+  <text x="60" y="478" font-size="14" font-family="Consolas, monospace">+12V_BUS beban drum/fan (IO)     ≥ 1.50 mm / pour</text>
+  <text x="60" y="508" font-size="14" font-family="Consolas, monospace">+12V_IN MAIN → U3 VIN            ≥ 0.80 mm</text>
+  <text x="60" y="538" font-size="14" font-family="Consolas, monospace">+5V_SYS                          ≥ 0.80 mm</text>
+  <text x="60" y="568" font-size="14" font-family="Consolas, monospace">+3V3_ANA                         ≥ 0.50 mm</text>
+  <text x="60" y="598" font-size="14" font-family="Consolas, monospace">GPIO / UART / I2C                ≥ 0.25 mm</text>
+  <text x="60" y="628" font-size="14" font-family="Consolas, monospace">SPI (SCK/MOSI/MISO/CS)           ≥ 0.25 mm</text>
+  <text x="60" y="658" font-size="14" font-family="Consolas, monospace">EXHAUST_PWM                      ≥ 0.30 mm</text>
+  <text x="60" y="688" font-size="14" font-family="Consolas, monospace">Heater AC L (IO)                 ≥ 2.00 mm + HV clearance</text>
+  <text x="60" y="728" font-size="13" fill="#c53030">GND = POLYGON (bukan track tipis). Refill setelah tiap ubahan.</text>
+  <text x="60" y="760" font-size="12" fill="#718096">Copper 1 oz · FR4 1.6 mm · match L3_08</text>
+
+  <!-- Via rules -->
+  <rect x="660" y="380" width="580" height="420" fill="#fff" stroke="#6b46c1" stroke-width="2.5" rx="8"/>
+  <text x="680" y="412" font-size="16" font-weight="700" fill="#6b46c1">4. VIA RULES</text>
+  <text x="680" y="452" font-size="14" font-weight="700">Power vias</text>
+  <text x="680" y="478" font-size="13">Drill/pad min praktis lebih besar · prefer via ≥ 0.40 / 0.80 mm</text>
+  <text x="680" y="508" font-size="13">Multi-via parallel di +12V / +5V (jangan 1 via kecil)</text>
+  <text x="680" y="548" font-size="14" font-weight="700">Logic vias</text>
+  <text x="680" y="574" font-size="13">Drill/pad ≈ 0.30 / 0.60 mm (min praktis fab)</text>
+  <text x="680" y="610" font-size="14" font-weight="700" fill="#c53030">SPI</text>
+  <text x="680" y="636" font-size="13">HINDARI via. Ideal 0 via di SCK/MOSI/MISO/CS.</text>
+  <text x="680" y="662" font-size="13">Jika terpaksa: max 1 via/net · length match pasangan</text>
+  <text x="680" y="698" font-size="14" font-weight="700" fill="#c53030">Thermocouple / analog</text>
+  <text x="680" y="724" font-size="13">TC return + POT/NTC: sebisa mungkin TANPA via</text>
+  <text x="680" y="750" font-size="13">Jangan via di bawah seat MAX31856 bila bisa dihindari</text>
+  <text x="680" y="778" font-size="12" fill="#718096">Via tented preferred (L3_08)</text>
+
+  <rect x="40" y="820" width="1200" height="320" fill="#fffbeb" stroke="#d69e2e" stroke-width="2" rx="8"/>
+  <text x="60" y="855" font-size="16" font-weight="700">CLEARANCE RINGKAS</text>
+  <text x="60" y="890" font-size="14">Clearance LV (logic)              ≥ 0.20 mm</text>
+  <text x="60" y="920" font-size="14">Clearance HV AC ↔ LV (IO)         ≥ 4.0 mm</text>
+  <text x="60" y="950" font-size="14">Edge clearance                    ≥ 0.5 mm (lebih aman 1.0 mm)</text>
+  <text x="60" y="980" font-size="14">AC heater track ≠ dekat J9 sinyal / SPI / ADC</text>
+  <text x="60" y="1020" font-size="14" font-weight="700">Setelah ubah copper: B (Refill Zones) → DRC ulang → cek L3_13 checklist</text>
+  <text x="60" y="1060" font-size="12" fill="#718096">Board: MAIN ~120×90 · IO ~160×120 · KiCad .dru generator boleh longgar — patuhi tabel ini</text>
+  <text x="60" y="1095" font-size="12" fill="#718096">Sumber industrial pack: gen_l3_manufacturing_svg.py · Electrical v3.7 · pcb_nets</text>
+</svg>

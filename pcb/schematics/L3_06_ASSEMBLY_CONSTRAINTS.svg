@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 980" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1280" height="980" fill="#faf9f7"/>
+  <text x="40" y="40" font-size="22" font-weight="700">L3 · KEEPOUT AREA + ASSEMBLY</text>
+  <text x="40" y="68" font-size="13" fill="#4a5568">Keepout electrical + mekanik getaran drum · WAJIB sebelum route</text>
+
+  <rect x="40" y="95" width="600" height="320" fill="#fff5f5" stroke="#c53030" stroke-width="2.5" rx="8"/>
+  <text x="60" y="130" font-size="15" font-weight="700" fill="#c53030">5. ESP32 antenna keepout</text>
+  <text x="60" y="165" font-size="14">Area di bawah / depan antena modul DevKit</text>
+  <text x="60" y="200" font-size="14" font-weight="700">Radius / span ≈ 15 mm</text>
+  <text x="60" y="235" font-size="14">· No Copper padat (plane/track besar)</text>
+  <text x="60" y="265" font-size="14">· No Ground pour solid di bawah antena</text>
+  <text x="60" y="295" font-size="14">· No Via cluster</text>
+  <text x="60" y="325" font-size="14">· No mounting metal di atas antena</text>
+  <text x="60" y="365" font-size="13" fill="#744210">Akses USB service tidak tertutup nampan lain</text>
+
+  <rect x="660" y="95" width="580" height="320" fill="#fffaf0" stroke="#dd6b20" stroke-width="2.5" rx="8"/>
+  <text x="680" y="130" font-size="15" font-weight="700" fill="#c05621">Buck U3 keepout noise</text>
+  <text x="680" y="165" font-size="14">JANGAN lewatkan track analog / SPI / TC di bawah atau menyamping rapat U3</text>
+  <text x="680" y="200" font-size="14">Pisahkan zona POWER (kiri) vs TC (kanan) — lihat L2 zones</text>
+  <text x="680" y="240" font-size="15" font-weight="700" fill="#c05621">MAX31856 keepout</text>
+  <text x="680" y="275" font-size="14">Jauh dari switching buck / MOSFET / PWM agresif</text>
+  <text x="680" y="305" font-size="14">Dekat J1/J2 (TC connector) — lihat L3_11</text>
+  <text x="680" y="345" font-size="14">SPI bus ideal &lt; 30–40 mm · jauh heater control</text>
+  <text x="680" y="380" font-size="12" fill="#718096">IO: AC keepout vs J9 sinyal ≥ 4 mm clearance</text>
+
+  <rect x="40" y="440" width="1200" height="480" fill="#fff" stroke="#276749" stroke-width="2" rx="8"/>
+  <text x="60" y="480" font-size="15" font-weight="700">Assembly mekanik</text>
+  <text x="60" y="520" font-size="14">Jarak antar female header seats (edge–edge)     ≥ 2.0 mm</text>
+  <text x="60" y="555" font-size="14">Standoff modul (BOM STD_MOD)                   M2.5 × 10 nylon · qty 6</text>
+  <text x="60" y="590" font-size="14">Mounting PCB ke box                            M3 · hole drill 3.2 mm</text>
+  <text x="60" y="625" font-size="14">Keepout sekitar mounting hole                  ≥ 3.0 mm (tanpa track kritis)</text>
+  <text x="60" y="660" font-size="14">Tinggi modul + header                          cek tutup box IP54 ventilated</text>
+  <text x="60" y="695" font-size="14">Retention getaran                              standoff WAJIB sebelum ship</text>
+  <text x="60" y="745" font-size="15" font-weight="700" fill="#c53030">IO board</text>
+  <text x="60" y="780" font-size="14">Heatsink SSR: clear sekrup/kabel · thermal pad TPAD1 terpasang</text>
+  <text x="60" y="815" font-size="14">Terminal J5–J8: arah obeng dari luar · silk cocok harness H2B</text>
+  <text x="60" y="860" font-size="12" fill="#718096">BOM: STD_MOD nylon · bukan opsional</text>
+</svg>

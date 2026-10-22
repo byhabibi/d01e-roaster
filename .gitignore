@@ -1,0 +1,7 @@
+.pio/
+.vscode/
+*.elf
+*.bin
+*.bak
+*.kicad_prl
+~*

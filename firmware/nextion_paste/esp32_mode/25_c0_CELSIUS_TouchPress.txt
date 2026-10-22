@@ -1,0 +1,8 @@
+c0.val=1
+c1.val=0
+printh A5
+printh 0D
+printh 00
+printh FF
+printh FF
+printh FF

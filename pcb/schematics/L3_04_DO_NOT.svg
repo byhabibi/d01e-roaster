@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 930" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1280" height="930" fill="#faf9f7"/>
+  <text x="40" y="40" font-size="22" font-weight="700">L3 · DO NOT + LARANGAN SEJAJAR (revisi PCB paling mahal)</text>
+  <text x="40" y="68" font-size="13" fill="#4a5568">Termasuk: jalur yang TIDAK BOLEH sejajar panjang · keepout · salah part</text>
+  
+  <rect x="40" y="100" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="128" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="128" font-size="13">JANGAN lewatkan SPI di bawah / menyilang modul buck U3 (noise switching).</text>
+  <rect x="40" y="152" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="180" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="180" font-size="13">JANGAN sejajarkan SPI parallel panjang dengan HEATER_EN / track heater / PWM.</text>
+  <rect x="40" y="204" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="232" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="232" font-size="13">JANGAN sejajarkan jalur thermocouple (J1/J2) parallel dengan PWM / heater control.</text>
+  <rect x="40" y="256" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="284" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="284" font-size="13">JANGAN taruh seat TC (U4/U5) dekat buck U3 — buck kiri, TC kanan (zona L2).</text>
+  <rect x="40" y="308" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="336" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="336" font-size="13">JANGAN campur PE chassis jadi signal GND · PE hanya bonding earth (IO).</text>
+  <rect x="40" y="360" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="388" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="388" font-size="13">JANGAN campur/sambung asal GND analog TC ke return motor IO tanpa pour rapi.</text>
+  <rect x="40" y="412" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="440" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="440" font-size="13">JANGAN route di bawah antena PCB DevKit — keepout 15 mm No Copper / No GND padat / No Via.</text>
+  <rect x="40" y="464" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="492" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="492" font-size="13">JANGAN route HEATER_EN / track AC heater (IO) dekat SPI / ADC / TC.</text>
+  <rect x="40" y="516" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="544" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="544" font-size="13">JANGAN pakai modul buck adjustable/trimpot untuk U3 — HANYA FIXED 5V.</text>
+  <rect x="40" y="568" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="596" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="596" font-size="13">JANGAN populate U11 CP2102 + J_USB bersamaan DevKit USB-UART (konflik UART0).</text>
+  <rect x="40" y="620" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="648" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="648" font-size="13">JANGAN isi L1 DevKit (3V3 out) ke rail +3V3_ANA board.</text>
+  <rect x="40" y="672" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="700" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="700" font-size="13">JANGAN balik pin1 header / putar DevKit USB ke bawah (silk + L2 map salah).</text>
+  <rect x="40" y="724" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="752" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="752" font-size="13">JANGAN kirim Gerber lama yang masih WROOM / MP1584EN SOT / L4 — seats baru + DRC 0.</text>
+  <rect x="40" y="776" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="804" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="804" font-size="13">JANGAN hilangkan pulldown gate di IO (R_G2, R_Q3_G, R_Q4_G) — boot harus OFF.</text>
+  <rect x="40" y="828" width="1200" height="44" fill="#fff5f5" stroke="#c53030" stroke-width="2" rx="6"/>
+  <text x="60" y="856" font-size="13" font-weight="700" fill="#c53030">✗</text>
+  <text x="90" y="856" font-size="13">JANGAN letakkan EMI filter di jalur AC heater — EMI hanya cabang PSU.</text>
+</svg>

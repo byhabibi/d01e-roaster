@@ -1,0 +1,17 @@
+*** DO NOT SEND THIS GERBER SET TO FAB — STALE / WRONG FOR FASE 1 ***
+
+Export date in files: ~2026-07-10
+
+positions.csv still contains (WRONG for Fase 1):
+  U1  ESP32-WROOM-32E     ← must be ESP32-DevKitC-32E seat (U1_DEVKIT)
+  U3  MP1584EN SOT-23-6   ← must be MP1584-FIXED-5V module seat (U3_MOD)
+  L4  4.7uH               ← removed from Fase 1 BOM
+  U4/U5 MAX31856 SOIC     ← must be MAX31856 breakout module seats
+
+Use instead until new Gerbers are exported:
+  ../../BOM/D01E_BOM_Production.csv
+  ../../schematics/INDEX.html
+  ../../docs/D01E_Module_Optimization_Fase1.md
+  ../../README.txt
+
+After KiCad seats layout + DRC 0: export NEW Gerbers here and DELETE this file.

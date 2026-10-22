@@ -1,0 +1,10 @@
+printh A5
+printh 09
+printh FF
+printh FF
+printh FF
+vis p7,0
+vis b7,0
+vis b8,0
+t0.txt="00:00"
+t1.txt="0"

@@ -1,0 +1,6 @@
+printh A5
+printh 06
+printh bt1.val
+printh FF
+printh FF
+printh FF

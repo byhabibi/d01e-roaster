@@ -1,0 +1,9 @@
+// tm1 — kedip banner ROASTING DONE (p3.pic 211). Attribute: tim=400, en=0
+// ESP32 nyalakan tm1.en=1 saat fase FINISHED
+if(p3.pic==211)
+{
+  p3.pic=165
+}else
+{
+  p3.pic=211
+}

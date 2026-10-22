@@ -1,0 +1,2 @@
+// page15 Preinitialize — KOSONGKAN (hapus "page page8")
+// Jangan taruh "page page8" di sini — itu bikin langsung balik ke page8

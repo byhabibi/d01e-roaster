@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 756" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1200" height="756" fill="#faf9f7"/>
+  <text x="40" y="40" font-size="22" font-weight="700">L3 · CHECKLIST SEBELUM GERBER</text>
+  <text x="40" y="68" font-size="13" fill="#c53030">Centang SEMUA di browser print / kertas sebelum zip ke pabrik</text>
+  
+  <rect x="40" y="100" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="124" font-size="14">ERC schematic MAIN + IO = 0</text>
+  <rect x="40" y="148" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="172" font-size="14">DRC PCB MAIN + IO = 0 (dari folder proyek, bukan asumsi)</text>
+  <rect x="40" y="196" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="220" font-size="14">Semua zone GND / power sudah Refill</text>
+  <rect x="40" y="244" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="268" font-size="14">0 unrouted nets (atau hanya net sengaja DNP yang di-exclude)</text>
+  <rect x="40" y="292" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="316" font-size="14">Pin1 semua connector benar (J9.1 = +12V, J1/J2, J_H1)</text>
+  <rect x="40" y="340" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="364" font-size="14">Mounting holes ada + diameter 3.2 mm M3</text>
+  <rect x="40" y="388" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="412" font-size="14">Silk tidak menimpa pad / via (terutama BUCK 5V FIXED, DevKit, TC)</text>
+  <rect x="40" y="436" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="460" font-size="14">Logo / board name / rev PCB terbaca (rev seats Fase1 / v3.7)</text>
+  <rect x="40" y="484" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="508" font-size="14">positions.csv TIDAK lagi menulis ESP32-WROOM / MP1584EN SOT / L4</text>
+  <rect x="40" y="532" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="556" font-size="14">Gerber F/B Cu Mask Paste Silk + Edge_Cuts + drill dicek di viewer</text>
+  <rect x="40" y="580" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="604" font-size="14">U11/J_USB path DNP tidak memaksa populate di BOM fab</text>
+  <rect x="40" y="628" width="40" height="36" fill="#fff" stroke="#2d3748" stroke-width="2" rx="4"/>
+  <text x="100" y="652" font-size="14">IO HV clearance AC↔LV dicek visual + DRC</text>
+  <text x="40" y="726" font-size="12" fill="#718096">Setelah OK: sync Gerber baru ke D01E_Delivery/03_PCB_Manufacturer (timpa yang lama)</text>
+</svg>

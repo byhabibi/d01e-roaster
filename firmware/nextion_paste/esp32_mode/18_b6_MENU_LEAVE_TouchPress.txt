@@ -1,0 +1,6 @@
+printh A5
+printh 0A
+printh FF
+printh FF
+printh FF
+page page3

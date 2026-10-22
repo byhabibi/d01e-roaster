@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 1100" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1280" height="1100" fill="#faf9f7"/>
+  <text x="40" y="40" font-size="22" font-weight="700">L3 · PROXIMITY: HARUS DEKAT vs BOLEH JAUH</text>
+  <text x="40" y="68" font-size="13" fill="#4a5568">Placement sebelum route — salah jarak = noise / EMC / suhu buruk</text>
+
+  <rect x="40" y="95" width="600" height="520" fill="#f0fff4" stroke="#276749" stroke-width="2.5" rx="8"/>
+  <text x="60" y="130" font-size="16" font-weight="700" fill="#276749">6. HARUS DEKAT</text>
+  <text x="60" y="170" font-size="14" font-weight="700">MAX31856 (U4/U5)</text>
+  <text x="60" y="195" font-size="13">wajib dekat konektor TC J1 / J2 (jejak T+/T− seminimal mungkin)</text>
+  <text x="60" y="230" font-size="14" font-weight="700">Decoupling 100 nF (C* VCC IC)</text>
+  <text x="60" y="255" font-size="13">&lt; 3 mm dari pin VCC ke GND (U6/U10/opto/reg)</text>
+  <text x="60" y="290" font-size="14" font-weight="700">Buck U3 input cap (C3)</text>
+  <text x="60" y="315" font-size="13">&lt; 5 mm dari pad VIN U3</text>
+  <text x="60" y="350" font-size="14" font-weight="700">Buck U3 output cap (C4)</text>
+  <text x="60" y="375" font-size="13">&lt; 5 mm dari pad VOUT U3 (+5V_SYS)</text>
+  <text x="60" y="410" font-size="14" font-weight="700">U2 MCP1700</text>
+  <text x="60" y="435" font-size="13">dekat U3 VOUT · keluaran +3V3_ANA pendek ke U4/U5 VIN</text>
+  <text x="60" y="470" font-size="14" font-weight="700">SPI DevKit ↔ U4/U5</text>
+  <text x="60" y="495" font-size="13">ideal &lt; 30–40 mm · DevKit sisi kanan menghadap TC</text>
+  <text x="60" y="530" font-size="14" font-weight="700">Opto U7–U9/U12</text>
+  <text x="60" y="555" font-size="13">dekat J_H1 (track panel pendek)</text>
+  <text x="60" y="585" font-size="12" fill="#718096">IO: Q_K1 dekat R_G1/R_G2 · U20 dekat Q2</text>
+
+  <rect x="660" y="95" width="580" height="520" fill="#ebf8ff" stroke="#2b6cb0" stroke-width="2.5" rx="8"/>
+  <text x="680" y="130" font-size="16" font-weight="700" fill="#2b6cb0">7. BOLEH JAUH / BEBAS</text>
+  <text x="680" y="170" font-size="14" font-weight="700">DFPlayer U13</text>
+  <text x="680" y="195" font-size="13">boleh jauh · TX GPIO4 cukup 1 track</text>
+  <text x="680" y="230" font-size="14" font-weight="700">RS485 U6 + J3</text>
+  <text x="680" y="255" font-size="13">boleh jauh dari TC · dekat tepi connector lapangan OK</text>
+  <text x="680" y="290" font-size="14" font-weight="700">Speaker J10</text>
+  <text x="680" y="315" font-size="13">bebas · jauhkan sedikit dari antena bila bisa</text>
+  <text x="680" y="350" font-size="14" font-weight="700">LED indikator (jika ada)</text>
+  <text x="680" y="375" font-size="13">bebas · tidak kritikal panjang</text>
+  <text x="680" y="410" font-size="14" font-weight="700">UART Nextion (J_H1.12/13)</text>
+  <text x="680" y="435" font-size="13">boleh relatif panjang di harness · di PCB tetap rapi</text>
+  <text x="680" y="480" font-size="14" font-weight="700">U11 / J_USB</text>
+  <text x="680" y="505" font-size="13">DNP Fase 1 — area boleh kosong / jangan padati antena</text>
+  <text x="680" y="555" font-size="13" fill="#744210">Yang jauh BUKAN berarti campur aduk zona power/TC</text>
+
+  <rect x="40" y="640" width="1200" height="420" fill="#fff5f5" stroke="#c53030" stroke-width="2.5" rx="8"/>
+  <text x="60" y="680" font-size="16" font-weight="700" fill="#c53030">8. JALUR YANG TIDAK BOLEH SEJAJAR (panjang)</text>
+  <text x="60" y="720" font-size="14">SPI          ≠ sejajar HEATER_EN / jalur heater / AC return</text>
+  <text x="60" y="755" font-size="14">Thermocouple ≠ sejajar EXHAUST_PWM / switching agresif</text>
+  <text x="60" y="790" font-size="14">TC / analog  ≠ lewat di bawah / samping buck U3</text>
+  <text x="60" y="825" font-size="14">ADC POT/NTC  ≠ sejajar PWM &amp; heater control</text>
+  <text x="60" y="870" font-size="14" fill="#276749" font-weight="700">BOLEH dekat:</text>
+  <text x="60" y="900" font-size="14">UART boleh dekat GPIO · I2C boleh dekat GPIO · RS485 A/B pair bersama</text>
+  <text x="60" y="940" font-size="13" fill="#4a5568">Silang 90° sekali-sekali lebih baik daripada parallel panjang.</text>
+  <text x="60" y="980" font-size="12" fill="#718096">Detail larangan lain: L3_04 · zona: L2_MAIN_PLACEMENT_ZONES</text>
+</svg>

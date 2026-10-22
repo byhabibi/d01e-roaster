@@ -1,0 +1,15 @@
+﻿D01E MAIN Fase 1 — fab / incoming QC notes
+
+BOM / seats (truth — ignore stale MAIN positions.csv until regen):
+[ ] U3 = MP1584 FIXED 5V only (VIN/GND/VOUT) — LARANG trimpot/adjustable
+[ ] U1 = DevKitC-32E on headers — flash USB DevKit (U11 DNP)
+[ ] U4/U5 = MAX31856 breakout headers
+[ ] Silk: BUCK 5V FIXED · ESP32 DevKit · BEAN/ENV TC MODULE
+[ ] No L4 discrete inductor on P&P
+[ ] K1 IO = LC1D25JD 12V · SSR = D2440
+
+Power QC after assy:
+[ ] VOUT buck 4.90 .. 5.10 V (reject if out of range)
+
+Docs: ../docs/D01E_Module_Optimization_Fase1.md v1.1
+Status Gerber: see ../README.txt + PCB-01_MAIN-CTRL/Gerbers/DO_NOT_FAB_STALE.txt
